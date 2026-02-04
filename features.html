@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | PyroGuard SaaS</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-[#0F172A] text-white transition-all duration-300">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 py-6">
+        <div class="container mx-auto px-4 md:px-6">
+            <nav class="flex items-center justify-between glass py-4 px-8 rounded-full border-white/5">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg">
+                        <i class="fas fa-microchip text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold font-outfit uppercase tracking-tighter">Pyro<span
+                            class="text-primary italic">AI</span></span>
+                </a>
+                <ul class="hidden lg:flex items-center gap-10 font-medium text-sm text-gray-400">
+                    <li><a href="home-2.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="features.html" class="text-white">Features</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+                <div class="flex items-center gap-4">
+                    <a href="login.html" class="text-sm font-bold hover:text-primary transition-colors">Sign In</a>
+                    <a href="register.html"
+                        class="bg-primary hover:bg-primary-dark px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20">Try
+                        for Free</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-48 pb-24 text-center">
+        <div class="container mx-auto px-4">
+            <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-6 inline-block">Unmatched
+                Capabilities</span>
+            <h1 class="text-5xl md:text-7xl font-black font-outfit mb-8">The Future of <span
+                    class="text-primary italic">Fire Prevention</span>.</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Explore the advanced modules that make PyroGuard the
+                industry gold standard for life safety management.</p>
+        </div>
+    </section>
+
+    <!-- Horizontal Feature Blocks -->
+    <section class="py-24 space-y-32">
+        <div class="container mx-auto px-4 md:px-6">
+            <!-- Feature 1 -->
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-6 italic">
+                        Predictive Safety</div>
+                    <h2 class="text-3xl md:text-5xl font-black font-outfit mb-8 leading-tight">AI-Driven Hazard <br>
+                        <span class="text-primary">Forecasting.</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">Our proprietary neural engine continuously
+                        analyzes ambient sensor data, historical patterns, and building occupancy to predict potential
+                        safety failures before they occur. It moves your strategy from reactive to proactive monitoring.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check text-primary"></i> <span>Early warning system for equipment thermal
+                                stress</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check text-primary"></i> <span>Occupancy-based evacuation route
+                                optimization</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check text-primary"></i> <span>99.8% accuracy in fault detection</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-2xl group-hover:bg-primary/30 transition-all">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1558486012-817176f84c6d?auto=format&fit=crop&q=80&w=1000"
+                            class="relative rounded-[2.5rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                            alt="Feature">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <div class="relative group mt-10">
+                        <div
+                            class="absolute -inset-4 bg-blue-500/20 rounded-[3rem] blur-2xl group-hover:bg-blue-500/30 transition-all">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1000"
+                            class="relative rounded-[2.5rem] shadow-2xl" alt="Feature">
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-xs font-bold mb-6 italic">
+                        Centralized Intelligence</div>
+                    <h2 class="text-3xl md:text-5xl font-black font-outfit mb-8 leading-tight">Everything, <br> <span
+                            class="text-blue-500">In One View.</span></h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">Stop jumping between spreadsheets and legacy
+                        software. PyroGuard provides a unified command center for all your fire pumps, sprinkler
+                        systems, smoke detectors, and emergency lighting across multiple continents.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check text-blue-500"></i> <span>Real-time asset telemetry streaming</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check text-blue-500"></i> <span>Automated digital compliance tagging</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check text-blue-500"></i> <span>Instant multi-site status
+                                synchronization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Grid -->
+    <section class="py-32 bg-white flex flex-col items-center">
+        <div class="container mx-auto px-4 text-center mb-20">
+            <h2 class="text-4xl md:text-6xl font-black font-outfit text-gray-900 mb-6">Deep Technical <span
+                    class="text-primary italic">Stack</span>.</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto">Engineered for the most demanding industrial environments and
+                high-rise commercial structures.</p>
+        </div>
+
+        <div class="container mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+                class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-800 hover:bg-primary group transition-all duration-300 shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary">
+                <i class="fas fa-lock text-3xl text-primary group-hover:text-white mb-6"></i>
+                <h4 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-white mb-4">Bank-Grade
+                    Security</h4>
+                <p class="text-gray-500 dark:text-gray-400 group-hover:text-white/80 text-sm">AES-256 encryption for all
+                    safety data logs and communication channels.</p>
+            </div>
+            <div class="p-10 rounded-3xl bg-gray-50 hover:bg-primary hover:text-white transition-all group">
+                <i class="fas fa-satellite text-3xl text-primary group-hover:text-white mb-6"></i>
+                <h4 class="text-xl font-bold text-gray-900 group-hover:text-white mb-4">Cloud Native</h4>
+                <p class="text-gray-500 group-hover:text-white/80 text-sm">Built on AWS for global scalability and
+                    99.99% infrastructure uptime.</p>
+            </div>
+            <div class="p-10 rounded-3xl bg-gray-50 hover:bg-primary hover:text-white transition-all group">
+                <i class="fas fa-code-branch text-3xl text-primary group-hover:text-white mb-6"></i>
+                <h4 class="text-xl font-bold text-gray-900 group-hover:text-white mb-4">Robust API</h4>
+                <p class="text-gray-500 group-hover:text-white/80 text-sm">Full RESTful API for seamless integration
+                    with your existing BMS/ERP systems.</p>
+            </div>
+            <div class="p-10 rounded-3xl bg-gray-50 hover:bg-primary hover:text-white transition-all group">
+                <i class="fas fa-mobile-alt text-3xl text-primary group-hover:text-white mb-6"></i>
+                <h4 class="text-xl font-bold text-gray-900 group-hover:text-white mb-4">Native PWA</h4>
+                <p class="text-gray-500 group-hover:text-white/80 text-sm">Access your safety data even in areas with
+                    zero cellular reception.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center text-gray-500 text-sm border-t border-white/5">
+        <p>© 2025 PyroAI Systems. Leading the digital safety revolution.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

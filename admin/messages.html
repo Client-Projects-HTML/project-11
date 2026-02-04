@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | PyroGuard Admin</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+    <div class="flex h-screen overflow-hidden">
+        <aside id="admin-sidebar"
+            class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 z-50 transition-all duration-300 lg:translate-x-0 -translate-x-full">
+            <div class="flex flex-col h-full">
+                <div class="p-6">
+                    <a href="../index.html" class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shadow-lg"><i
+                                class="fas fa-shield-alt text-white text-xs"></i></div>
+                        <span class="text-xl font-bold font-outfit tracking-tighter uppercase">Pyro<span
+                                class="text-primary italic">Guard</span></span>
+                    </a>
+                </div>
+                <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
+                    <a href="index.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-th-large w-5"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="compliance.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-clipboard-check w-5"></i>
+                        <span>Compliance</span>
+                    </a>
+                    <a href="scheduling.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-calendar-alt w-5"></i>
+                        <span>Scheduling</span>
+                    </a>
+                    <a href="violations.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-exclamation-triangle w-5"></i>
+                        <span>Violations</span>
+                    </a>
+                    <a href="users.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-users w-5"></i>
+                        <span>Clients</span>
+                    </a>
+                    <a href="messages.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold">
+                        <i class="fas fa-envelope w-5"></i>
+                        <span>Messages</span>
+                    </a>
+                    <a href="settings.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-cog w-5"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+                <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+                    <a href="../login.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-medium">
+                        <i class="fas fa-sign-out-alt w-5"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 lg:ml-64 min-h-screen flex flex-col bg-white dark:bg-gray-900 overflow-hidden">
+            <header
+                class="p-6 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between shrink-0">
+                <div class="flex items-center gap-4">
+                    <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <h1 class="text-xl font-bold font-outfit">Support Messages</h1>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle"
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="rtl-toggle"
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase">
+                        RTL
+                    </button>
+                    <div class="relative group">
+                        <button
+                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                            <i class="fas fa-bell"></i>
+                            <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
+                        <div class="text-right hidden sm:block">
+                            <p class="text-sm font-bold">Johnathan Doe</p>
+                            <p class="text-xs text-gray-500">Admin</p>
+                        </div>
+                        <img src="https://i.pravatar.cc/150?u=inspector"
+                            class="w-10 h-10 rounded-xl border border-gray-200" alt="Profile">
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex-1 flex overflow-hidden">
+                <!-- Message List -->
+                <div class="w-full md:w-80 lg:w-96 border-r border-gray-100 dark:border-gray-700 overflow-y-auto">
+                    <div class="divide-y divide-gray-50 dark:divide-gray-700">
+                        <!-- Item 1 -->
+                        <div
+                            class="p-6 bg-gray-50/50 dark:bg-gray-700/50 cursor-pointer hover:bg-gray-100 transition-all border-l-4 border-primary">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold text-sm">Robert Miller</h4>
+                                <span class="text-[10px] text-gray-400 font-bold uppercase">10:45 AM</span>
+                            </div>
+                            <p class="text-xs font-bold text-primary mb-2">Emergency Pump Secondary Check</p>
+                            <p class="text-[11px] text-gray-500 line-clamp-1">Hi team, the secondary pump in the
+                                mechanical room...</p>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="p-6 cursor-pointer hover:bg-gray-50 transition-all">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold text-sm">Sarah Jenkins</h4>
+                                <span class="text-[10px] text-gray-400 font-bold uppercase">Yesterday</span>
+                            </div>
+                            <p class="text-xs font-bold text-gray-700 dark:text-gray-200 mb-2">NFPA 10 Documentation
+                                Query</p>
+                            <p class="text-[11px] text-gray-400 line-clamp-1">I noticed the certificate generation for
+                                site #1024...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Pane (Simple UI) -->
+                <div class="hidden md:flex flex-1 flex-col overflow-hidden">
+                    <div class="p-8 flex-1 overflow-y-auto space-y-8">
+                        <!-- Recipient Message -->
+                        <div class="flex gap-4 max-w-2xl">
+                            <img src="https://i.pravatar.cc/100?u=robert" class="w-10 h-10 rounded-full shrink-0">
+                            <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-700 text-sm leading-relaxed">
+                                Hi, we ran the test on the secondary pump this morning as scheduled. However, the
+                                pressure sensor didn't report to the dashboard correctly, although the pump was
+                                physically running. Could someone look into the sensor integration?
+                            </div>
+                        </div>
+
+                        <!-- Admin Reply -->
+                        <div class="flex flex-row-reverse gap-4 max-w-2xl ml-auto text-right">
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                <i class="fas fa-user-shield text-white text-xs"></i>
+                            </div>
+                            <div class="p-6 rounded-2xl bg-primary text-white text-sm leading-relaxed">
+                                Understood, Robert. I'm assigning a sensor specialist to investigate the gateway
+                                connection now. Expect a resolution update within 2 hours.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="p-6 border-t border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
+                        <div
+                            class="flex items-center gap-4 bg-white dark:bg-gray-800 p-2 rounded-2xl border border-gray-100 dark:border-gray-700">
+                            <input type="text" placeholder="Type your reply here..."
+                                class="flex-1 px-4 bg-transparent border-none focus:ring-0 outline-none">
+                            <button class="w-10 h-10 bg-primary text-white rounded-xl shadow-lg shadow-primary/20"><i
+                                    class="fas fa-paper-plane text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- main js -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('admin-sidebar');
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar?.classList.toggle('-translate-x-full');
+        });
+    </script>
+</body>
+
+
+</html>

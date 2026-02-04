@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | PyroGuard Safety</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 glass">
+        <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                        class="text-primary">Guard</span></span>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 font-medium">
+                <li><a href="index.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Home</a></li>
+                <li><a href="about.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">About</a></li>
+                <li><a href="services.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Services</a></li>
+                <li><a href="pricing.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Pricing</a></li>
+                <li><a href="blog.html" class="text-primary">Blog</a></li>
+                <li><a href="contact.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
+                    title="Toggle Theme">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="rtl-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                    title="RTL Toggle">
+                    RTL
+                </button>
+                <div class="relative group hidden sm:block">
+                    <button
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                    </button>
+                </div>
+                <a href="login.html"
+                    class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30">
+                    Login
+                </a>
+                <button id="menu-toggle" class="lg:hidden p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-40 pb-24">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
+                    <span class="text-primary bg-primary/10 px-3 py-1 rounded-full italic font-black">Safety Tips</span>
+                    <span>Oct 20, 2025</span>
+                    <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                    <span>5 min read</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black font-outfit mb-12 leading-tight">5 Common Fire Hazards in
+                    Modern Office Buildings.</h1>
+
+                <img src="assets/images/blog_fire_hazards.png" class="w-full rounded-[2.5rem] mb-12 shadow-2xl"
+                    alt="Post Hero">
+
+                <div
+                    class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-relaxed mb-16">
+                    <p class="text-xl font-medium text-gray-900 dark:text-gray-100 mb-8">Modern offices are designed for
+                        collaboration and productivity, but they also introduce unique fire safety challenges that are
+                        often overlooked. As technology advances, our workplaces evolve, bringing new risks with them.
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Overloaded Electrical Power
+                        Strips</h3>
+                    <p>With dozens of monitors, computers, and peripheral devices, electrical outlets are under more
+                        strain than ever. Daisychaining power strips—plugging one into another—is a leading cause of
+                        electrical fires in commercial buildings.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Blocked Emergency Exits</h3>
+                    <p>It sounds simple, but temporary storage of deliveries or office furniture in corridors can be
+                        fatal during an evacuation. Every second counts when a fire starts, and a clear path to safety
+                        is non-negotiable.</p>
+
+                    <blockquote
+                        class="border-l-4 border-primary pl-8 my-12 italic text-2xl font-medium text-gray-900 dark:text-white">
+                        "Fire safety isn't just about having the right equipment; it's about maintaining a culture of
+                        awareness at every level of the organization."
+                    </blockquote>
+
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Improper Storage of Flammables
+                    </h3>
+                    <p>Even in paperless offices, cleaning supplies and certain tech maintenance chemicals are often
+                        stored incorrectly. Proper ventilation and designated storage areas are essential for these
+                        materials.</p>
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between gap-8 py-12 border-y border-gray-100 dark:border-gray-800">
+                    <div class="flex items-center gap-6">
+                        <img src="https://i.pravatar.cc/100?u=author" class="w-16 h-16 rounded-full" alt="Author">
+                        <div>
+                            <p class="text-xs uppercase font-bold text-gray-400 tracking-widest mb-1">Author</p>
+                            <h4 class="text-lg font-bold">Marcus Thorne</h4>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">Share:</span>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Related Posts -->
+                <div class="mt-20">
+                    <h3 class="text-3xl font-bold font-outfit mb-12">Related <span
+                            class="text-primary italic">Articles</span></h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="group">
+                            <div class="rounded-3xl overflow-hidden mb-6">
+                                <img src="assets/images/blog_compliance.png"
+                                    class="w-full aspect-video object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Related">
+                            </div>
+                            <h4 class="text-xl font-bold text-primary group-hover:text-primary-dark transition-colors">
+                                <a href="#">Understanding the New 2025 NFPA 10 Standards.</a>
+                            </h4>
+                        </div>
+                        <div class="group">
+                            <div class="rounded-3xl overflow-hidden mb-6">
+                                <img src="assets/images/blog_ai_fire.png"
+                                    class="w-full aspect-video object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Related">
+                            </div>
+                            <h4 class="text-xl font-bold text-primary group-hover:text-primary-dark transition-colors">
+                                <a href="#">How AI
+                                    is Decorating Fire Detection Systems.</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                class="text-primary">Guard</span></span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                        life safety
+                        management solutions since 2010. Protecting what matters most.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-primary transition-colors">Latest News</a></li>
+                        <li><a href="404.html" class="hover:text-primary transition-colors">Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service-details.html?service=alarms"
+                                class="hover:text-primary transition-colors">Fire Alarms</a>
+                        </li>
+                        <li><a href="service-details.html?service=sprinkler"
+                                class="hover:text-primary transition-colors">Sprinkler
+                                Systems</a></li>
+                        <li><a href="service-details.html?service=lighting"
+                                class="hover:text-primary transition-colors">Emergency
+                                Lights</a></li>
+                        <li><a href="service-details.html?service=audits"
+                                class="hover:text-primary transition-colors">Safety
+                                Audits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
+                            <span>123 Safety Ave, Tech City, ST 54321</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>support@pyroguard.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                    Reserved.</p>
+                <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-500">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <span class="text-gray-500">Developed By| <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary transition-colors">Abhivorn Technologies Pvt.Ltd</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

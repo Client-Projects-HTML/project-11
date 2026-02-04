@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Insights Blog | PyroGuard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 glass">
+        <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                        class="text-primary">Guard</span></span>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 font-medium">
+                <li><a href="index.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Home</a></li>
+                <li><a href="about.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">About</a></li>
+                <li><a href="services.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Services</a></li>
+                <li><a href="pricing.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Pricing</a></li>
+                <li><a href="blog.html" class="text-primary">Blog</a></li>
+                <li><a href="contact.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
+                    title="Toggle Theme">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="rtl-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                    title="RTL Toggle">
+                    RTL
+                </button>
+                <div class="relative group hidden sm:block">
+                    <button
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                    </button>
+                </div>
+                <a href="login.html"
+                    class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30">
+                    Login
+                </a>
+                <button id="menu-toggle" class="lg:hidden p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-40 pb-20 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                <div class="max-w-2xl">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Blog</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold font-outfit mt-2">Latest Safety <span
+                            class="text-primary italic">Insights</span>.</h1>
+                </div>
+
+                <div
+                    class="flex items-center gap-4 bg-white dark:bg-gray-800 p-2 rounded-2xl border border-gray-100 dark:border-gray-700">
+                    <i class="fas fa-search text-gray-400 ml-4"></i>
+                    <input type="text" placeholder="Search articles..."
+                        class="bg-transparent border-none focus:ring-0 outline-none text-sm w-48 md:w-64">
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Blog Content -->
+                <div class="lg:w-2/3">
+                    <div id="blog-grid" class="grid md:grid-cols-2 gap-12">
+                        <!-- Blog 1 -->
+                        <div class="group">
+                            <div class="relative overflow-hidden rounded-3xl mb-6">
+                                <img src="assets/images/blog_fire_hazards.png"
+                                    class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110"
+                                    alt="Blog">
+                                <div
+                                    class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
+                                    Safety Tips</div>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                <span>Oct 20, 2025</span>
+                                <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                                <span>5 min read</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
+                                <a href="blog-details.html">5 Common Fire Hazards in Modern Office Buildings.</a>
+                            </h3>
+                            <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">Discover the hidden risks in
+                                your workplace, from overloaded power strips to blocked emergency exits, and how to fix
+                                them.</p>
+                            <a href="blog-details.html"
+                                class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
+                                More <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Blog 2 -->
+                        <div class="group">
+                            <div class="relative overflow-hidden rounded-3xl mb-6">
+                                <img src="assets/images/blog_compliance.png"
+                                    class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110"
+                                    alt="Blog">
+                                <div
+                                    class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
+                                    Compliance</div>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                <span>Oct 18, 2025</span>
+                                <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                                <span>8 min read</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
+                                <a href="blog-details.html">Understanding the New 2025 NFPA 10 Standards.</a>
+                            </h3>
+                            <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">The fire safety landscape is
+                                changing. Here's what facility managers need to know about the latest regulatory
+                                updates.</p>
+                            <a href="blog-details.html"
+                                class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
+                                More <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Blog 3 -->
+                        <div class="group">
+                            <div class="relative overflow-hidden rounded-3xl mb-6">
+                                <img src="assets/images/blog_ai_fire.png"
+                                    class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110"
+                                    alt="Blog">
+                                <div
+                                    class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
+                                    Technology</div>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                <span>Oct 15, 2025</span>
+                                <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
+                                <a href="blog-details.html">How AI is Decorating Fire Detection Systems.</a>
+                            </h3>
+                            <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">Learn how machine learning
+                                algorithms are identifying fire patterns faster than traditional heat sensors.</p>
+                            <a href="blog-details.html"
+                                class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
+                                More <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-12">
+                    <!-- Our Services Box (Matching User Image) -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] border border-gray-100 dark:border-gray-700 shadow-sm">
+                        <h4 class="text-2xl font-bold font-outfit mb-8">Our Services</h4>
+                        <ul class="space-y-6">
+                            <li>
+                                <a href="service-details.html?service=alarms"
+                                    class="flex items-center justify-between group">
+                                    <span
+                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Fire
+                                        Alarms</span>
+                                    <i
+                                        class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-primary transition-all group-hover:translate-x-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service-details.html?service=sprinkler"
+                                    class="flex items-center justify-between group">
+                                    <span
+                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Sprinkler
+                                        Systems</span>
+                                    <i
+                                        class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-primary transition-all group-hover:translate-x-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service-details.html?service=lighting"
+                                    class="flex items-center justify-between group">
+                                    <span
+                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Emergency
+                                        Lights</span>
+                                    <i
+                                        class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-primary transition-all group-hover:translate-x-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service-details.html?service=audits"
+                                    class="flex items-center justify-between group">
+                                    <span
+                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Safety
+                                        Audits</span>
+                                    <i
+                                        class="fas fa-arrow-right text-xs text-primary transition-all group-hover:translate-x-1"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter Sidebar Box -->
+                    <div
+                        class="bg-primary p-8 rounded-[2.5rem] text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
+                        <!-- Decorative circles -->
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 delay-100">
+                        </div>
+
+                        <div class="relative z-10">
+                            <img src="assets/images/newsletter_icon.png" class="w-20 mb-6 drop-shadow-md"
+                                alt="Newsletter">
+                            <h4 class="text-2xl font-bold font-outfit mb-4">Stay Secure.</h4>
+                            <p class="text-white/80 text-sm mb-6">Get weekly safety tips and compliance updates
+                                delivered to
+                                your inbox.</p>
+                            <form class="space-y-4">
+                                <input type="email" placeholder="Your email address"
+                                    class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/20 text-sm placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50">
+                                <button
+                                    class="w-full py-4 bg-white text-primary font-bold rounded-2xl hover:bg-gray-100 transition-all">Subscribe
+                                    Now</button>
+                            </form>
+                        </div>
+                </aside>
+            </div>
+
+            <!-- Pagination -->
+            <!-- Pagination -->
+            <div id="blog-pagination" class="mt-20 flex justify-center items-center gap-4">
+                <button
+                    class="pagination-btn w-12 h-12 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all"
+                    data-page="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="pagination-btn w-12 h-12 rounded-xl bg-primary text-white font-bold"
+                    data-page="1">1</button>
+                <button
+                    class="pagination-btn w-12 h-12 rounded-xl border border-gray-200 dark:border-gray-700 font-bold hover:bg-gray-100 transition-all"
+                    data-page="2">2</button>
+                <button
+                    class="pagination-btn w-12 h-12 rounded-xl border border-gray-200 dark:border-gray-700 font-bold hover:bg-gray-100 transition-all"
+                    data-page="3">3</button>
+                <button
+                    class="pagination-btn w-12 h-12 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all"
+                    data-page="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const buttons = document.querySelectorAll('.pagination-btn');
+                    const blogContainer = document.getElementById('blog-grid');
+                    let currentPage = 1;
+
+                    // Blog Data Source
+                    const blogPosts = {
+                        1: [
+                            {
+                                category: 'Safety Tips',
+                                date: 'Oct 20, 2025',
+                                read: '5 min read',
+                                title: '5 Common Fire Hazards in Modern Office Buildings.',
+                                desc: 'Discover the hidden risks in your workplace, from overloaded power strips to blocked emergency exits, and how to fix them.',
+                                img: 'assets/images/blog_fire_hazards.png'
+                            },
+                            {
+                                category: 'Compliance',
+                                date: 'Oct 18, 2025',
+                                read: '8 min read',
+                                title: 'Understanding the New 2025 NFPA 10 Standards.',
+                                desc: 'The fire safety landscape is changing. Here\'s what facility managers need to know about the latest regulatory updates.',
+                                img: 'assets/images/blog_compliance.png'
+                            },
+                            {
+                                category: 'Technology',
+                                date: 'Oct 15, 2025',
+                                read: '6 min read',
+                                title: 'How AI is Decorating Fire Detection Systems.',
+                                desc: 'Learn how machine learning algorithms are identifying fire patterns faster than traditional heat sensors.',
+                                img: 'assets/images/blog_ai_fire.png'
+                            }
+                        ],
+                        2: [
+                            {
+                                category: 'Training',
+                                date: 'Oct 10, 2025',
+                                read: '4 min read',
+                                title: 'Why Regular Fire Drills Are Essential for Team Safety.',
+                                desc: 'Routine practice can save lives. Learn how to conduct effective fire drills that prepare your employees for real emergencies.',
+                                img: 'https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                            },
+                            {
+                                category: 'Maintenance',
+                                date: 'Oct 05, 2025',
+                                read: '7 min read',
+                                title: 'Fire Extinguisher Maintenance: A Comprehensive Guide.',
+                                desc: 'Ensure your first line of defense is always ready. A step-by-step guide to inspecting and maintaining fire extinguishers.',
+                                img: 'https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                            },
+                            {
+                                category: 'Equipment',
+                                date: 'Oct 01, 2025',
+                                read: '5 min read',
+                                title: 'Choosing the Right Smoke Detectors for Your Facility.',
+                                desc: 'Ionization vs. Photoelectric? We break down the differences to help you select the best protection for your specific environment.',
+                                img: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                            }
+                        ],
+                        3: [
+                            {
+                                category: 'Industrial',
+                                date: 'Sep 28, 2025',
+                                read: '9 min read',
+                                title: 'Warehouse Fire Safety Checklist for 2025.',
+                                desc: 'High piles, forklifts, and combustibles. Master the unique challenges of warehouse fire prevention with our expert checklist.',
+                                img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                            },
+                            {
+                                category: 'Safety Tips',
+                                date: 'Sep 25, 2025',
+                                read: '5 min read',
+                                title: 'Electrical Safety at Work: Best Practices.',
+                                desc: 'Prevent sparks before they start. Essential electrical safety protocols every office and industrial worker should follow.',
+                                img: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                            },
+                            {
+                                category: 'Planning',
+                                date: 'Sep 20, 2025',
+                                read: '10 min read',
+                                title: 'Creating an Emergency Evacuation Plan That Works.',
+                                desc: 'Don\'t leave it to chance. Strategies for developing clear, effective evacuation routes and procedures for large buildings.',
+                                img: 'https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                            }
+                        ]
+                    };
+
+                    function renderPosts(page) {
+                        const posts = blogPosts[page];
+                        if (!posts) return;
+
+                        blogContainer.innerHTML = ''; // Clear current
+
+                        posts.forEach(post => {
+                            const html = `
+                             <div class="group">
+                                <div class="relative overflow-hidden rounded-3xl mb-6">
+                                    <img src="${post.img}"
+                                        class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Blog">
+                                    <div
+                                        class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
+                                        ${post.category}</div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                    <span>${post.date}</span>
+                                    <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                                    <span>${post.read}</span>
+                                </div>
+                                <h3
+                                    class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
+                                    <a href="blog-details.html">${post.title}</a>
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">${post.desc}</p>
+                                <a href="blog-details.html"
+                                    class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
+                                    More <i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                            `;
+                            blogContainer.insertAdjacentHTML('beforeend', html);
+                        });
+                    }
+
+                    buttons.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const page = btn.dataset.page;
+
+                            if (page === 'prev') {
+                                if (currentPage > 1) currentPage--;
+                            } else if (page === 'next') {
+                                if (currentPage < 3) currentPage++;
+                            } else {
+                                currentPage = parseInt(page);
+                            }
+
+                            renderPosts(currentPage);
+
+                            // Update Visuals
+                            buttons.forEach(b => {
+                                const p = b.dataset.page;
+                                if (p !== 'prev' && p !== 'next') {
+                                    if (parseInt(p) === currentPage) {
+                                        b.className = 'pagination-btn w-12 h-12 rounded-xl bg-primary text-white font-bold';
+                                    } else {
+                                        b.className = 'pagination-btn w-12 h-12 rounded-xl border border-gray-200 dark:border-gray-700 font-bold hover:bg-gray-100 transition-all';
+                                    }
+                                }
+                            });
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                class="text-primary">Guard</span></span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                        life safety
+                        management solutions since 2010. Protecting what matters most.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-primary transition-colors">Latest News</a></li>
+                        <li><a href="404.html" class="hover:text-primary transition-colors">Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service-details.html?service=alarms"
+                                class="hover:text-primary transition-colors">Fire Alarms</a>
+                        </li>
+                        <li><a href="service-details.html?service=sprinkler"
+                                class="hover:text-primary transition-colors">Sprinkler
+                                Systems</a></li>
+                        <li><a href="service-details.html?service=lighting"
+                                class="hover:text-primary transition-colors">Emergency
+                                Lights</a></li>
+                        <li><a href="service-details.html?service=audits"
+                                class="hover:text-primary transition-colors">Safety
+                                Audits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
+                            <span>123 Safety Ave, Tech City, ST 54321</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>support@pyroguard.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                    Reserved.</p>
+                <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-500">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <span class="text-gray-500">Developed By| <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary transition-colors">Abhivorn Technologies Pvt.Ltd</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Modal -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm hidden transition-all duration-300 translate-x-full">
+        <div
+            class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-800 p-6 shadow-2xl overflow-y-auto">
+            <div class="flex items-center justify-between mb-8">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg">
+                        <i class="fas fa-shield-alt text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold font-outfit">Pyro<span class="text-primary">Guard</span></span>
+                </a>
+                <button id="menu-close" class="p-2">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+
+            <ul class="space-y-6 text-lg font-medium mb-10">
+                <li><a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a></li>
+                <li><a href="about.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About</a></li>
+                <li><a href="services.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Services</a></li>
+                <li><a href="pricing.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Pricing</a></li>
+                <li><a href="blog.html" class="text-primary">Blog</a></li>
+                <li><a href="contact.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+
+            <a href="login.html"
+                class="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl bg-primary text-white font-bold text-center">
+                Login
+            </a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

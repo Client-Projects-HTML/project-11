@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | PyroGuard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                        secondary: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 glass">
+        <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                        class="text-primary">Guard</span></span>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 font-medium">
+                <li><a href="index.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Home</a></li>
+                <li><a href="about.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">About</a></li>
+                <li><a href="services.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Services</a></li>
+                <li><a href="pricing.html" class="text-primary">Pricing</a></li>
+                <li><a href="blog.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Blog</a></li>
+                <li><a href="contact.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
+                    title="Toggle Theme">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="rtl-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                    title="RTL Toggle">
+                    RTL
+                </button>
+                <div class="relative group hidden sm:block">
+                    <button
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                    </button>
+                </div>
+                <a href="login.html"
+                    class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30">
+                    Login
+                </a>
+                <button id="menu-toggle" class="lg:hidden p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-40 pb-24 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Flexible Plans</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold font-outfit mt-2 mb-6">Choose Your <span
+                        class="text-primary italic">Safety</span> Plan.</h1>
+                <p class="text-lg text-gray-500 dark:text-gray-400">Scale your fire safety management as your business
+                    grows. No hidden fees, just pure protection.</p>
+
+                <div class="mt-10 flex items-center justify-center gap-4">
+                    <span class="font-bold">Monthly</span>
+                    <button class="w-14 h-8 bg-gray-200 dark:bg-gray-700 rounded-full p-1 relative transition-colors">
+                        <div class="w-6 h-6 bg-primary rounded-full shadow-md transition-transform"></div>
+                    </button>
+                    <span class="text-gray-400">Yearly <span class="text-primary text-xs font-bold">(Save
+                            20%)</span></span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch pt-12">
+                <!-- Basic -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <img src="assets/images/basic_safety.png" alt="Basic Safety"
+                        class="w-full h-48 object-cover rounded-2xl mb-8">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Basic Safety</h3>
+                        <p class="text-gray-500 text-sm mb-6 uppercase font-bold tracking-widest">Small Business</p>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold">$</span>
+                            <span class="text-6xl font-extrabold">49</span>
+                            <span class="text-gray-500 font-medium">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> 1 Building Location
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Annual Extinguisher Check
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Basic Compliance Portal
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Email Support
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300 dark:text-gray-600 line-through">
+                            Advanced Reporting
+                        </li>
+                    </ul>
+                    <a href="register.html"
+                        class="w-full py-4 text-center rounded-2xl border-2 border-gray-100 dark:border-gray-700 font-bold hover:border-primary hover:text-primary transition-all">Get
+                        Started</a>
+                </div>
+
+                <!-- Professional -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border-4 border-primary shadow-2xl flex flex-col relative scale-105 z-10 hover:shadow-primary/20 transition-all duration-300">
+                    <div
+                        class="absolute -top-5 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-xs font-bold rounded-full uppercase tracking-widest">
+                        Most Popular</div>
+                    <img src="assets/images/pro_compliance.png" alt="Pro Compliance"
+                        class="w-full h-48 object-cover rounded-2xl mb-8">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Pro Compliance</h3>
+                        <p class="text-gray-500 text-sm mb-6 uppercase font-bold tracking-widest">Enterprise Ready</p>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold">$</span>
+                            <span class="text-6xl font-extrabold">129</span>
+                            <span class="text-gray-500 font-medium">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Up to 5 Locations
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Quarterly System Testing
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Advanced Analytics Dashboard
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Priority Email & Phone
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Digital NFPA Certificates
+                        </li>
+                    </ul>
+                    <a href="register.html"
+                        class="w-full py-4 text-center rounded-2xl bg-primary text-white font-bold hover:bg-primary-dark transition-all shadow-xl shadow-primary/30">Select
+                        Pro</a>
+                </div>
+
+                <!-- Ultimate -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <img src="assets/images/custom_safety.png" alt="Custom Safety"
+                        class="w-full h-48 object-cover rounded-2xl mb-8">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Custom Safety</h3>
+                        <p class="text-gray-500 text-sm mb-6 uppercase font-bold tracking-widest">Industrial Giants</p>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold italic font-outfit">Custom</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Unlimited Locations
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> 24/7 Remote Monitoring
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> Dedicated Account Manager
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> On-site Training Sessions
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-primary"></i> API & Webhook Support
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="w-full py-4 text-center rounded-2xl border-2 border-gray-100 dark:border-gray-700 font-bold hover:border-primary hover:text-primary transition-all">Contact
+                        Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 border-t border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-5xl font-extrabold font-outfit text-center mb-16">Frequently Asked <span
+                    class="text-primary italic">Questions</span>.</h2>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
+                        <span>How often do I need a fire safety inspection?</span>
+                        <i class="fas fa-plus text-primary group-hover:rotate-45 transition-transform"></i>
+                    </button>
+                    <div class="mt-4 text-gray-500 leading-relaxed">Most commercial buildings require an annual
+                        inspection for extinguishers and alarm systems, though some systems like sprinklers may require
+                        quarterly checks according to local fire codes.</div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
+                        <span>Can I manage multiple buildings under one account?</span>
+                        <i class="fas fa-plus text-primary group-hover:rotate-45 transition-transform"></i>
+                    </button>
+                    <div class="mt-4 text-gray-500 leading-relaxed">Yes! Our Professional and Ultimate plans allow for
+                        multi-site management, where you can see all your locations' compliance status from a single
+                        unified dashboard.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                class="text-primary">Guard</span></span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                        life safety
+                        management solutions since 2010. Protecting what matters most.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-primary transition-colors">Latest News</a></li>
+                        <li><a href="404.html" class="hover:text-primary transition-colors">Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service-details.html?service=alarms"
+                                class="hover:text-primary transition-colors">Fire Alarms</a>
+                        </li>
+                        <li><a href="service-details.html?service=sprinkler"
+                                class="hover:text-primary transition-colors">Sprinkler
+                                Systems</a></li>
+                        <li><a href="service-details.html?service=lighting"
+                                class="hover:text-primary transition-colors">Emergency
+                                Lights</a></li>
+                        <li><a href="service-details.html?service=audits"
+                                class="hover:text-primary transition-colors">Safety
+                                Audits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
+                            <span>123 Safety Ave, Tech City, ST 54321</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>support@pyroguard.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                    Reserved.</p>
+                <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-500">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <span class="text-gray-500">Developed By| <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary transition-colors">Abhivorn Technologies Pvt.Ltd</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Modal -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm hidden transition-all duration-300 translate-x-full">
+        <div
+            class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-800 p-6 shadow-2xl overflow-y-auto">
+            <div class="flex items-center justify-between mb-8">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg">
+                        <i class="fas fa-shield-alt text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold font-outfit">Pyro<span class="text-primary">Guard</span></span>
+                </a>
+                <button id="menu-close" class="p-2">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+
+            <ul class="space-y-6 text-lg font-medium mb-10">
+                <li><a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a></li>
+                <li><a href="about.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About</a></li>
+                <li><a href="services.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Services</a></li>
+                <li><a href="pricing.html" class="text-primary">Pricing</a></li>
+                <li><a href="blog.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Blog</a></li>
+                <li><a href="contact.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+
+            <a href="login.html"
+                class="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl bg-primary text-white font-bold text-center">
+                Login
+            </a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

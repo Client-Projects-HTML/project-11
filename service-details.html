@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | PyroGuard Safety</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 glass">
+        <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                        class="text-primary">Guard</span></span>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 font-medium">
+                <li><a href="index.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Home</a></li>
+                <li><a href="about.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">About</a></li>
+                <li><a href="services.html" class="text-primary">Services</a></li>
+                <li><a href="pricing.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Pricing</a></li>
+                <li><a href="blog.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Blog</a></li>
+                <li><a href="contact.html"
+                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
+                    title="Toggle Theme">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="rtl-toggle"
+                    class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                    title="RTL Toggle">
+                    RTL
+                </button>
+                <div class="relative group hidden sm:block">
+                    <button
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                    </button>
+                </div>
+                <a href="login.html"
+                    class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30">
+                    Login
+                </a>
+                <button id="menu-toggle" class="lg:hidden p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-40 pb-24">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <img id="service-image"
+                        src="https://images.unsplash.com/photo-1599708145610-186580556637?auto=format&fit=crop&q=80&w=1200"
+                        class="w-full rounded-[2rem] mb-12 shadow-2xl" alt="Service Detail">
+                    <h1 id="service-title" class="text-4xl md:text-5xl font-black font-outfit mb-8">Fire Alarm <span
+                            class="text-primary italic">Systems</span> Inspection.</h1>
+                    <p id="service-description" class="text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">
+                        Early detection is the most
+                        critical factor in reducing property damage and saving lives. Our fire alarm system inspections
+                        are thorough, going beyond the basics to ensure every component of your detection network is
+                        optimized and compliant with NFPA 72 standards.</p>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <div
+                            class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                            <h4 class="text-xl font-bold mb-4">Inspection Checklist</h4>
+                            <ul id="service-checklist" class="space-y-3">
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-check-circle text-primary mt-1"></i> Control Panel Functionality
+                                </li>
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-check-circle text-primary mt-1"></i> Smoke & Heat Detector
+                                    Sensitivity</li>
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-check-circle text-primary mt-1"></i> Audio/Visual Notification
+                                    Devices</li>
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-check-circle text-primary mt-1"></i> Remote Signaling Verification
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                            <h4 class="text-xl font-bold mb-4">Benefits</h4>
+                            <ul id="service-benefits" class="space-y-3">
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-shield-alt text-primary mt-1"></i> Professional Liability
+                                    Protection</li>
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-shield-alt text-primary mt-1"></i> Insurance Premium Reductions
+                                </li>
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-shield-alt text-primary mt-1"></i> Zero-Downtime Guarantee</li>
+                                <li class="flex items-start gap-3 text-gray-500"><i
+                                        class="fas fa-shield-alt text-primary mt-1"></i> Digital Compliance Proof</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-3xl font-bold font-outfit mb-6">Service FAQ</h3>
+                    <div class="space-y-4 mb-12">
+                        <div class="p-6 rounded-2xl bg-white dark:bg-gray-800 border-2 border-primary/10">
+                            <p class="font-bold mb-2">Manual Pull Station Checks</p>
+                            <p class="text-gray-500">We verify that every manual pull station is accessible and
+                                functioning correctly within the system loop.</p>
+                        </div>
+                        <div
+                            class="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                            <p class="font-bold mb-2">Battery Backups</p>
+                            <p class="text-gray-500">System backup batteries are load-tested to ensure they provide at
+                                least 24 hours of standby power.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="space-y-10">
+                    <!-- Service List -->
+                    <div class="p-8 rounded-3xl bg-gray-900 text-white">
+                        <h4 class="text-xl font-bold mb-6 border-b border-white/10 pb-4">Our Services</h4>
+                        <ul class="space-y-4 font-medium">
+                            <li><a href="#"
+                                    class="flex justify-between items-center hover:text-primary transition-colors"><span>Fire
+                                        Extinguishers</span> <i class="fas fa-chevron-right text-xs"></i></a></li>
+                            <li><a href="service-details.html?service=alarms"
+                                    class="flex justify-between items-center hover:text-primary transition-colors"><span>Fire
+                                        Alarm Systems</span> <i class="fas fa-chevron-right text-xs"></i></a></li>
+                            <li><a href="service-details.html?service=sprinkler"
+                                    class="flex justify-between items-center hover:text-primary transition-colors"><span>Sprinkler
+                                        Systems</span> <i class="fas fa-chevron-right text-xs"></i></a></li>
+                            <li><a href="service-details.html?service=lighting"
+                                    class="flex justify-between items-center hover:text-primary transition-colors"><span>Emergency
+                                        Lights</span> <i class="fas fa-chevron-right text-xs"></i></a></li>
+                            <li><a href="service-details.html?service=audits"
+                                    class="flex justify-between items-center text-primary font-bold"><span>Safety
+                                        Audits</span> <i class="fas fa-chevron-right text-xs"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Card -->
+                    <div class="p-8 rounded-[2rem] bg-primary text-white text-center shadow-2xl shadow-primary/20">
+                        <i class="fas fa-headset text-5xl mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-4">Need Help?</h4>
+                        <p class="mb-8 opacity-90">Talk to our experts about your specific building needs.</p>
+                        <a href="contact.html"
+                            class="block w-full py-4 bg-white text-primary rounded-2xl font-black hover:bg-gray-100 transition-all">Contact
+                            Us Now</a>
+                    </div>
+
+                    <!-- Download Brochure -->
+                    <div class="p-8 rounded-3xl border-2 border-dashed border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-red-100 dark:bg-red-900/30 text-primary flex items-center justify-center rounded-xl">
+                                <i class="fas fa-file-pdf text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Service Guide</h5>
+                                <p class="text-xs text-gray-500">PDF, 2.4 MB</p>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="mt-6 inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">Download
+                            Brochure <i class="fas fa-download text-xs"></i></a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                class="text-primary">Guard</span></span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                        life safety
+                        management solutions since 2010. Protecting what matters most.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-primary transition-colors">Latest News</a></li>
+                        <li><a href="404.html" class="hover:text-primary transition-colors">Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service-details.html?service=alarms"
+                                class="hover:text-primary transition-colors">Fire Alarms</a>
+                        </li>
+                        <li><a href="service-details.html?service=sprinkler"
+                                class="hover:text-primary transition-colors">Sprinkler
+                                Systems</a></li>
+                        <li><a href="service-details.html?service=lighting"
+                                class="hover:text-primary transition-colors">Emergency
+                                Lights</a></li>
+                        <li><a href="service-details.html?service=audits"
+                                class="hover:text-primary transition-colors">Safety
+                                Audits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
+                            <span>123 Safety Ave, Tech City, ST 54321</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>support@pyroguard.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                    Reserved.</p>
+                <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-500">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <span class="text-gray-500">Developed By| <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary transition-colors">Abhivorn Technologies Pvt.Ltd</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceType = urlParams.get('service') || 'alarms'; // Default to alarms
+
+            const services = {
+                'alarms': {
+                    title: 'Fire Alarm <span class="text-primary italic">Systems</span> Inspection.',
+                    description: 'Early detection is the most critical factor in reducing property damage and saving lives. Our fire alarm system inspections are thorough, going beyond the basics to ensure every component of your detection network is optimized and compliant with NFPA 72 standards.',
+                    image: 'https://images.unsplash.com/photo-1599708145610-186580556637?auto=format&fit=crop&q=80&w=1200',
+                    checklist: [
+                        'Control Panel Functionality',
+                        'Smoke & Heat Detector Sensitivity',
+                        'Audio/Visual Notification Devices',
+                        'Remote Signaling Verification'
+                    ],
+                    benefits: [
+                        'Professional Liability Protection',
+                        'Insurance Premium Reductions',
+                        'Zero-Downtime Guarantee',
+                        'Digital Compliance Proof'
+                    ]
+                },
+                'sprinkler': {
+                    title: 'Sprinkler <span class="text-primary italic">Systems</span> Maintenance.',
+                    description: 'Your first line of defense against fire spread. We perform rigorous testing on wet, dry, pre-action, and deluge systems to ensure they will activate instantly when needed most, adhering to NFPA 25 requirements.',
+                    image: 'assets/images/service_sprinkler_alarm.png',
+                    checklist: [
+                        'Main Drain Flow Testing',
+                        'Gauge Calibration Checks',
+                        'Pipe Corrosion Inspection',
+                        'Sprinkler Head Clearance Verification'
+                    ],
+                    benefits: [
+                        'Property Loss Minimization',
+                        'Code Compliance Assurance',
+                        'Extended System Lifespan',
+                        'Reduced False Activations'
+                    ]
+                },
+                'lighting': {
+                    title: 'Emergency <span class="text-primary italic">Lighting</span> Solutions.',
+                    description: 'Illuminating the path to safety. Our comprehensive emergency lighting and exit sign inspections ensure that during a power outage, your occupants can safely evacuate the building.',
+                    image: 'assets/images/service_lighting_training.png',
+                    checklist: [
+                        '90-Minute Battery Load Test',
+                        'Bulb & Lamp Functionality',
+                        'Charging Circuit Verification',
+                        'Unit Alignment & Positioning'
+                    ],
+                    benefits: [
+                        'Enhanced Occupant Safety',
+                        'AHJ Inspection Readiness',
+                        'Battery Life Optimization',
+                        'Clear Evacuation Routes'
+                    ]
+                },
+                'audits': {
+                    title: 'Safety <span class="text-primary italic">Audits</span> & Consulting.',
+                    description: 'Proactive risk identification before an incident occurs. Our certified safety experts conduct comprehensive walkthroughs to identify hazards, code violations, and gaps in your current safety protocols.',
+                    image: 'assets/images/service_compliance.png',
+                    checklist: [
+                        'Hazard Identification Walkthrough',
+                        'Fire Extinguisher Placement Review',
+                        'Egress Route Analysis',
+                        'OSHA Compliance Reporting'
+                    ],
+                    benefits: [
+                        'Reduced Liability Risk',
+                        'Improved Safety Culture',
+                        'Actionable Correction Plans',
+                        'Worker Compensation Savings'
+                    ]
+                }
+            };
+
+            const data = services[serviceType] || services['alarms'];
+
+            // Update DOM
+            document.getElementById('service-title').innerHTML = data.title;
+            document.getElementById('service-description').textContent = data.description;
+            document.getElementById('service-image').src = data.image;
+
+            // Populating Lists
+            const checklistContainer = document.getElementById('service-checklist');
+            checklistContainer.innerHTML = data.checklist.map(item => `
+                <li class="flex items-start gap-3 text-gray-500"><i
+                        class="fas fa-check-circle text-primary mt-1"></i> ${item}
+                </li>`).join('');
+
+            const benefitsContainer = document.getElementById('service-benefits');
+            benefitsContainer.innerHTML = data.benefits.map(item => `
+                <li class="flex items-start gap-3 text-gray-500"><i
+                        class="fas fa-shield-alt text-primary mt-1"></i> ${item}
+                </li>`).join('');
+
+            // Update Sidebar Active State (Optional visual flair)
+            const links = document.querySelectorAll('aside a');
+            links.forEach(link => {
+                if (link.href.includes(serviceType)) {
+                    link.classList.add('text-primary', 'font-bold');
+                    link.classList.remove('hover:text-primary');
+                } else {
+                    link.classList.remove('text-primary', 'font-bold');
+                    link.classList.add('hover:text-primary');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

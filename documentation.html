@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | PyroGuard API & Platform</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+    <div class="flex min-h-screen">
+        <!-- Documentation Sidebar -->
+        <aside
+            class="hidden lg:block w-72 h-screen sticky top-0 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-y-auto p-10">
+            <a href="index.html" class="flex items-center gap-2 mb-10">
+                <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold font-outfit tracking-tight">Pyro<span
+                        class="text-primary">Guard</span></span>
+            </a>
+
+            <div class="space-y-10">
+                <div>
+                    <h5 class="text-xs font-black uppercase tracking-widest text-gray-400 mb-6">Getting Started</h5>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#" class="text-primary">Introduction</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Quick Installation</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Architecture</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs font-black uppercase tracking-widest text-gray-400 mb-6">Core Concepts</h5>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Asset Management</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Compliance Rules</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Sensor Integration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs font-black uppercase tracking-widest text-gray-400 mb-6">API Reference</h5>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Authentication</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Endpoints Overview</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-primary">Webhooks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Documentation Content -->
+        <main class="flex-1 p-10 md:p-20 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto">
+                <header class="mb-16">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase">Version 2.4.0</span>
+                    <h1 class="text-4xl md:text-5xl font-black font-outfit mt-4 mb-6">Introduction to PyroGuard AI</h1>
+                    <p class="text-xl text-gray-500 dark:text-gray-400">Welcome to the PyroGuard developer
+                        documentation. Our platform provides the most advanced API for building fire safety and life
+                        safety management systems.</p>
+                </header>
+
+                <div class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 mb-20">
+                    <p>PyroGuard is a cloud-native platform designed to aggregate, analyze, and manage safety data from
+                        industrial-grade sensors. This documentation will guide you through connecting your first
+                        building, setting up automated compliance audits, and integrating with our Global Safety
+                        Network.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Why use PyroGuard?</h3>
+                    <p>Our infrastructure is designed for 100% reliability. We use a multi-region deployment strategy to
+                        ensure that your safety data is never offline, even during massive network outages.</p>
+
+                    <div class="grid md:grid-cols-2 gap-8 my-12">
+                        <div
+                            class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-black text-gray-900 dark:text-white mb-4">REST API First</h4>
+                            <p class="text-sm">Everything you can do in our dashboard can be done programmatically via
+                                our robust API.</p>
+                        </div>
+                        <div
+                            class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-black text-gray-900 dark:text-white mb-4">Webhook Ready</h4>
+                            <p class="text-sm">Receive real-time alerts for system faults, violations, and certification
+                                approvals.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Example API Call</h3>
+                    <div class="relative group">
+                        <div class="absolute top-4 right-4 text-xs font-bold text-gray-500 flex items-center gap-2">
+                            <i class="fas fa-copy cursor-pointer hover:text-primary transition-colors"></i>
+                            <span>COPY</span>
+                        </div>
+                        <pre
+                            class="bg-gray-900 text-green-400 p-8 rounded-3xl overflow-x-auto text-sm font-mono shadow-2xl"><code>curl -X GET "https://api.pyroguard.com/v1/assets/status" \
+     -H "Authorization: Bearer YOUR_API_KEY" \
+     -H "Content-Type: application/json"</code></pre>
+                    </div>
+
+                    <div
+                        class="mt-20 p-8 rounded-3xl bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/20">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-exclamation-circle text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-primary mb-2">Important Security Note</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Never share your API keys or
+                                    hardcode them in frontend applications. Use environment variables and server-side
+                                    authentication for all production integrations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer
+                    class="pt-12 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center text-sm font-bold text-gray-400 group">
+                    <a href="#" class="hover:text-primary transition-colors flex items-center gap-2"><i
+                            class="fas fa-arrow-left text-xs"></i> Architecture</a>
+                    <a href="#" class="hover:text-primary transition-colors flex items-center gap-2">Quick Installation
+                        <i class="fas fa-arrow-right text-xs"></i></a>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

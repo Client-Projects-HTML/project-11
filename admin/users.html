@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients & Users | PyroGuard Admin</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+    <div class="flex min-h-screen">
+        <aside id="admin-sidebar"
+            class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 z-50 transition-all duration-300 lg:translate-x-0 -translate-x-full">
+            <div class="flex flex-col h-full">
+                <div class="p-6">
+                    <a href="../index.html" class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shadow-lg"><i
+                                class="fas fa-shield-alt text-white text-xs"></i></div>
+                        <span class="text-xl font-bold font-outfit tracking-tighter uppercase">Pyro<span
+                                class="text-primary italic">Guard</span></span>
+                    </a>
+                </div>
+                <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
+                    <a href="index.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-th-large w-5"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="compliance.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-clipboard-check w-5"></i>
+                        <span>Compliance</span>
+                    </a>
+                    <a href="scheduling.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-calendar-alt w-5"></i>
+                        <span>Scheduling</span>
+                    </a>
+                    <a href="violations.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-exclamation-triangle w-5"></i>
+                        <span>Violations</span>
+                    </a>
+                    <a href="users.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold">
+                        <i class="fas fa-users w-5"></i>
+                        <span>Clients</span>
+                    </a>
+                    <a href="messages.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-envelope w-5"></i>
+                        <span>Messages</span>
+                    </a>
+                    <a href="settings.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-cog w-5"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+                <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+                    <a href="../login.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-medium">
+                        <i class="fas fa-sign-out-alt w-5"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 lg:ml-64 min-h-screen">
+            <header
+                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                        <h1 class="text-xl font-bold font-outfit">Client Management</h1>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button id="theme-toggle"
+                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
+                            <i class="fas fa-moon dark:hidden"></i>
+                            <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                        </button>
+                        <button id="rtl-toggle"
+                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase">
+                            RTL
+                        </button>
+                        <div class="relative group">
+                            <button
+                                class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                                <i class="fas fa-bell"></i>
+                                <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                            </button>
+                        </div>
+                        <button
+                            class="hidden md:flex px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-bold shadow-lg shadow-primary/20">Add
+                            New Client</button>
+                        <div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
+                            <div class="text-right hidden sm:block">
+                                <p class="text-sm font-bold">Johnathan Doe</p>
+                                <p class="text-xs text-gray-500">Admin</p>
+                            </div>
+                            <img src="https://i.pravatar.cc/150?u=inspector"
+                                class="w-10 h-10 rounded-xl border border-gray-200" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-6">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm overflow-hidden">
+                    <div class="p-6 border-b border-gray-100">
+                        <div class="flex flex-col md:flex-row gap-4 justify-between">
+                            <div class="flex items-center gap-2">
+                                <button onclick="filterUsers('all')" data-filter="all"
+                                    class="filter-btn bg-gray-100 px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer">All
+                                    (3)</button>
+                                <button onclick="filterUsers('active')" data-filter="active"
+                                    class="filter-btn text-gray-400 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer">Active</button>
+                                <button onclick="filterUsers('inactive')" data-filter="inactive"
+                                    class="filter-btn text-gray-400 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer">Inactive</button>
+                            </div>
+                            <input type="text" placeholder="Filter by name, email..."
+                                class="px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded-xl text-sm border-none focus:ring-1 focus:ring-primary outline-none">
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 text-[10px] uppercase font-bold">
+                                <tr>
+                                    <th class="px-6 py-4">Client</th>
+                                    <th class="px-6 py-4">Subscription</th>
+                                    <th class="px-6 py-4">Building Counts</th>
+                                    <th class="px-6 py-4">Last Activity</th>
+                                    <th class="px-6 py-4 text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700/50">
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?u=c1" class="w-10 h-10 rounded-xl">
+                                            <div>
+                                                <p class="font-bold">Global Logistics Inc.</p>
+                                                <p class="text-xs text-gray-400">admin@globallogistics.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm">Pro Compliance</td>
+                                    <td class="px-6 py-4 text-sm font-bold">24 Buildings</td>
+                                    <td class="px-6 py-4 text-sm text-gray-400">2 Hours ago</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="bg-green-100 text-green-600 px-2 py-0.5 rounded-full text-[10px] font-bold">ACTIVE</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?u=c2" class="w-10 h-10 rounded-xl">
+                                            <div>
+                                                <p class="font-bold">Tech Plaza B</p>
+                                                <p class="text-xs text-gray-400">facilities@techplazab.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm">Basic Safety</td>
+                                    <td class="px-6 py-4 text-sm font-bold">1 Building</td>
+                                    <td class="px-6 py-4 text-sm text-gray-400">12 Oct 2025</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="bg-amber-100 text-amber-600 px-2 py-0.5 rounded-full text-[10px] font-bold">PENDING</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?u=c3" class="w-10 h-10 rounded-xl">
+                                            <div>
+                                                <p class="font-bold">Old Town Warehouse</p>
+                                                <p class="text-xs text-gray-400">contact@oldtown.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm">Basic Safety</td>
+                                    <td class="px-6 py-4 text-sm font-bold">3 Buildings</td>
+                                    <td class="px-6 py-4 text-sm text-gray-400">01 Jan 2024</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-[10px] font-bold">INACTIVE</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- main js -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('admin-sidebar');
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar?.classList.toggle('-translate-x-full');
+        });
+
+        // Filter Logic
+        function filterUsers(status) {
+            // Update Tab Styles
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                // Reset to default style
+                btn.className = 'filter-btn text-gray-400 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer';
+                if (btn.dataset.filter === status) {
+                    // Set active style
+                    btn.className = 'filter-btn bg-gray-100 px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer';
+                }
+            });
+
+            // Filter Table Rows
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const rowStatusElem = row.querySelector('td:nth-child(5) span');
+                if (rowStatusElem) {
+                    const rowStatus = rowStatusElem.innerText.trim().toUpperCase();
+                    if (status === 'all') {
+                        row.style.display = '';
+                    } else if (status === 'active' && rowStatus === 'ACTIVE') {
+                        row.style.display = '';
+                    } else if (status === 'inactive' && rowStatus === 'INACTIVE') {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Search Functionality
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput?.addEventListener('keyup', (e) => {
+            const term = e.target.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const clientName = row.querySelector('td:nth-child(1) .font-bold')?.innerText.toLowerCase() || '';
+                const clientEmail = row.querySelector('td:nth-child(1) .text-gray-400')?.innerText.toLowerCase() || '';
+
+                if (clientName.includes(term) || clientEmail.includes(term)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+
+</html>

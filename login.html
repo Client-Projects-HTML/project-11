@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | PyroGuard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        <!-- Back to Home -->
+        <div class="mb-8">
+            <a href="index.html"
+                class="flex items-center gap-2 text-gray-500 hover:text-primary transition-all font-bold">
+                <i class="fas fa-arrow-left text-sm"></i>
+                <span>Back to Home</span>
+            </a>
+        </div>
+
+        <div class="max-w-md w-full">
+            <!-- Brand -->
+            <div class="text-center mb-10">
+                <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+                    <div
+                        class="w-12 h-12 bg-primary flex items-center justify-center rounded-2xl shadow-xl shadow-primary/30">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <span class="text-4xl font-extrabold font-outfit tracking-tight">Pyro<span
+                            class="text-primary">Guard</span></span>
+                </a>
+                <h2 class="text-2xl font-bold font-outfit mt-4">Welcome Back!</h2>
+                <p class="text-gray-500">Access your safety dashboard and manage compliance.</p>
+            </div>
+
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] shadow-2xl border border-gray-100 dark:border-gray-700">
+                <form action="admin/index.html" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Email
+                            Address</label>
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="email" placeholder="name@company.com"
+                                class="w-full pl-14 pr-4 py-5 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-gray-300">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Password</label>
+                            <a href="#" class="text-xs font-bold text-primary hover:underline">Forgot password?</a>
+                        </div>
+                        <div class="relative">
+                            <i class="fas fa-lock absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="password" placeholder="••••••••"
+                                class="w-full pl-14 pr-4 py-5 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-gray-300">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 py-2">
+                        <input type="checkbox" id="remember"
+                            class="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary">
+                        <label for="remember" class="text-sm font-bold text-gray-500">Keep me logged in</label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-xl hover:bg-primary-dark transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-3">
+                        Sign In <i class="fas fa-arrow-right text-sm"></i>
+                    </button>
+
+                    <!-- Login Types -->
+                    <div class="pt-2 grid grid-cols-2 gap-4">
+                        <a href="admin/index.html"
+                            class="flex items-center justify-center gap-3 py-4 rounded-2xl bg-gray-50 dark:bg-gray-700/50 border border-transparent hover:border-primary/30 hover:text-primary transition-all font-bold text-sm">
+                            <i class="fas fa-user-shield text-lg text-primary"></i> Admin Login
+                        </a>
+                        <a href="client/index.html"
+                            class="flex items-center justify-center gap-3 py-4 rounded-2xl bg-gray-50 dark:bg-gray-700/50 border border-transparent hover:border-primary/30 hover:text-primary transition-all font-bold text-sm">
+                            <i class="fas fa-user text-lg text-primary"></i> Client Login
+                        </a>
+                    </div>
+                </form>
+
+                <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700 text-center">
+                    <p class="text-gray-500 font-medium">Don't have an account yet? <a href="register.html"
+                            class="text-primary font-bold hover:underline">Create Account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

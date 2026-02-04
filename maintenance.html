@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance | PyroGuard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="text-center max-w-lg">
+            <div
+                class="w-32 h-32 bg-amber-100 dark:bg-amber-900/30 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-10 shadow-2xl">
+                <i class="fas fa-tools text-5xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black font-outfit mb-6">Pardon the <span
+                    class="text-primary italic">Interruption</span>.</h1>
+            <p class="text-lg text-gray-500 dark:text-gray-400 mb-10 leading-relaxed">We're performing a scheduled
+                system upgrade to enhance our safety intelligence network. We'll be back online within the hour.</p>
+
+            <div class="flex flex-col items-center gap-6">
+                <div class="w-full max-w-xs bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+                    <div class="bg-primary h-full rounded-full animate-[progress_2s_ease-in-out_infinite]"
+                        style="width: 70%"></div>
+                </div>
+                <p class="text-sm font-bold text-gray-400 uppercase tracking-widest">Upgrade In Progress: 70%</p>
+            </div>
+
+            <div class="mt-16 flex justify-center gap-8">
+                <a href="index.html"
+                    class="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 font-bold"><i
+                        class="fas fa-home"></i> Home</a>
+                <a href="contact.html"
+                    class="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 font-bold"><i
+                        class="fas fa-info-circle"></i> Support Status</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes progress {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</body>
+
+</html>

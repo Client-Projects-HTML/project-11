@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Soon | PyroGuard AI</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-[#0F172A] text-white flex items-center justify-center min-h-screen relative overflow-hidden">
+
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px]"></div>
+
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="inline-flex items-center gap-2 mb-12">
+            <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-xl">
+                <i class="fas fa-shield-alt text-white"></i>
+            </div>
+            <span class="text-2xl font-bold font-outfit uppercase tracking-tighter">Pyro<span
+                    class="text-primary italic">Guard</span></span>
+        </div>
+
+        <h1 class="text-5xl md:text-8xl font-black font-outfit mb-8 tracking-tight">Something Big Is <br> <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-400 italic">Igniting
+                Soon.</span></h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-16">We're finalizing our next-generation AI modules for
+            industrial fire safety. Be the first to know when we go live.</p>
+
+        <!-- Countdown -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-20 text-center">
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                <div class="text-4xl md:text-6xl font-black mb-1">12</div>
+                <div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Days</div>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                <div class="text-4xl md:text-6xl font-black mb-1">18</div>
+                <div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Hours</div>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                <div class="text-4xl md:text-6xl font-black mb-1">45</div>
+                <div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Minutes</div>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                <div class="text-4xl md:text-6xl font-black mb-1">29</div>
+                <div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Seconds</div>
+            </div>
+        </div>
+
+        <!-- Notify Form -->
+        <div class="max-w-md mx-auto">
+            <div class="flex flex-col sm:flex-row gap-4 p-2 rounded-[2rem] bg-white/5 border border-white/10">
+                <input type="email" placeholder="Enter your email address"
+                    class="flex-1 bg-transparent border-none px-6 py-4 focus:ring-0 outline-none text-white text-lg">
+                <button
+                    class="px-8 py-4 bg-white text-gray-900 font-bold rounded-[1.5rem] hover:bg-primary hover:text-white transition-all">Notify
+                    Me</button>
+            </div>
+        </div>
+
+        <div class="mt-20 flex justify-center gap-8">
+            <a href="#" class="text-gray-500 hover:text-white transition-colors"><i
+                    class="fab fa-twitter text-xl"></i></a>
+            <a href="#" class="text-gray-500 hover:text-white transition-colors"><i
+                    class="fab fa-linkedin text-xl"></i></a>
+            <a href="#" class="text-gray-500 hover:text-white transition-colors"><i
+                    class="fab fa-instagram text-xl"></i></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

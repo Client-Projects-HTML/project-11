@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Monitoring | PyroGuard Admin</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                        },
+                        secondary: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar (Same as admin/index.html) -->
+        <aside id="admin-sidebar"
+            class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 z-50 transition-all duration-300 lg:translate-x-0 -translate-x-full">
+            <!-- Sidebar content... -->
+            <div class="flex flex-col h-full">
+                <div class="p-6">
+                    <a href="../index.html" class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold font-outfit tracking-tight">Pyro<span
+                                class="text-primary">Guard</span></span>
+                    </a>
+                </div>
+
+                <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
+                    <a href="index.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-th-large w-5"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="compliance.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold">
+                        <i class="fas fa-clipboard-check w-5"></i>
+                        <span>Compliance</span>
+                    </a>
+                    <a href="scheduling.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-calendar-alt w-5"></i>
+                        <span>Scheduling</span>
+                    </a>
+                    <a href="violations.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-exclamation-triangle w-5"></i>
+                        <span>Violations</span>
+                    </a>
+                    <a href="users.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-users w-5"></i>
+                        <span>Clients</span>
+                    </a>
+                    <a href="messages.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-envelope w-5"></i>
+                        <span>Messages</span>
+                    </a>
+                    <a href="settings.html"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-cog w-5"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="flex-1 lg:ml-64 min-h-screen">
+            <header
+                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                        <h1 class="text-xl font-bold font-outfit">Compliance Monitoring</h1>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <button id="theme-toggle"
+                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
+                            <i class="fas fa-moon dark:hidden"></i>
+                            <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                        </button>
+                        <button id="rtl-toggle"
+                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase">
+                            RTL
+                        </button>
+                        <div class="relative group">
+                            <button
+                                class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                                <i class="fas fa-bell"></i>
+                                <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                            </button>
+                        </div>
+                        <button
+                            class="hidden md:flex px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-bold shadow-lg shadow-primary/20 items-center gap-2">
+                            <i class="fas fa-file-export"></i> Export Report
+                        </button>
+                        <div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
+                            <div class="text-right hidden sm:block">
+                                <p class="text-sm font-bold">Johnathan Doe</p>
+                                <p class="text-xs text-gray-500">Admin</p>
+                            </div>
+                            <img src="https://i.pravatar.cc/150?u=inspector"
+                                class="w-10 h-10 rounded-xl border border-gray-200" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-6">
+                <!-- Compliance Map/Grid -->
+                <div class="grid lg:grid-cols-4 gap-6 mb-8 text-center">
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 rounded-full border-8 border-green-500 flex items-center justify-center mb-4">
+                            <span class="text-xl font-black">124</span>
+                        </div>
+                        <h4 class="font-bold">Fully Compliant</h4>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-1">Buildings</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 rounded-full border-8 border-orange-400 flex items-center justify-center mb-4">
+                            <span class="text-xl font-black">12</span>
+                        </div>
+                        <h4 class="font-bold">Pending Review</h4>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-1">Buildings</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 rounded-full border-8 border-red-500 flex items-center justify-center mb-4">
+                            <span class="text-xl font-black">3</span>
+                        </div>
+                        <h4 class="font-bold">Non-Compliant</h4>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-1">Buildings</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 rounded-full border-8 border-blue-500 flex items-center justify-center mb-4 text-xs font-bold">
+                            98%</div>
+                        <h4 class="font-bold">Overall Safety</h4>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-1">Global Score</p>
+                    </div>
+                </div>
+
+                <!-- Detailed Building List -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <div
+                        class="p-6 border-b border-gray-100 dark:border-gray-700 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <h3 class="text-lg font-bold font-outfit">Asset Compliance Status</h3>
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                <input type="text" placeholder="Search buildings..."
+                                    class="pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-1 focus:ring-primary outline-none">
+                            </div>
+                            <button
+                                class="p-2.5 rounded-xl border border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
+                                <i class="fas fa-filter text-gray-500"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead
+                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-400 text-[10px] uppercase font-bold">
+                                <tr>
+                                    <th class="px-6 py-4">Building ID</th>
+                                    <th class="px-6 py-4">Structure Name</th>
+                                    <th class="px-6 py-4">Asset Coverage</th>
+                                    <th class="px-6 py-4">Last Inspection</th>
+                                    <th class="px-6 py-4">Next Task</th>
+                                    <th class="px-6 py-4">Compliance Status</th>
+                                    <th class="px-6 py-4 text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700/50">
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-bold">#BLD-1024</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-[10px]">
+                                                NY</div>
+                                            <span class="font-medium">Empire Tech Towers</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm">942 Assets</td>
+                                    <td class="px-6 py-4 text-sm">Sept 12, 2025</td>
+                                    <td class="px-6 py-4 text-sm">Alarm Testing</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="flex items-center gap-2 text-green-500 font-bold text-xs uppercase tracking-tighter">
+                                            <i class="fas fa-check-circle"></i> Compliant
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center">
+                                        <button class="text-primary hover:underline text-xs font-bold">View
+                                            Assets</button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-bold">#BLD-4521</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-[10px]">
+                                                SF</div>
+                                            <span class="font-medium">Golden Gate Logistics</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm">1,520 Assets</td>
+                                    <td class="px-6 py-4 text-sm">Oct 05, 2025</td>
+                                    <td class="px-6 py-4 text-sm text-red-500 font-bold">Violation Fix</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="flex items-center gap-2 text-red-500 font-bold text-xs uppercase tracking-tighter">
+                                            <i class="fas fa-times-circle"></i> Expired
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center">
+                                        <button class="text-primary hover:underline text-xs font-bold">View
+                                            Assets</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- main js -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('admin-sidebar');
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar?.classList.toggle('-translate-x-full');
+        });
+
+        // Search Functionality
+        const searchInput = document.querySelector('input[type="text"]');
+        const tableRows = document.querySelectorAll('tbody tr');
+
+        searchInput?.addEventListener('keyup', (e) => {
+            const term = e.target.value.toLowerCase();
+            tableRows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                if (text.includes(term)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // View Assets Button Handler
+        const viewButtons = document.querySelectorAll('button.text-primary');
+        viewButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const row = e.target.closest('tr');
+                const buildingName = row.querySelector('td:nth-child(2) span').innerText;
+                alert(`Viewing assets for ${buildingName}`);
+            });
+        });
+
+        // Filter Button Handler
+        const filterBtn = document.querySelector('.fa-filter').parentElement;
+        filterBtn?.addEventListener('click', () => {
+            alert('Filter options would appear here.');
+        });
+    </script>
+</body>
+
+</html>
