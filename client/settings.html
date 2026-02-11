@@ -108,7 +108,7 @@
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
-                            
+
                             <a href="../index.html" class="flex items-center gap-2 lg:hidden">
                                 <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg shadow-lg">
                                     <i class="fas fa-shield-alt text-white text-sm"></i>
@@ -119,6 +119,47 @@
                             </a>
                         </div>
                         <div class="flex items-center gap-1.5 sm:gap-2 md:gap-4 shrink-0 ml-auto">
+                            <!-- Notification -->
+                            <div class="relative">
+                                <button id="notification-btn"
+                                    class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
+                                    <i class="fas fa-bell"></i>
+                                    <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                                </button>
+                                <!-- Notification Dropdown -->
+                                <div id="notification-dropdown"
+                                    class="absolute -right-20 sm:right-0 top-full mt-4 w-[240px] sm:w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 hidden z-50 transform origin-top-right transition-all">
+                                    <div
+                                        class="p-4 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                                        <h3 class="font-bold font-outfit text-gray-900 dark:text-white">Notifications
+                                        </h3>
+                                        <button class="text-xs text-primary font-bold hover:underline">Mark all
+                                            read</button>
+                                    </div>
+                                    <div class="max-h-[300px] overflow-y-auto">
+                                        <a href="#"
+                                            class="flex items-start gap-3 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center shrink-0">
+                                                <i class="fas fa-check-circle text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900 dark:text-white">Report
+                                                    Available</p>
+                                                <p class="text-xs text-gray-500 mt-1">Monthly maintenance report for
+                                                    September is ready.
+                                                </p>
+                                                <p class="text-[10px] text-gray-400 mt-1">5 hours ago</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="p-3 border-t border-gray-100 dark:border-gray-700 text-center">
+                                        <a href="notifications.html"
+                                            class="text-xs font-bold text-primary hover:underline">View All
+                                            Notifications</a>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- RTL Toggle -->
                             <button id="rtl-toggle"
                                 class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
@@ -141,10 +182,11 @@
                                 <img src="https://i.pravatar.cc/150?u=client"
                                     class="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200" alt="Profile">
                             </div>
-                        
+
                             <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
                                 <i class="fas fa-bars text-xl"></i>
-                            </button></div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </header>

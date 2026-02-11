@@ -120,7 +120,7 @@
                                 </button>
                                 <!-- Notification Dropdown -->
                                 <div id="notification-dropdown"
-                                    class="absolute right-0 top-full mt-4 w-[240px] sm:w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 hidden z-50 transform origin-top-right transition-all">
+                                    class="absolute -right-20 sm:right-0 top-full mt-4 w-[240px] sm:w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 hidden z-50 transform origin-top-right transition-all">
                                     <div
                                         class="p-4 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
                                         <h3 class="font-bold font-outfit text-gray-900 dark:text-white">Notifications
@@ -129,7 +129,35 @@
                                             read</button>
                                     </div>
                                     <div class="max-h-[300px] overflow-y-auto">
-                                        <p class="p-4 text-sm text-gray-500 text-center">No new notifications</p>
+                                        <a href="#"
+                                            class="flex items-start gap-3 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors border-b border-gray-50 dark:border-gray-700/50">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center shrink-0">
+                                                <i class="fas fa-calendar-check text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900 dark:text-white">Inspection
+                                                    Confirmed</p>
+                                                <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
+                                                    scheduled for Oct
+                                                    28.</p>
+                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                            </div>
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-start gap-3 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors border-b border-gray-50 dark:border-gray-700/50">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center shrink-0">
+                                                <i class="fas fa-exclamation-triangle text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900 dark:text-white">New Safety
+                                                    Alert</p>
+                                                <p class="text-xs text-gray-500 mt-1">Critical violation detected at
+                                                    Tech Plaza B.</p>
+                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="p-3 border-t border-gray-100 dark:border-gray-700 text-center">
                                         <a href="notifications.html"
@@ -165,10 +193,6 @@
                             </div>
 
                             <!-- Sidebar Toggle (Mobile) -->
-                            <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
-                                <i class="fas fa-bars text-xl"></i>
-                            </button>
-
                             <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
                                 <i class="fas fa-bars text-xl"></i>
                             </button>

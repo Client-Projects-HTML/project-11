@@ -131,7 +131,7 @@
                                 </button>
                                 <!-- Notification Dropdown -->
                                 <div id="notification-dropdown"
-                                    class="absolute right-0 top-full mt-4 w-[240px] sm:w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 hidden z-50 transform origin-top-right transition-all">
+                                    class="absolute -right-20 sm:right-0 top-full mt-4 w-[240px] sm:w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 hidden z-50 transform origin-top-right transition-all">
                                     <div
                                         class="p-4 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
                                         <h3 class="font-bold font-outfit text-gray-900 dark:text-white">Notifications
@@ -157,7 +157,8 @@
                                         </a>
                                     </div>
                                     <div class="p-3 border-t border-gray-100 dark:border-gray-700 text-center">
-                                        <a href="notifications.html" class="text-xs font-bold text-primary hover:underline">View All
+                                        <a href="notifications.html"
+                                            class="text-xs font-bold text-primary hover:underline">View All
                                             Notifications</a>
                                     </div>
                                 </div>
@@ -194,14 +195,18 @@
             <div class="container mx-auto px-6 py-8">
                 <div class="flex items-center justify-between mb-8">
                     <h1 class="text-2xl font-bold font-outfit">Notifications</h1>
-                    <button id="markReadPageBtn" class="text-sm text-primary font-bold hover:underline">Mark all as read</button>
+                    <button id="markReadPageBtn" class="text-sm text-primary font-bold hover:underline">Mark all as
+                        read</button>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
                     <div class="divide-y divide-gray-100 dark:divide-gray-700">
                         <!-- Notification Item -->
-                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center shrink-0">
+                        <div
+                            class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center shrink-0">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
                             <div class="flex-1">
@@ -209,13 +214,16 @@
                                     <h3 class="font-bold text-gray-900 dark:text-white">Inspection Confirmed</h3>
                                     <span class="text-xs text-gray-500">2 mins ago</span>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Skyline Heights lobby inspection scheduled for Oct 28.</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Skyline Heights lobby
+                                    inspection scheduled for Oct 28.</p>
                             </div>
                         </div>
 
                         <!-- Notification Item -->
-                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start bg-blue-50/50 dark:bg-blue-900/10">
-                            <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center shrink-0">
+                        <div
+                            class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start bg-blue-50/50 dark:bg-blue-900/10">
+                            <div
+                                class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center shrink-0">
                                 <i class="fas fa-exclamation-triangle"></i>
                             </div>
                             <div class="flex-1">
@@ -223,13 +231,16 @@
                                     <h3 class="font-bold text-gray-900 dark:text-white">New Safety Alert</h3>
                                     <span class="text-xs text-gray-500">1 hour ago</span>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Minor compliance issue reported in Server Room B.</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Minor compliance issue reported
+                                    in Server Room B.</p>
                             </div>
                         </div>
 
                         <!-- Notification Item -->
-                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center shrink-0">
+                        <div
+                            class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div
+                                class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center shrink-0">
                                 <i class="fas fa-check-circle"></i>
                             </div>
                             <div class="flex-1">
@@ -237,13 +248,16 @@
                                     <h3 class="font-bold text-gray-900 dark:text-white">Report Available</h3>
                                     <span class="text-xs text-gray-500">5 hours ago</span>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Monthly maintenance report for September is ready.</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Monthly maintenance report for
+                                    September is ready.</p>
                             </div>
                         </div>
-                        
-                         <!-- Notification Item -->
-                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center shrink-0">
+
+                        <!-- Notification Item -->
+                        <div
+                            class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div
+                                class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center shrink-0">
                                 <i class="fas fa-user-plus"></i>
                             </div>
                             <div class="flex-1">
@@ -251,17 +265,20 @@
                                     <h3 class="font-bold text-gray-900 dark:text-white">New User Registration</h3>
                                     <span class="text-xs text-gray-500">1 day ago</span>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">John Doe has requested access to the portal.</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">John Doe has requested access
+                                    to the portal.</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="p-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex justify-center">
-                        <button id="loadMorePageBtn" class="text-sm font-bold text-primary hover:underline">Load More</button>
+
+                    <div
+                        class="p-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex justify-center">
+                        <button id="loadMorePageBtn" class="text-sm font-bold text-primary hover:underline">Load
+                            More</button>
                     </div>
                 </div>
             </div>
-    </main>
+        </main>
     </div>
 
     <!-- main js -->
@@ -306,7 +323,7 @@
                     unreadItems.forEach(item => {
                         item.classList.remove('bg-blue-50/50', 'dark:bg-blue-900/10');
                     });
-                    
+
                     // Remove badge from header if present
                     const badge = document.querySelector('#notification-btn .bg-primary');
                     if (badge) badge.classList.add('hidden');
@@ -324,12 +341,12 @@
             const loadMorePageBtn = document.getElementById('loadMorePageBtn');
             if (loadMorePageBtn) {
                 loadMorePageBtn.addEventListener('click', () => {
-                   // Simulate loading
-                   const originalText = loadMorePageBtn.textContent;
-                   loadMorePageBtn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> Loading...';
-                   loadMorePageBtn.disabled = true;
-                   
-                   setTimeout(() => {
+                    // Simulate loading
+                    const originalText = loadMorePageBtn.textContent;
+                    loadMorePageBtn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> Loading...';
+                    loadMorePageBtn.disabled = true;
+
+                    setTimeout(() => {
                         // Create a new notification item
                         const template = `
                         <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start animate-fade-in border-t border-gray-100 dark:border-gray-700">
@@ -344,16 +361,16 @@
                                 <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Platform maintenance scheduled for next weekend.</p>
                             </div>
                         </div>`;
-                        
+
                         // Fix for container selection - look for the specific divide-y container
                         const container = document.querySelector('.overflow-hidden .divide-y');
                         if (container) {
                             container.insertAdjacentHTML('beforeend', template);
                         }
-                        
+
                         loadMorePageBtn.innerHTML = originalText;
                         loadMorePageBtn.disabled = false;
-                   }, 1000);
+                    }, 1000);
                 });
             }
         });
