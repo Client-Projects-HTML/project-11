@@ -7,7 +7,7 @@
     <title>Messages | PyroGuard Admin</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -88,42 +88,59 @@
             </div>
         </aside>
 
-        <main class="flex-1 lg:ml-64 min-h-screen flex flex-col bg-white dark:bg-gray-900 overflow-hidden">
+        <main class="flex-1 lg:ml-64 min-h-screen flex flex-col bg-white dark:bg-gray-900 min-w-0 overflow-x-hidden">
             <header
-                class="p-6 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between shrink-0">
-                <div class="flex items-center gap-4">
-                    <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                    <h1 class="text-xl font-bold font-outfit">Support Messages</h1>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button id="theme-toggle"
-                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
-                    </button>
-                    <button id="rtl-toggle"
-                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase">
-                        RTL
-                    </button>
-                    <div class="relative group">
-                        <button
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
-                            <i class="fas fa-bell"></i>
-                            <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
-                        </button>
-                    </div>
-                    <div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
-                        <div class="text-right hidden sm:block">
-                            <p class="text-sm font-bold">Johnathan Doe</p>
-                            <p class="text-xs text-gray-500">Admin</p>
+                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                <div class="container mx-auto px-2 md:px-6">
+                    <div class="flex items-center gap-1 md:gap-4 justify-between">
+                        <div class="flex items-center gap-4">
+                            
+                            <a href="../index.html" class="flex items-center gap-2 lg:hidden">
+                                <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                                </div>
+                                <span
+                                    class="text-xs xs:text-base md:text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                        class="text-primary">Guard</span></span>
+                            </a>
                         </div>
-                        <img src="https://i.pravatar.cc/150?u=inspector"
-                            class="w-10 h-10 rounded-xl border border-gray-200" alt="Profile">
+                        <div class="flex items-center gap-1.5 sm:gap-2 md:gap-4 shrink-0 ml-auto">
+                            <!-- RTL Toggle -->
+                            <button id="rtl-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                                title="RTL Toggle">
+                                RTL
+                            </button>
+                            <!-- Theme Toggle -->
+                            <button id="theme-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
+                                <i class="fas fa-moon dark:hidden"></i>
+                                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                            </button>
+                            <!-- Profile -->
+                            <div
+                                class="flex items-center gap-2 md:gap-3 pl-1 md:pl-4 border-l border-gray-200 dark:border-gray-700">
+                                <div class="text-right hidden md:block">
+                                    <p class="text-sm font-bold">Johnathan Doe</p>
+                                    <p class="text-xs text-gray-500">Admin</p>
+                                </div>
+                                <img src="https://i.pravatar.cc/150?u=inspector"
+                                    class="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200" alt="Profile">
+                            </div>
+                        
+                            <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
+                                <i class="fas fa-bars text-xl"></i>
+                            </button></div>
                     </div>
                 </div>
             </header>
+
+            <!-- Page Heading -->
+            <div class="px-3 md:px-6 py-4 md:py-8">
+                <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Support Messages</h1>
+                <p class="text-gray-500 mt-1 text-sm md:text-base break-words">View and manage client support inquiries.
+                </p>
+            </div>
 
             <div class="flex-1 flex overflow-hidden">
                 <!-- Message List -->
@@ -131,7 +148,7 @@
                     <div class="divide-y divide-gray-50 dark:divide-gray-700">
                         <!-- Item 1 -->
                         <div
-                            class="p-6 bg-gray-50/50 dark:bg-gray-700/50 cursor-pointer hover:bg-gray-100 transition-all border-l-4 border-primary">
+                            class="p-4 md:p-6 bg-gray-50/50 dark:bg-gray-700/50 cursor-pointer hover:bg-gray-100 transition-all border-l-4 border-primary">
                             <div class="flex justify-between items-center mb-1">
                                 <h4 class="font-bold text-sm">Robert Miller</h4>
                                 <span class="text-[10px] text-gray-400 font-bold uppercase">10:45 AM</span>
@@ -141,7 +158,7 @@
                                 mechanical room...</p>
                         </div>
                         <!-- Item 2 -->
-                        <div class="p-6 cursor-pointer hover:bg-gray-50 transition-all">
+                        <div class="p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-all">
                             <div class="flex justify-between items-center mb-1">
                                 <h4 class="font-bold text-sm">Sarah Jenkins</h4>
                                 <span class="text-[10px] text-gray-400 font-bold uppercase">Yesterday</span>
@@ -156,7 +173,17 @@
 
                 <!-- Chat Pane (Simple UI) -->
                 <div class="hidden md:flex flex-1 flex-col overflow-hidden">
-                    <div class="p-8 flex-1 overflow-y-auto space-y-8">
+                    <div class="p-4 border-b border-gray-100 dark:border-gray-700 flex items-center gap-4">
+                        <button onclick="goBackToList()" class="md:hidden p-2 text-gray-500 hover:text-primary">
+                            <i class="fas fa-arrow-left text-xl"></i>
+                        </button>
+                        <img src="https://i.pravatar.cc/100?u=robert" class="w-10 h-10 rounded-full" alt="Avatar">
+                        <div>
+                            <h4 class="font-bold text-sm">Robert Miller</h4>
+                            <p class="text-xs text-green-500 font-bold">Online</p>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-8 flex-1 overflow-y-auto space-y-4 md:space-y-8">
                         <!-- Recipient Message -->
                         <div class="flex gap-4 max-w-2xl">
                             <img src="https://i.pravatar.cc/100?u=robert" class="w-10 h-10 rounded-full shrink-0">
@@ -180,14 +207,28 @@
                     </div>
 
                     <!-- Input Area -->
-                    <div class="p-6 border-t border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
+                    <div
+                        class="p-4 md:p-6 border-t border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
                         <div
                             class="flex items-center gap-4 bg-white dark:bg-gray-800 p-2 rounded-2xl border border-gray-100 dark:border-gray-700">
-                            <input type="text" placeholder="Type your reply here..."
+                            <input type="file" id="fileInput" class="hidden" multiple>
+                            <button onclick="document.getElementById('fileInput').click()"
+                                class="p-2 text-gray-400 hover:text-primary transition-colors" title="Attach files">
+                                <i class="fas fa-paperclip text-lg"></i>
+                            </button>
+                            <input type="text" id="messageInput" placeholder="Type your reply here..."
                                 class="flex-1 px-4 bg-transparent border-none focus:ring-0 outline-none">
-                            <button class="w-10 h-10 bg-primary text-white rounded-xl shadow-lg shadow-primary/20"><i
-                                    class="fas fa-paper-plane text-xs"></i></button>
+                            <button id="sendBtn" onclick="sendMessage()"
+                                class="w-10 h-10 bg-primary text-white rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-dark transition-colors">
+                                <i class="fas fa-paper-plane text-xs"></i>
+                            </button>
+                            <button id="sendingBtn"
+                                class="w-10 h-10 bg-gray-300 text-white rounded-xl shadow-lg hidden">
+                                <i class="fas fa-spinner fa-spin text-xs"></i>
+                            </button>
                         </div>
+                        <!-- File Preview -->
+                        <div id="filePreview" class="mt-2 flex flex-wrap gap-2"></div>
                     </div>
                 </div>
             </div>
@@ -197,12 +238,189 @@
     <!-- main js -->
     <script src="../assets/js/main.js"></script>
     <script>
-        // Sidebar Toggle for Mobile
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('admin-sidebar');
-        sidebarToggle?.addEventListener('click', () => {
-            sidebar?.classList.toggle('-translate-x-full');
+        // Message Chat Functionality
+        const messageItems = document.querySelectorAll('.cursor-pointer');
+        const chatPane = document.querySelector('.hidden.md\\:flex.flex-1.flex-col');
+        const messageList = document.querySelector('.w-full.md\\:w-80');
+
+        messageItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                // Remove active state from all items
+                messageItems.forEach(i => {
+                    i.classList.remove('bg-gray-50/50', 'dark:bg-gray-700/50', 'border-l-4', 'border-primary');
+                    i.classList.add('hover:bg-gray-50');
+                });
+
+                // Add active state to clicked item
+                item.classList.add('bg-gray-50/50', 'dark:bg-gray-700/50', 'border-l-4', 'border-primary');
+                item.classList.remove('hover:bg-gray-50');
+
+                // Show chat pane on mobile
+                if (window.innerWidth < 768) {
+                    messageList.classList.add('hidden');
+                    chatPane.classList.remove('hidden');
+                    chatPane.classList.add('flex');
+                }
+
+                // Update chat content based on selected conversation
+                updateChatContent(index);
+            });
         });
+
+        // Chat content data
+        const conversations = [
+            {
+                name: 'Robert Miller',
+                avatar: 'https://i.pravatar.cc/100?u=robert',
+                messages: [
+                    { type: 'received', text: 'Hi, we ran the test on the secondary pump this morning as scheduled. However, the pressure sensor didn\'t report to the dashboard correctly, although the pump was physically running. Could someone look into the sensor integration?' },
+                    { type: 'sent', text: 'Understood, Robert. I\'m assigning a sensor specialist to investigate the gateway connection now. Expect a resolution update within 2 hours.' }
+                ]
+            },
+            {
+                name: 'Sarah Jenkins',
+                avatar: 'https://i.pravatar.cc/100?u=sarah',
+                messages: [
+                    { type: 'received', text: 'I noticed the certificate generation for site #1024 is showing an error. Can you help me troubleshoot this NFPA 10 documentation issue?' },
+                    { type: 'sent', text: 'Hi Sarah, I\'ll look into the certificate generation issue right away. Could you please confirm the exact error message you\'re seeing?' }
+                ]
+            }
+        ];
+
+        function updateChatContent(index) {
+            const chatContainer = chatPane.querySelector('.flex-1.overflow-y-auto');
+            const chatHeader = chatPane.querySelector('.border-b');
+            const conversation = conversations[index];
+
+            // Update header
+            chatHeader.querySelector('img').src = conversation.avatar;
+            chatHeader.querySelector('h4').textContent = conversation.name;
+
+            // Clear existing messages
+            chatContainer.innerHTML = '';
+
+            // Add messages
+            conversation.messages.forEach(msg => {
+                const messageDiv = document.createElement('div');
+                if (msg.type === 'received') {
+                    messageDiv.className = 'flex gap-4 max-w-2xl';
+                    messageDiv.innerHTML = `
+                        <img src="${conversation.avatar}" class="w-10 h-10 rounded-full shrink-0" alt="Avatar">
+                        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-700 text-sm leading-relaxed">
+                            ${msg.text}
+                        </div>
+                    `;
+                } else {
+                    messageDiv.className = 'flex flex-row-reverse gap-4 max-w-2xl ml-auto text-right';
+                    messageDiv.innerHTML = `
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                            <i class="fas fa-user-shield text-white text-xs"></i>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-primary text-white text-sm leading-relaxed">
+                            ${msg.text}
+                        </div>
+                    `;
+                }
+                chatContainer.appendChild(messageDiv);
+            });
+
+            // Scroll to bottom
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Send Message Function
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const fileInput = document.getElementById('fileInput');
+            const message = input.value.trim();
+            const files = fileInput.files;
+
+            if (message === '' && files.length === 0) return;
+
+            // Show sending animation
+            const sendBtn = document.getElementById('sendBtn');
+            const sendingBtn = document.getElementById('sendingBtn');
+            sendBtn.classList.add('hidden');
+            sendingBtn.classList.remove('hidden');
+
+            // Build message with file info
+            let messageText = message;
+            if (files.length > 0) {
+                const fileNames = Array.from(files).map(f => f.name).join(', ');
+                messageText = message + (message ? ' ' : '') + `[Attached: ${fileNames}]`;
+            }
+
+            // Simulate sending delay
+            setTimeout(() => {
+                // Hide sending animation
+                sendingBtn.classList.add('hidden');
+                sendBtn.classList.remove('hidden');
+
+                // Clear input and files
+                input.value = '';
+                fileInput.value = '';
+                document.getElementById('filePreview').innerHTML = '';
+
+                // Add message to chat
+                const chatContainer = chatPane.querySelector('.flex-1.overflow-y-auto');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'flex flex-row-reverse gap-4 max-w-2xl ml-auto text-right';
+                messageDiv.innerHTML = `
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                        <i class="fas fa-user-shield text-white text-xs"></i>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-primary text-white text-sm leading-relaxed">
+                        ${messageText}
+                    </div>
+                `;
+                chatContainer.appendChild(messageDiv);
+
+                // Scroll to bottom
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+
+                // Simulate reply after a delay
+                setTimeout(() => {
+                    const replyDiv = document.createElement('div');
+                    replyDiv.className = 'flex gap-4 max-w-2xl';
+                    replyDiv.innerHTML = `
+                        <img src="https://i.pravatar.cc/100?u=robert" class="w-10 h-10 rounded-full shrink-0" alt="Avatar">
+                        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-700 text-sm leading-relaxed">
+                            Thank you for your message${files.length > 0 ? ' and files' : ''}. I'll look into this and get back to you shortly.
+                        </div>
+                    `;
+                    chatContainer.appendChild(replyDiv);
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }, 1500);
+
+            }, 1000);
+        }
+
+        // File input change handler
+        document.getElementById('fileInput')?.addEventListener('change', function () {
+            const filePreview = document.getElementById('filePreview');
+            filePreview.innerHTML = '';
+
+            Array.from(this.files).forEach(file => {
+                const fileDiv = document.createElement('div');
+                fileDiv.className = 'flex items-center gap-2 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs';
+                fileDiv.innerHTML = `<i class="fas fa-file text-primary"></i><span class="truncate max-w-[100px]">${file.name}</span>`;
+                filePreview.appendChild(fileDiv);
+            });
+        });
+
+        // Send message on Enter key
+        document.getElementById('messageInput')?.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Back button for mobile
+        function goBackToList() {
+            messageList.classList.remove('hidden');
+            chatPane.classList.add('hidden');
+            chatPane.classList.remove('flex');
+        }
     </script>
 </body>
 

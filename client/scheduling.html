@@ -7,7 +7,7 @@
     <title>Book Inspection | PyroGuard Client Portal</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -93,53 +93,66 @@
                     <a href="../login.html"
                         class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-medium">
                         <i class="fas fa-sign-out-alt w-5"></i>
-                        <span>Logout</span>
                     </a>
                 </div>
             </div>
         </aside>
 
-        <main class="flex-1 lg:ml-64 min-h-screen">
+        <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-6 py-4">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                        <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
-                            <i class="fas fa-bars text-xl"></i>
-                        </button>
-                        <h1 class="text-xl font-bold font-outfit">Book an Inspection</h1>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                        <button id="theme-toggle"
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
-                            <i class="fas fa-moon dark:hidden"></i>
-                            <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
-                        </button>
-                        <button id="rtl-toggle"
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase">
-                            RTL
-                        </button>
-                        <div class="relative group">
-                            <button
-                                class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
-                                <i class="fas fa-bell"></i>
-                                <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                <div class="container mx-auto px-2 md:px-6">
+                    <div class="flex items-center gap-1 md:gap-4 justify-between">
+                        <div class="flex items-center gap-4">
+                            
+                            <a href="../index.html" class="flex items-center gap-2 lg:hidden">
+                                <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                                </div>
+                                <span
+                                    class="text-xs xs:text-base md:text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                        class="text-primary">Guard</span></span>
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-1.5 sm:gap-2 md:gap-4 shrink-0 ml-auto">
+                            <!-- RTL Toggle -->
+                            <button id="rtl-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                                title="RTL Toggle">
+                                RTL
                             </button>
-                        </div>
-                        <div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
-                            <div class="text-right hidden sm:block">
-                                <p class="text-sm font-bold">Robert Miller</p>
-                                <p class="text-xs text-gray-500">Facility Manager</p>
+                            <!-- Theme Toggle -->
+                            <button id="theme-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
+                                <i class="fas fa-moon dark:hidden"></i>
+                                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                            </button>
+                            <!-- Profile -->
+                            <div
+                                class="flex items-center gap-2 md:gap-3 pl-1 md:pl-4 border-l border-gray-200 dark:border-gray-700">
+                                <div class="text-right hidden md:block">
+                                    <p class="text-sm font-bold">Robert Miller</p>
+                                    <p class="text-xs text-gray-500">Facility Manager</p>
+                                </div>
+                                <img src="https://i.pravatar.cc/150?u=client"
+                                    class="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200" alt="Profile">
                             </div>
-                            <img src="https://i.pravatar.cc/150?u=client"
-                                class="w-10 h-10 rounded-xl border border-gray-200" alt="Profile">
-                        </div>
+                        
+                            <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
+                                <i class="fas fa-bars text-xl"></i>
+                            </button></div>
                     </div>
                 </div>
             </header>
 
-            <div class="p-6">
+            <!-- Page Heading -->
+            <div class="px-3 md:px-6 py-4 md:py-8">
+                <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Book an Inspection</h1>
+                <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Schedule fire safety inspections for your
+                    facility.</p>
+            </div>
+
+            <div class="p-3 md:p-6 pt-0">
                 <div class="grid lg:grid-cols-3 gap-8">
                     <!-- Booking Form -->
                     <div class="lg:col-span-2 space-y-8">
@@ -214,14 +227,6 @@
 
     <!-- main js -->
     <script src="../assets/js/main.js"></script>
-    <script>
-        // Sidebar Toggle for Mobile
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('client-sidebar');
-        sidebarToggle?.addEventListener('click', () => {
-            sidebar?.classList.toggle('-translate-x-full');
-        });
-    </script>
 </body>
 
 </html>

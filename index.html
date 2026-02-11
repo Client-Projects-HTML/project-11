@@ -9,7 +9,7 @@
         content="Advanced fire protection, life safety systems, and compliance dashboard for modern businesses.">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -71,25 +71,20 @@
                 </ul>
 
                 <!-- Actions -->
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 md:gap-4">
+
+                    <button id="rtl-toggle"
+                        class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                        title="RTL Toggle">
+                        RTL
+                    </button>
                     <button id="theme-toggle"
-                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
+                        class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
                         title="Toggle Theme">
                         <i class="fas fa-moon dark:hidden"></i>
                         <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                     </button>
-                    <button id="rtl-toggle"
-                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
-                        title="RTL Toggle">
-                        RTL
-                    </button>
-                    <div class="relative group hidden sm:block">
-                        <button
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
-                            <i class="fas fa-bell"></i>
-                            <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
-                        </button>
-                    </div>
+
                     <a href="login.html"
                         class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30">
                         Login
@@ -117,7 +112,7 @@
                     class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary font-bold text-sm tracking-widest uppercase mb-4 border border-primary/30">Trusted
                     by Professionals</span>
                 <h1
-                    class="text-4xl md:text-6xl lg:text-7xl font-extrabold font-outfit text-gray-900 dark:text-white leading-tight mb-6">
+                    class="text-4xl md:text-6xl lg:text-7xl font-extrabold font-outfit text-gray-900 dark:text-white leading-tight mb-6 break-words">
                     Advanced <span class="text-primary italic">Fire & Life</span> Safety Intelligence.
                 </h1>
                 <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl">
@@ -130,7 +125,7 @@
                         View Our Services <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="contact.html"
-                        class="px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+                        class="px-8 py-4 bg-secondary text-white rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-xl hover:shadow-secondary/20">
                         Request a Demo
                     </a>
                 </div>
@@ -168,7 +163,8 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div class="max-w-2xl">
                     <span class="text-primary font-bold tracking-widest uppercase text-sm">What We Offer</span>
-                    <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2">Comprehensive Fire Protection
+                    <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 break-words">Comprehensive Fire
+                        Protection
                         Solutions.</h2>
                 </div>
                 <a href="services.html"
@@ -189,7 +185,7 @@
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                         </div>
                     </div>
-                    <div class="p-8">
+                    <div class="p-6 md:p-8">
                         <div
                             class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center mb-6 -mt-14 relative z-10 border-4 border-white dark:border-gray-800">
                             <i class="fas fa-fire-extinguisher text-primary text-xl"></i>
@@ -216,7 +212,7 @@
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                         </div>
                     </div>
-                    <div class="p-8">
+                    <div class="p-6 md:p-8">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-6 -mt-14 relative z-10 border-4 border-white dark:border-gray-800">
                             <i class="fas fa-broadcast-tower text-blue-600 text-xl"></i>
@@ -242,7 +238,7 @@
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                         </div>
                     </div>
-                    <div class="p-8">
+                    <div class="p-6 md:p-8">
                         <div
                             class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 -mt-14 relative z-10 border-4 border-white dark:border-gray-800">
                             <i class="fas fa-file-contract text-amber-600 text-xl"></i>
@@ -269,7 +265,7 @@
                     <div
                         class="relative z-10 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 p-4">
                         <img src="assets/images/dashboard_preview.png" alt="Dashboard Preview"
-                            class="rounded-2xl shadow-inner">
+                            class="w-full h-auto rounded-2xl shadow-inner">
                     </div>
                 </div>
                 <div>
@@ -331,7 +327,7 @@
 
                 <!-- Floating Map Card -->
                 <div
-                    class="absolute bottom-8 left-8 right-8 md:right-auto md:w-80 bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-800 backdrop-blur-md">
+                    class="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-auto md:w-80 bg-white dark:bg-gray-900 p-6 md:p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-800 backdrop-blur-md">
                     <h4 class="text-xl font-bold mb-4">Regional Headquarters</h4>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 leading-relaxed">Our central command hub
                         manages over 500 active compliance projects weekly.</p>
@@ -358,9 +354,9 @@
     <footer
         class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 md:px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-12 mb-16">
                 <!-- Brand -->
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6">
                         <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
                             <i class="fas fa-shield-alt text-white text-xl"></i>
@@ -403,23 +399,23 @@
                 <div>
                     <h4 class="text-xl font-bold mb-6">Our Services</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service-details.html?service=extinguishers"
+                                class="hover:text-primary transition-colors">Portable Extinguishers</a></li>
                         <li><a href="service-details.html?service=alarms"
-                                class="hover:text-primary transition-colors">Fire Alarms</a>
-                        </li>
+                                class="hover:text-primary transition-colors">Fire Alarm Systems</a></li>
                         <li><a href="service-details.html?service=sprinkler"
-                                class="hover:text-primary transition-colors">Sprinkler
-                                Systems</a></li>
+                                class="hover:text-primary transition-colors">Sprinkler Systems</a></li>
                         <li><a href="service-details.html?service=lighting"
-                                class="hover:text-primary transition-colors">Emergency
-                                Lights</a></li>
+                                class="hover:text-primary transition-colors">Emergency Lighting</a></li>
+                        <li><a href="service-details.html?service=cloud"
+                                class="hover:text-primary transition-colors">Cloud Dashboard</a></li>
                         <li><a href="service-details.html?service=audits"
-                                class="hover:text-primary transition-colors">Safety
-                                Audits</a></li>
+                                class="hover:text-primary transition-colors">Safety Audits</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <h4 class="text-xl font-bold mb-6">Contact Us</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
                         <li class="flex items-start gap-4">
@@ -442,11 +438,13 @@
                 class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
                     Reserved.</p>
-                <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-500">
-                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
-                    <span class="text-gray-500">Developed By| <a href="https://www.abhivorn.com/"
-                            class="hover:text-primary transition-colors">Abhivorn Technologies Pvt.Ltd</a></span>
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    </div>
+                    <span class="text-gray-500">Powered By <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn Technologies Pvt.Ltd</a></span>
                 </div>
             </div>
         </div>

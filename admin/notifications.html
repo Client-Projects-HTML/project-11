@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | PyroGuard Admin</title>
+    <title>Notifications | PyroGuard</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -231,242 +231,77 @@
                     </div>
                 </div>
             </header>
-
-            <!-- Page Heading -->
-            <div class="container mx-auto px-3 md:px-6 py-4 md:py-8">
-                <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Welcome Back, Admin</h1>
-                <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Here's what's happening with your safety
-                    dashboard today.</p>
-            </div>
-
-            <!-- Dashboard Content -->
-            <div class="container mx-auto px-3 md:px-6 pb-6">
-                <!-- Stats Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
-                    <!-- Stat Card 1 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <div
-                                class="w-10 h-10 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
-                                <i class="fas fa-building text-blue-600 text-lg"></i>
-                            </div>
-                            <span class="text-green-500 text-[10px] font-bold">+12% <i
-                                    class="fas fa-arrow-up"></i></span>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Total Buildings</h3>
-                        <p class="text-xl md:text-2xl font-bold">1,284</p>
-                    </div>
-
-                    <!-- Stat Card 2 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <div
-                                class="w-10 h-10 rounded-2xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center">
-                                <i class="fas fa-calendar-check text-orange-600 text-lg"></i>
-                            </div>
-                            <span class="text-red-500 text-[10px] font-bold">-4% <i
-                                    class="fas fa-arrow-down"></i></span>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Inspections</h3>
-                        <p class="text-xl md:text-2xl font-bold">452</p>
-                    </div>
-
-                    <!-- Stat Card 3 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <div
-                                class="w-10 h-10 rounded-2xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center">
-                                <i class="fas fa-check-double text-green-600 text-lg"></i>
-                            </div>
-                            <span class="text-green-500 text-[10px] font-bold">+28% <i
-                                    class="fas fa-arrow-up"></i></span>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Compliance Rate</h3>
-                        <p class="text-xl md:text-2xl font-bold">94.2%</p>
-                    </div>
-
-                    <!-- Stat Card 4 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <div
-                                class="w-10 h-10 rounded-2xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center">
-                                <i class="fas fa-radiation text-red-600 text-lg"></i>
-                            </div>
-                            <span class="text-orange-500 text-[10px] font-bold">+2 New</span>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Active Violations</h3>
-                        <p class="text-xl md:text-2xl font-bold">14</p>
-                    </div>
+            <div class="container mx-auto px-6 py-8">
+                <div class="flex items-center justify-between mb-8">
+                    <h1 class="text-2xl font-bold font-outfit">Notifications</h1>
+                    <button id="markReadPageBtn" class="text-sm text-primary font-bold hover:underline">Mark all as read</button>
                 </div>
 
-                <!-- Charts Section -->
-                <div class="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-lg font-bold font-outfit">Inspection Trends</h3>
-                            <select class="bg-gray-50 dark:bg-gray-700 border-none rounded-lg text-sm px-3 py-1">
-                                <option>Last 6 Months</option>
-                                <option>Last Year</option>
-                            </select>
+                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <div class="divide-y divide-gray-100 dark:divide-gray-700">
+                        <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">Inspection Confirmed</h3>
+                                    <span class="text-xs text-gray-500">2 mins ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Skyline Heights lobby inspection scheduled for Oct 28.</p>
+                            </div>
                         </div>
-                        <div class="relative h-80 w-full">
-                            <canvas id="inspectionsChart"></canvas>
-                        </div>
-                    </div>
 
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm text-center">
-                        <h3 class="text-lg font-bold font-outfit text-left mb-6">Compliance Overview</h3>
-                        <div class="relative inline-block w-full max-w-[250px]">
-                            <canvas id="complianceDonut" height="250"></canvas>
-                            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                <p class="text-3xl font-bold">94%</p>
-                                <p class="text-xs text-gray-500 uppercase tracking-tighter">Safe</p>
+                        <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start bg-blue-50/50 dark:bg-blue-900/10">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">New Safety Alert</h3>
+                                    <span class="text-xs text-gray-500">1 hour ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Minor compliance issue reported in Server Room B.</p>
+                            </div>
+                        </div>
+
+                        <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">Report Available</h3>
+                                    <span class="text-xs text-gray-500">5 hours ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Monthly maintenance report for September is ready.</p>
+                            </div>
+                        </div>
+                        
+                         <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">New User Registration</h3>
+                                    <span class="text-xs text-gray-500">1 day ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">John Doe has requested access to the portal.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Recent Activity Table -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm overflow-hidden">
-                    <div
-                        class="p-4 md:p-6 flex items-center justify-between border-b border-gray-100 dark:border-gray-700">
-                        <h3 class="text-lg font-bold font-outfit">Recent Violation Reports</h3>
-                        <a href="violations.html" class="text-sm text-primary font-bold hover:underline">View All</a>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left">
-                            <thead
-                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-400 text-xs uppercase font-bold">
-                                <tr>
-                                    <th class="px-3 md:px-6 py-4">Building Name</th>
-                                    <th class="px-3 md:px-6 py-4">Violation Type</th>
-                                    <th class="px-3 md:px-6 py-4">Status</th>
-                                    <th class="px-3 md:px-6 py-4">Date</th>
-                                    <th class="px-3 md:px-6 py-4 text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700/50">
-                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
-                                    <td class="px-3 md:px-6 py-4">
-                                        <div class="flex items-center gap-2 md:gap-3">
-                                            <div
-                                                class="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-xs font-bold">
-                                                SH</div>
-                                            <span class="font-medium text-xs md:text-sm">Skyline Heights</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-xs md:text-sm">Expired Extinguisher</td>
-                                    <td class="px-3 md:px-6 py-4">
-                                        <span
-                                            class="px-2 py-1 rounded-full bg-red-100 dark:bg-red-900/40 text-red-600 text-[10px] font-bold uppercase">Critical</span>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-sm text-gray-500">Oct 24, 2025</td>
-                                    <td class="px-3 md:px-6 py-4 text-center">
-                                        <div class="flex items-center justify-center gap-1">
-                                            <button
-                                                onclick="viewViolation('Skyline Heights', 'Expired Extinguisher', 'Critical', 'Oct 24, 2025')"
-                                                class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-500 hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-all"
-                                                title="View">
-                                                <i class="fas fa-eye text-xs"></i>
-                                            </button>
-                                            <button onclick="editViolation('Skyline Heights', 'Expired Extinguisher')"
-                                                class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-500 hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-all"
-                                                title="Edit">
-                                                <i class="fas fa-edit text-xs"></i>
-                                            </button>
-                                            <button onclick="deleteViolation('Skyline Heights')"
-                                                class="w-8 h-8 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-500 hover:bg-red-100 dark:hover:bg-red-900/40 transition-all"
-                                                title="Delete">
-                                                <i class="fas fa-trash text-xs"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
-                                    <td class="px-3 md:px-6 py-4">
-                                        <div class="flex items-center gap-2 md:gap-3">
-                                            <div
-                                                class="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-xs font-bold">
-                                                TP</div>
-                                            <span class="font-medium text-xs md:text-sm">Tech Plaza B</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-xs md:text-sm">Blocked Exit Path</td>
-                                    <td class="px-3 md:px-6 py-4">
-                                        <span
-                                            class="px-2 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-600 text-[10px] font-bold uppercase">Moderate</span>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-sm text-gray-500">Oct 23, 2025</td>
-                                    <td class="px-3 md:px-6 py-4 text-center">
-                                        <div class="flex items-center justify-center gap-1">
-                                            <button
-                                                onclick="viewViolation('Tech Plaza B', 'Blocked Exit Path', 'Moderate', 'Oct 23, 2025')"
-                                                class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-500 hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-all"
-                                                title="View">
-                                                <i class="fas fa-eye text-xs"></i>
-                                            </button>
-                                            <button onclick="editViolation('Tech Plaza B', 'Blocked Exit Path')"
-                                                class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-500 hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-all"
-                                                title="Edit">
-                                                <i class="fas fa-edit text-xs"></i>
-                                            </button>
-                                            <button onclick="deleteViolation('Tech Plaza B')"
-                                                class="w-8 h-8 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-500 hover:bg-red-100 dark:hover:bg-red-900/40 transition-all"
-                                                title="Delete">
-                                                <i class="fas fa-trash text-xs"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
-                                    <td class="px-3 md:px-6 py-4">
-                                        <div class="flex items-center gap-2 md:gap-3">
-                                            <div
-                                                class="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-xs font-bold">
-                                                GV</div>
-                                            <span class="font-medium text-xs md:text-sm">Grand Valley Mall</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-xs md:text-sm">Faulty Alarm Sensor</td>
-                                    <td class="px-3 md:px-6 py-4">
-                                        <span
-                                            class="px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 text-[10px] font-bold uppercase">Minor</span>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-sm text-gray-500">Oct 22, 2025</td>
-                                    <td class="px-3 md:px-6 py-4 text-center">
-                                        <div class="flex items-center justify-center gap-1">
-                                            <button
-                                                onclick="viewViolation('Grand Valley Mall', 'Faulty Alarm Sensor', 'Minor', 'Oct 22, 2025')"
-                                                class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-500 hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-all"
-                                                title="View">
-                                                <i class="fas fa-eye text-xs"></i>
-                                            </button>
-                                            <button onclick="editViolation('Grand Valley Mall', 'Faulty Alarm Sensor')"
-                                                class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-500 hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-all"
-                                                title="Edit">
-                                                <i class="fas fa-edit text-xs"></i>
-                                            </button>
-                                            <button onclick="deleteViolation('Grand Valley Mall')"
-                                                class="w-8 h-8 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-500 hover:bg-red-100 dark:hover:bg-red-900/40 transition-all"
-                                                title="Delete">
-                                                <i class="fas fa-trash text-xs"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    
+                    <div class="p-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex justify-center">
+                        <button id="loadMorePageBtn" class="text-sm font-bold text-primary hover:underline">Load More</button>
                     </div>
                 </div>
             </div>
-        </main>
+    </main>
     </div>
 
     <!-- main js -->
@@ -541,8 +376,8 @@
     <div id="dialogModal" class="fixed inset-0 z-50 hidden">
         <div class="fixed inset-0 bg-black/50" onclick="closeDialog()"></div>
         <div
-            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl max-w-md w-[90%] p-5 max-h-[90vh] overflow-y-auto">
-            <div class="flex items-center justify-between mb-4">
+            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl max-w-lg w-[90%] p-6 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
                 <h3 id="dialogTitle" class="text-xl font-bold font-outfit">Dialog Title</h3>
                 <button onclick="closeDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
@@ -550,14 +385,14 @@
                 </button>
             </div>
             <form id="dialogForm" onsubmit="handleDialogSubmit(event)">
-                <div id="dialogContent" class="mb-4">
+                <div id="dialogContent" class="mb-6">
                     <!-- Content will be injected here -->
                 </div>
                 <div class="flex justify-end gap-3">
                     <button type="button" onclick="closeDialog()"
-                        class="px-4 py-2 rounded-xl border border-gray-200 dark:border-gray-600 font-bold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Cancel</button>
+                        class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600 font-bold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Cancel</button>
                     <button type="submit" id="dialogConfirmBtn"
-                        class="px-4 py-2 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/20">Save</button>
+                        class="px-5 py-2.5 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/20">Save</button>
                 </div>
             </form>
         </div>
@@ -568,14 +403,14 @@
         function viewViolation(name, type, status, date) {
             document.getElementById('dialogTitle').innerHTML = '<i class="fas fa-eye text-blue-500 mr-2"></i> View Violation';
             document.getElementById('dialogContent').innerHTML = `
-                <div class="space-y-3">
+                <div class="space-y-4">
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Building Name</label>
-                        <input type="text" value="${name}" class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
+                        <input type="text" value="${name}" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Type</label>
-                        <select class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
+                        <select class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
                             <option ${type === 'Faulty Alarm Sensor' ? 'selected' : ''}>Faulty Alarm Sensor</option>
                             <option ${type === 'Blocked Exit' ? 'selected' : ''}>Blocked Exit</option>
                             <option ${type === 'Expired Equipment' ? 'selected' : ''}>Expired Equipment</option>
@@ -583,7 +418,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Status</label>
-                        <select class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
+                        <select class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
                             <option ${status === 'Pending' ? 'selected' : ''}>Pending</option>
                             <option ${status === 'In Progress' ? 'selected' : ''}>In Progress</option>
                             <option ${status === 'Resolved' ? 'selected' : ''}>Resolved</option>
@@ -591,7 +426,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Date</label>
-                        <input type="date" value="${date}" class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
+                        <input type="date" value="${date}" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                     </div>
                 </div>
             `;
@@ -603,14 +438,14 @@
         function editViolation(name, type) {
             document.getElementById('dialogTitle').innerHTML = '<i class="fas fa-edit text-amber-500 mr-2"></i> Edit Violation';
             document.getElementById('dialogContent').innerHTML = `
-                <div class="space-y-3">
+                <div class="space-y-4">
                     <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
                         <p class="font-bold text-lg">${name}</p>
                         <p class="text-sm text-gray-400">${type}</p>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Violation Type</label>
-                        <select class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
+                        <select class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
                             <option>Faulty Alarm Sensor</option>
                             <option>Blocked Exit</option>
                             <option>Expired Equipment</option>
@@ -619,7 +454,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Priority</label>
-                        <select class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
+                        <select class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
                             <option>High</option>
                             <option>Medium</option>
                             <option>Low</option>
@@ -627,7 +462,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Notes</label>
-                        <textarea rows="2" class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none" placeholder="Enter violation notes..."></textarea>
+                        <textarea rows="2" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none" placeholder="Enter violation notes..."></textarea>
                     </div>
                 </div>
             `;
@@ -639,14 +474,14 @@
         function deleteViolation(name) {
             document.getElementById('dialogTitle').innerHTML = '<i class="fas fa-trash text-red-500 mr-2"></i> Delete Violation';
             document.getElementById('dialogContent').innerHTML = `
-                <div class="space-y-3">
+                <div class="space-y-4">
                     <p class="text-gray-500">Are you sure you want to delete this violation? This action cannot be undone.</p>
                     <div class="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-200 dark:border-red-800">
                         <p class="font-bold text-red-600">${name}</p>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Delete Reason</label>
-                        <textarea rows="2" class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-red-500 outline-none" placeholder="Enter reason for deletion..."></textarea>
+                        <textarea rows="2" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-red-500 outline-none" placeholder="Enter reason for deletion..."></textarea>
                     </div>
                 </div>
             `;
@@ -665,6 +500,71 @@
             document.getElementById('dialogModal').classList.add('hidden');
         }
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mark All Read
+            const markReadPageBtn = document.getElementById('markReadPageBtn');
+            if (markReadPageBtn) {
+                markReadPageBtn.addEventListener('click', () => {
+                    // Find all unread items (those with colored backgrounds)
+                    const unreadItems = document.querySelectorAll('.bg-blue-50\\/50');
+                    unreadItems.forEach(item => {
+                        item.classList.remove('bg-blue-50/50', 'dark:bg-blue-900/10');
+                    });
+                    
+                    // Remove badge from header if present
+                    const badge = document.querySelector('#notification-btn .bg-primary');
+                    if (badge) badge.classList.add('hidden');
+
+                    // Show success message
+                    const toast = document.createElement('div');
+                    toast.className = 'fixed bottom-4 right-4 bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-bounce';
+                    toast.textContent = 'All notifications marked as read';
+                    document.body.appendChild(toast);
+                    setTimeout(() => toast.remove(), 3000);
+                });
+            }
+
+            // Load More
+            const loadMorePageBtn = document.getElementById('loadMorePageBtn');
+            if (loadMorePageBtn) {
+                loadMorePageBtn.addEventListener('click', () => {
+                   // Simulate loading
+                   const originalText = loadMorePageBtn.textContent;
+                   loadMorePageBtn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> Loading...';
+                   loadMorePageBtn.disabled = true;
+                   
+                   setTimeout(() => {
+                        // Create a new notification item
+                        const template = `
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start animate-fade-in border-t border-gray-100 dark:border-gray-700">
+                            <div class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-500 flex items-center justify-center shrink-0">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">System Update</h3>
+                                    <span class="text-xs text-gray-500">2 days ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Platform maintenance scheduled for next weekend.</p>
+                            </div>
+                        </div>`;
+                        
+                        // Fix for container selection - look for the specific divide-y container
+                        const container = document.querySelector('.overflow-hidden .divide-y');
+                        if (container) {
+                            container.insertAdjacentHTML('beforeend', template);
+                        }
+                        
+                        loadMorePageBtn.innerHTML = originalText;
+                        loadMorePageBtn.disabled = false;
+                   }, 1000);
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>

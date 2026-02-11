@@ -7,7 +7,7 @@
     <title>About Us | PyroGuard</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -62,24 +62,18 @@
                     </li>
                 </ul>
                 <div class="flex items-center gap-4">
+                    <button id="rtl-toggle"
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                        title="RTL Toggle">
+                        RTL
+                    </button>
                     <button id="theme-toggle"
                         class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
                         title="Toggle Theme">
                         <i class="fas fa-moon dark:hidden"></i>
                         <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                     </button>
-                    <button id="rtl-toggle"
-                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
-                        title="RTL Toggle">
-                        RTL
-                    </button>
-                    <div class="relative group hidden sm:block">
-                        <button
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
-                            <i class="fas fa-bell"></i>
-                            <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
-                        </button>
-                    </div>
+
                     <a href="login.html"
                         class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30">
                         Login
@@ -95,7 +89,7 @@
     <!-- Page Header -->
     <section class="pt-40 pb-20 bg-white dark:bg-gray-900 text-gray-900 dark:text-white relative overflow-hidden">
         <div class="container mx-auto px-4 md:px-6 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold font-outfit mb-6">Our Mission & <span
+            <h1 class="text-4xl md:text-6xl font-extrabold font-outfit mb-6 break-words">Our Mission & <span
                     class="text-primary italic">Legacy</span></h1>
             <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">For over a decade, we have been the
                 silent guardians of
@@ -112,7 +106,8 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
                 <div>
                     <span class="text-primary font-bold tracking-widest uppercase text-sm">Founded in 2010</span>
-                    <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 mb-6">From a Small Startup to
+                    <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 mb-6 break-words">From a Small
+                        Startup to
                         Industry <span class="italic">Leaders</span>.</h2>
                     <p class="text-lg text-gray-500 dark:text-gray-400 mb-6 font-medium">PyroGuard started with a simple
                         belief: that every building deserves the highest standard of fire protection, powered by
@@ -142,7 +137,7 @@
             <!-- Team Grid -->
             <div class="text-center mb-16">
                 <span class="text-primary font-bold tracking-widest uppercase text-sm">Our Team</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2">Meet the Experts.</h2>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 break-words">Meet the Experts.</h2>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -222,7 +217,8 @@
     <section class="py-24 bg-gray-50 dark:bg-gray-900">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2">What Our Clients Say.</h2>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 break-words">What Our Clients Say.
+                </h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="p-8 rounded-3xl bg-white dark:bg-gray-800 shadow-sm">
@@ -230,8 +226,10 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-400 italic mb-6">"PyroGuard's dashboard made our compliance
-                        audits 10x faster. We can now track every fire extinguisher in our 12 locations in real-time."
+                    <p class="text-gray-600 dark:text-gray-400 italic mb-6">"PyroGuard's dashboard made our
+                        compliance
+                        audits 10x faster. We can now track every fire extinguisher in our 12 locations in
+                        real-time."
                     </p>
                     <div class="flex items-center gap-4">
                         <img src="https://i.pravatar.cc/100?u=a" class="w-12 h-12 rounded-full" alt="User">
@@ -247,7 +245,8 @@
                             class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 italic mb-6">"The best fire safety partner we've ever
-                        had. Their inspectors are professional, thorough, and highly knowledgeable about NFPA codes."
+                        had. Their inspectors are professional, thorough, and highly knowledgeable about NFPA
+                        codes."
                     </p>
                     <div class="flex items-center gap-4">
                         <img src="https://i.pravatar.cc/100?u=b" class="w-12 h-12 rounded-full" alt="User">
@@ -262,8 +261,10 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-400 italic mb-6">"Exceptional service. The scheduling system
-                        is seamless, and we've never missed a safety inspection thanks to their automated alerts."</p>
+                    <p class="text-gray-600 dark:text-gray-400 italic mb-6">"Exceptional service. The scheduling
+                        system
+                        is seamless, and we've never missed a safety inspection thanks to their automated alerts."
+                    </p>
                     <div class="flex items-center gap-4">
                         <img src="https://i.pravatar.cc/100?u=c" class="w-12 h-12 rounded-full" alt="User">
                         <div>
@@ -280,9 +281,9 @@
     <footer
         class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 md:px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-12 mb-16">
                 <!-- Brand -->
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6">
                         <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
                             <i class="fas fa-shield-alt text-white text-xl"></i>
@@ -290,7 +291,8 @@
                         <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
                                 class="text-primary">Guard</span></span>
                     </a>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection
+                        and
                         life safety
                         management solutions since 2010. Protecting what matters most.</p>
                     <div class="flex items-center gap-4">
@@ -314,9 +316,12 @@
                     <h4 class="text-xl font-bold mb-6">Quick Links</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
                         <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
-                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
-                        <li><a href="coming-soon.html" class="hover:text-primary transition-colors">Latest News</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a>
+                        </li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a>
+                        </li>
+                        <li><a href="coming-soon.html" class="hover:text-primary transition-colors">Latest News</a>
+                        </li>
                         <li><a href="404.html" class="hover:text-primary transition-colors">Events</a></li>
                     </ul>
                 </div>
@@ -325,23 +330,23 @@
                 <div>
                     <h4 class="text-xl font-bold mb-6">Our Services</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service-details.html?service=extinguishers"
+                                class="hover:text-primary transition-colors">Portable Extinguishers</a></li>
                         <li><a href="service-details.html?service=alarms"
-                                class="hover:text-primary transition-colors">Fire Alarms</a>
-                        </li>
+                                class="hover:text-primary transition-colors">Fire Alarm Systems</a></li>
                         <li><a href="service-details.html?service=sprinkler"
-                                class="hover:text-primary transition-colors">Sprinkler
-                                Systems</a></li>
+                                class="hover:text-primary transition-colors">Sprinkler Systems</a></li>
                         <li><a href="service-details.html?service=lighting"
-                                class="hover:text-primary transition-colors">Emergency
-                                Lights</a></li>
+                                class="hover:text-primary transition-colors">Emergency Lighting</a></li>
+                        <li><a href="service-details.html?service=cloud"
+                                class="hover:text-primary transition-colors">Cloud Dashboard</a></li>
                         <li><a href="service-details.html?service=audits"
-                                class="hover:text-primary transition-colors">Safety
-                                Audits</a></li>
+                                class="hover:text-primary transition-colors">Safety Audits</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <h4 class="text-xl font-bold mb-6">Contact Us</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
                         <li class="flex items-start gap-4">
@@ -364,11 +369,13 @@
                 class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
                     Reserved.</p>
-                <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-500">
-                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
-                    <span class="text-gray-500">Developed By| <a href="https://www.abhivorn.com/"
-                            class="hover:text-primary transition-colors">Abhivorn Technologies Pvt.Ltd</a></span>
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    </div>
+                    <span class="text-gray-500">Powered By <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn Technologies Pvt.Ltd</a></span>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
     <title>Safety Alerts | PyroGuard Client Portal</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -99,47 +99,61 @@
             </div>
         </aside>
 
-        <main class="flex-1 lg:ml-64 min-h-screen">
+        <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-6 py-4">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                        <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
-                            <i class="fas fa-bars text-xl"></i>
-                        </button>
-                        <h1 class="text-xl font-bold font-outfit">Safety Alerts & Violations</h1>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                        <button id="theme-toggle"
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
-                            <i class="fas fa-moon dark:hidden"></i>
-                            <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
-                        </button>
-                        <button id="rtl-toggle"
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase">
-                            RTL
-                        </button>
-                        <div class="relative group">
-                            <button
-                                class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
-                                <i class="fas fa-bell"></i>
-                                <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                <div class="container mx-auto px-2 md:px-6">
+                    <div class="flex items-center gap-1 md:gap-4 justify-between">
+                        <div class="flex items-center gap-4">
+                            
+                            <a href="../index.html" class="flex items-center gap-2 lg:hidden">
+                                <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                                </div>
+                                <span
+                                    class="text-xs xs:text-base md:text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                        class="text-primary">Guard</span></span>
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-1.5 sm:gap-2 md:gap-4 shrink-0 ml-auto">
+                            <!-- RTL Toggle -->
+                            <button id="rtl-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                                title="RTL Toggle">
+                                RTL
                             </button>
-                        </div>
-                        <div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
-                            <div class="text-right hidden sm:block">
-                                <p class="text-sm font-bold">Robert Miller</p>
-                                <p class="text-xs text-gray-500">Facility Manager</p>
+                            <!-- Theme Toggle -->
+                            <button id="theme-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
+                                <i class="fas fa-moon dark:hidden"></i>
+                                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                            </button>
+                            <!-- Profile -->
+                            <div
+                                class="flex items-center gap-2 md:gap-3 pl-1 md:pl-4 border-l border-gray-200 dark:border-gray-700">
+                                <div class="text-right hidden md:block">
+                                    <p class="text-sm font-bold">Robert Miller</p>
+                                    <p class="text-xs text-gray-500">Facility Manager</p>
+                                </div>
+                                <img src="https://i.pravatar.cc/150?u=client"
+                                    class="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200" alt="Profile">
                             </div>
-                            <img src="https://i.pravatar.cc/150?u=client"
-                                class="w-10 h-10 rounded-xl border border-gray-200" alt="Profile">
-                        </div>
+                        
+                            <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
+                                <i class="fas fa-bars text-xl"></i>
+                            </button></div>
                     </div>
                 </div>
             </header>
 
-            <div class="p-6">
+            <!-- Page Heading -->
+            <div class="px-3 md:px-6 py-4 md:py-8">
+                <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Safety Alerts & Violations</h1>
+                <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Monitor and address fire safety
+                    violations in real-time.</p>
+            </div>
+
+            <div class="p-3 md:p-6 pt-0">
                 <!-- Alerts Section -->
                 <div class="space-y-6">
                     <!-- Critical Alert -->
@@ -151,15 +165,20 @@
                         </div>
                         <div class="flex-1">
                             <div class="flex items-center justify-between mb-1">
-                                <h3 class="font-bold text-red-800 dark:text-red-400">Critical: Blocked Fire Exit</h3>
-                                <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Immediate Action
+                                <h3 class="font-bold text-red-800 dark:text-red-400">Critical: Blocked Fire Exit
+                                </h3>
+                                <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Immediate
+                                    Action
                                     Required</span>
                             </div>
                             <p class="text-sm text-red-700/70 dark:text-red-400/70 leading-relaxed">During the last
-                                maintenance sweep, building exit 4B in the East Tower was found obstructed by delivery
+                                maintenance sweep, building exit 4B in the East Tower was found obstructed by
+                                delivery
                                 pallets. Please clear this immediately to remain compliant.</p>
                             <div class="mt-4 flex items-center gap-3">
-                                <button class="px-4 py-2 bg-red-600 text-white rounded-xl text-xs font-bold">Mark as
+                                <button onclick="resolveViolation(this)"
+                                    class="px-4 py-2 bg-red-600 text-white rounded-xl text-xs font-bold cursor-pointer hover:bg-red-700 transition-colors">Mark
+                                    as
                                     Resolved</button>
                                 <span class="text-[10px] text-red-400 font-bold">Reported: 2 hours ago</span>
                             </div>
@@ -179,7 +198,8 @@
                                     Priority</span>
                             </div>
                             <p class="text-sm text-gray-400 leading-relaxed">The inspection log for the ground floor
-                                riser room needs a new signature card. Our technician will replace it during the next
+                                riser room needs a new signature card. Our technician will replace it during the
+                                next
                                 visit on Oct 28.</p>
                         </div>
                     </div>
@@ -191,12 +211,33 @@
     <!-- main js -->
     <script src="../assets/js/main.js"></script>
     <script>
-        // Sidebar Toggle for Mobile
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('client-sidebar');
-        sidebarToggle?.addEventListener('click', () => {
-            sidebar?.classList.toggle('-translate-x-full');
-        });
+        // Resolve Violation Function
+        function resolveViolation(button) {
+            // Navigate up to find the alert card (3 levels up)
+            const alertCard = button.parentElement.parentElement.parentElement;
+            if (alertCard && alertCard.classList.contains('rounded-\[2\.5rem\]')) {
+                // Change button to resolved state
+                button.innerHTML = '<i class="fas fa-check mr-1"></i> Resolved';
+                button.classList.remove('bg-red-600', 'hover:bg-red-700');
+                button.classList.add('bg-green-600', 'hover:bg-green-700');
+                button.disabled = true;
+
+                // Update status badge if exists
+                const statusBadge = alertCard.querySelector('.uppercase.tracking-widest');
+                if (statusBadge) {
+                    statusBadge.classList.remove('text-red-500');
+                    statusBadge.classList.add('text-green-500');
+                    statusBadge.textContent = 'Resolved';
+                }
+
+                // Add resolved text
+                const parentDiv = button.parentElement;
+                const resolvedTime = document.createElement('span');
+                resolvedTime.className = 'text-[10px] text-green-400 font-bold ml-2';
+                resolvedTime.innerHTML = '<i class="fas fa-check-circle mr-1"></i>Resolved just now';
+                parentDiv.appendChild(resolvedTime);
+            }
+        }
     </script>
 </body>
 

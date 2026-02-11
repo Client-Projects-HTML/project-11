@@ -7,7 +7,7 @@
     <title>Support | PyroGuard Client Portal</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -99,47 +99,62 @@
             </div>
         </aside>
 
-        <main class="flex-1 lg:ml-64 min-h-screen">
+        <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-6 py-4">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                        <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
-                            <i class="fas fa-bars text-xl"></i>
-                        </button>
-                        <h1 class="text-xl font-bold font-outfit">Support & Messages</h1>
-                    </div>
+                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                <div class="container mx-auto px-2 md:px-6">
+                    <div class="flex items-center gap-1 md:gap-4 justify-between">
+                        <div class="flex items-center gap-4">
 
-                    <div class="flex items-center gap-4">
-                        <button id="theme-toggle"
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
-                            <i class="fas fa-moon dark:hidden"></i>
-                            <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
-                        </button>
-                        <button id="rtl-toggle"
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase">
-                            RTL
-                        </button>
-                        <div class="relative group">
-                            <button
-                                class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
-                                <i class="fas fa-bell"></i>
-                                <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
-                            </button>
+                            <a href="../index.html" class="flex items-center gap-2 lg:hidden">
+                                <div class="w-8 h-8 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+                                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                                </div>
+                                <span
+                                    class="text-xs xs:text-base md:text-2xl font-bold font-outfit tracking-tight">Pyro<span
+                                        class="text-primary">Guard</span></span>
+                            </a>
                         </div>
-                        <div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
-                            <div class="text-right hidden sm:block">
-                                <p class="text-sm font-bold">Robert Miller</p>
-                                <p class="text-xs text-gray-500">Facility Manager</p>
+                        <div class="flex items-center gap-1.5 sm:gap-2 md:gap-4 shrink-0 ml-auto">
+                            <!-- RTL Toggle -->
+                            <button id="rtl-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                                title="RTL Toggle">
+                                RTL
+                            </button>
+                            <!-- Theme Toggle -->
+                            <button id="theme-toggle"
+                                class="p-2 md:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all">
+                                <i class="fas fa-moon dark:hidden"></i>
+                                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                            </button>
+                            <!-- Profile -->
+                            <div
+                                class="flex items-center gap-2 md:gap-3 pl-1 md:pl-4 border-l border-gray-200 dark:border-gray-700">
+                                <div class="text-right hidden md:block">
+                                    <p class="text-sm font-bold">Robert Miller</p>
+                                    <p class="text-xs text-gray-500">Facility Manager</p>
+                                </div>
+                                <img src="https://i.pravatar.cc/150?u=client"
+                                    class="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200" alt="Profile">
                             </div>
-                            <img src="https://i.pravatar.cc/150?u=client"
-                                class="w-10 h-10 rounded-xl border border-gray-200" alt="Profile">
+
+                            <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500">
+                                <i class="fas fa-bars text-xl"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </header>
 
-            <div class="p-6">
+            <!-- Page Heading -->
+            <div class="px-3 md:px-6 py-4 md:py-8">
+                <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Support & Messages</h1>
+                <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Contact our team for assistance and
+                    support.</p>
+            </div>
+
+            <div class="p-3 md:p-6 pt-0">
                 <!-- Chat Sandbox Representation -->
                 <div
                     class="bg-white dark:bg-gray-800 rounded-[2.5rem] border border-gray-100 dark:border-gray-700 shadow-sm overflow-hidden flex flex-col h-[70vh]">
@@ -168,11 +183,23 @@
 
                     <div class="p-6 border-t border-gray-100 dark:border-gray-700">
                         <div class="relative">
-                            <input type="text" placeholder="Type your message here..."
-                                class="w-full pl-6 pr-20 py-4 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl focus:ring-2 focus:ring-primary outline-none transition-all">
-                            <button
-                                class="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-primary text-white rounded-xl font-bold text-sm">Send</button>
+                            <input type="file" id="fileInput" class="hidden" multiple>
+                            <input type="text" id="messageInput" placeholder="Type your message here..."
+                                class="w-full pl-10 md:pl-12 pr-28 md:pr-32 py-4 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl focus:ring-2 focus:ring-primary outline-none transition-all">
+                            <button onclick="document.getElementById('fileInput').click()"
+                                class="absolute left-2 md:left-3 top-1/2 -translate-y-1/2 p-1.5 md:p-2 text-gray-400 hover:text-primary transition-colors"
+                                title="Attach files">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button id="sendBtn" onclick="sendMessage()"
+                                class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 px-3 md:px-6 py-2 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary-dark transition-colors cursor-pointer">Send</button>
+                            <button id="sendingBtn"
+                                class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 px-3 md:px-6 py-2 bg-gray-400 text-white rounded-xl font-bold text-sm hidden cursor-not-allowed">
+                                <i class="fas fa-spinner fa-spin mr-1"></i> Sending...
+                            </button>
                         </div>
+                        <!-- File Preview -->
+                        <div id="filePreview" class="mt-2 flex flex-wrap gap-2"></div>
                     </div>
                 </div>
             </div>
@@ -182,11 +209,91 @@
     <!-- main js -->
     <script src="../assets/js/main.js"></script>
     <script>
-        // Sidebar Toggle for Mobile
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('client-sidebar');
-        sidebarToggle?.addEventListener('click', () => {
-            sidebar?.classList.toggle('-translate-x-full');
+        // Send Message Function
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const fileInput = document.getElementById('fileInput');
+            const message = input.value.trim();
+            const files = fileInput.files;
+
+            if (message === '' && files.length === 0) return;
+
+            // Show sending animation
+            const sendBtn = document.getElementById('sendBtn');
+            const sendingBtn = document.getElementById('sendingBtn');
+            sendBtn.classList.add('hidden');
+            sendingBtn.classList.remove('hidden');
+
+            // Build message with file info
+            let messageText = message;
+            if (files.length > 0) {
+                const fileNames = Array.from(files).map(f => f.name).join(', ');
+                messageText = message + (message ? ' ' : '') + `[Attached: ${fileNames}]`;
+            }
+
+            // Get chat container
+            const chatContainer = document.querySelector('.flex-1.p-8');
+
+            // Simulate sending delay
+            setTimeout(() => {
+                // Hide sending animation
+                sendingBtn.classList.add('hidden');
+                sendBtn.classList.remove('hidden');
+
+                // Clear input and files
+                input.value = '';
+                fileInput.value = '';
+                document.getElementById('filePreview').innerHTML = '';
+
+                // Add user message to chat
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'flex justify-end';
+                messageDiv.innerHTML = `
+                    <div class="bg-primary text-white p-4 rounded-2xl rounded-tr-none max-w-[70%]">
+                        <p class="text-sm leading-relaxed">${messageText}</p>
+                        <span class="text-[10px] text-white/70 mt-1 block">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                    </div>
+                `;
+                chatContainer.appendChild(messageDiv);
+
+                // Scroll to bottom
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+
+                // Simulate reply after a delay
+                setTimeout(() => {
+                    const replyDiv = document.createElement('div');
+                    replyDiv.className = 'flex justify-start';
+                    replyDiv.innerHTML = `
+                        <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-2xl rounded-tl-none max-w-[70%]">
+                            <p class="text-sm leading-relaxed">Thank you for your message${files.length > 0 ? ' and files' : ''}! Our safety compliance expert will respond shortly.</p>
+                            <span class="text-[10px] text-gray-400 mt-1 block">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                        </div>
+                    `;
+                    chatContainer.appendChild(replyDiv);
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }, 1500);
+
+            }, 1000);
+        }
+
+        // File input change handler
+        document.getElementById('fileInput')?.addEventListener('change', function () {
+            const filePreview = document.getElementById('filePreview');
+            filePreview.innerHTML = '';
+
+            Array.from(this.files).forEach(file => {
+                const fileDiv = document.createElement('div');
+                fileDiv.className = 'flex items-center gap-2 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs';
+                fileDiv.innerHTML = `<i class="fas fa-file text-primary"></i><span class="truncate max-w-[100px]">${file.name}</span>`;
+                filePreview.appendChild(fileDiv);
+            });
+        });
+
+        // Send message on Enter key
+        document.getElementById('messageInput')?.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
         });
     </script>
 </body>

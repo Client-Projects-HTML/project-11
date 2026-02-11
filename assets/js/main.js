@@ -63,18 +63,37 @@ const initApp = () => {
 
     // Mobile Menu Logic
     const initMobileMenu = () => {
-        const menuToggle = document.getElementById('menu-toggle');
+        const menuToggles = document.querySelectorAll('#menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuClose = document.getElementById('menu-close');
 
-        menuToggle?.addEventListener('click', () => {
-            mobileMenu?.classList.remove('hidden');
-            setTimeout(() => mobileMenu?.classList.remove('translate-x-full'), 10);
+        if (!mobileMenu) return;
+
+        menuToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                // Force reflow
+                mobileMenu.offsetHeight;
+                mobileMenu.classList.remove('translate-x-full');
+            });
         });
 
         menuClose?.addEventListener('click', () => {
-            mobileMenu?.classList.add('translate-x-full');
-            setTimeout(() => mobileMenu?.classList.add('hidden'), 300);
+            mobileMenu.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
+
+        // Close menu on link click
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            });
         });
     };
 
@@ -85,20 +104,97 @@ const initApp = () => {
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add('glass', 'py-2', 'bg-white/80', 'dark:bg-gray-800/80');
+                header.classList.add('glass', 'py-2', 'bg-white/90', 'dark:bg-gray-800/90', 'shadow-lg');
                 header.classList.remove('py-4');
             } else {
-                header.classList.remove('glass', 'py-2', 'bg-white/80', 'dark:bg-gray-800/80');
+                header.classList.remove('glass', 'py-2', 'bg-white/90', 'dark:bg-gray-800/90', 'shadow-lg');
                 header.classList.add('py-4');
             }
         });
     };
 
+    // Sidebar Toggle Logic (for mobile)
+    const initSidebarToggle = () => {
+        const sidebarToggles = document.querySelectorAll('#sidebar-toggle');
+        const sidebar = document.getElementById('client-sidebar') || document.getElementById('admin-sidebar');
+
+        if (!sidebar || sidebarToggles.length === 0) return;
+
+        sidebarToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isHidden = sidebar.classList.contains('-translate-x-full');
+
+                if (isHidden) {
+                    sidebar.classList.remove('-translate-x-full');
+                    sidebar.classList.add('translate-x-0');
+                } else {
+                    sidebar.classList.remove('translate-x-0');
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 1024) { // lg breakpoint
+                if (!sidebar.contains(e.target) && !sidebar.classList.contains('-translate-x-full')) {
+                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.remove('translate-x-0');
+                }
+            }
+        });
+    };
+
+    // Notification Toggle Logic
+    const initNotification = () => {
+        const notificationBtn = document.getElementById('notification-btn');
+        const notificationDropdown = document.getElementById('notification-dropdown');
+
+        if (!notificationBtn || !notificationDropdown) return;
+
+        notificationBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            notificationDropdown.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!notificationBtn.contains(e.target) && !notificationDropdown.contains(e.target)) {
+                notificationDropdown.classList.add('hidden');
+            }
+        });
+
+        // Mark all read logic
+        const markReadBtn = Array.from(notificationDropdown.querySelectorAll('button')).find(btn => btn.textContent.trim().toLowerCase() === 'mark all read');
+
+        if (markReadBtn) {
+            markReadBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Remove badge
+                const badge = notificationBtn.querySelector('.bg-primary.rounded-full');
+                if (badge) {
+                    badge.classList.add('hidden');
+                }
+
+                // Show feedback (simulated toast)
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-4 right-4 bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-bounce';
+                toast.textContent = 'All notifications marked as read';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 3000);
+            });
+        }
+    };
+
     // Run Initializers
     initTheme();
     initRTL();
+    initSidebarToggle();
     initMobileMenu();
     initHeaderScroll();
+    initNotification();
 };
 
 document.addEventListener('DOMContentLoaded', initApp);

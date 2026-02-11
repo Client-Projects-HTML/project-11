@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | PyroGuard Client Portal</title>
+    <title>Notifications | PyroGuard</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -157,8 +157,7 @@
                                         </a>
                                     </div>
                                     <div class="p-3 border-t border-gray-100 dark:border-gray-700 text-center">
-                                        <a href="notifications.html"
-                                            class="text-xs font-bold text-primary hover:underline">View All
+                                        <a href="notifications.html" class="text-xs font-bold text-primary hover:underline">View All
                                             Notifications</a>
                                     </div>
                                 </div>
@@ -192,121 +191,77 @@
                     </div>
                 </div>
             </header>
-
-            <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
-                <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Client Dashboard</h1>
-                <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Monitor your fire safety compliance and
-                    inspections.</p>
-            </div>
-
-            <!-- Dashboard Content -->
-            <div class="p-3 md:p-6">
-                <!-- Stats Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
-                    <!-- Stat Card 1 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 md:p-6 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
-                                <i class="fas fa-building text-blue-600 text-xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">My Buildings</h3>
-                        <p class="text-2xl font-bold">12</p>
-                    </div>
-
-                    <!-- Stat Card 2 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 md:p-6 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center">
-                                <i class="fas fa-calendar-check text-orange-600 text-xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Scheduled Tasks</h3>
-                        <p class="text-2xl font-bold">3</p>
-                    </div>
-
-                    <!-- Stat Card 3 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 md:p-6 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center">
-                                <i class="fas fa-check-double text-green-600 text-xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Safety Score</h3>
-                        <p class="text-2xl font-bold">98%</p>
-                    </div>
-
-                    <!-- Stat Card 4 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-4 md:p-6 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center">
-                                <i class="fas fa-radiation text-red-600 text-xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Pending Alerts</h3>
-                        <p class="text-2xl font-bold">1</p>
-                    </div>
+            <div class="container mx-auto px-6 py-8">
+                <div class="flex items-center justify-between mb-8">
+                    <h1 class="text-2xl font-bold font-outfit">Notifications</h1>
+                    <button id="markReadPageBtn" class="text-sm text-primary font-bold hover:underline">Mark all as read</button>
                 </div>
 
-                <!-- Recent Activity Table -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm overflow-hidden">
-                    <div
-                        class="p-4 md:p-6 flex items-center justify-between border-b border-gray-100 dark:border-gray-700">
-                        <h3 class="text-lg font-bold font-outfit">Upcoming Inspections</h3>
-                        <button onclick="downloadSchedule()"
-                            class="text-sm text-primary font-bold hover:underline cursor-pointer">Download
-                            Schedule</button>
+                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <div class="divide-y divide-gray-100 dark:divide-gray-700">
+                        <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">Inspection Confirmed</h3>
+                                    <span class="text-xs text-gray-500">2 mins ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Skyline Heights lobby inspection scheduled for Oct 28.</p>
+                            </div>
+                        </div>
+
+                        <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start bg-blue-50/50 dark:bg-blue-900/10">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">New Safety Alert</h3>
+                                    <span class="text-xs text-gray-500">1 hour ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Minor compliance issue reported in Server Room B.</p>
+                            </div>
+                        </div>
+
+                        <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">Report Available</h3>
+                                    <span class="text-xs text-gray-500">5 hours ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Monthly maintenance report for September is ready.</p>
+                            </div>
+                        </div>
+                        
+                         <!-- Notification Item -->
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center shrink-0">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">New User Registration</h3>
+                                    <span class="text-xs text-gray-500">1 day ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">John Doe has requested access to the portal.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left">
-                            <thead
-                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-400 text-xs uppercase font-bold">
-                                <tr>
-                                    <th class="px-3 md:px-6 py-4">Location</th>
-                                    <th class="px-3 md:px-6 py-4">Service</th>
-                                    <th class="px-3 md:px-6 py-4">Status</th>
-                                    <th class="px-3 md:px-6 py-4">Scheduled Date</th>
-                                    <th class="px-3 md:px-6 py-4 text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700/50">
-                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
-                                    <td class="px-3 md:px-6 py-4">
-                                        <div class="flex items-center gap-2 md:gap-3">
-                                            <div
-                                                class="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-xs font-bold">
-                                                SH</div>
-                                            <span class="font-medium text-xs md:text-sm">Skyline Heights - Main
-                                                Lobby</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-xs md:text-sm">Extinguisher Recertification</td>
-                                    <td class="px-3 md:px-6 py-4">
-                                        <span
-                                            class="px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 text-[10px] font-bold uppercase">Confirmed</span>
-                                    </td>
-                                    <td class="px-3 md:px-6 py-4 text-sm text-gray-500">Oct 28, 2025</td>
-                                    <td class="px-3 md:px-6 py-4 text-center">
-                                        <button onclick="rescheduleInspection()"
-                                            class="text-primary hover:underline text-xs font-bold">Reschedule</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    
+                    <div class="p-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex justify-center">
+                        <button id="loadMorePageBtn" class="text-sm font-bold text-primary hover:underline">Load More</button>
                     </div>
                 </div>
             </div>
-        </main>
+    </main>
     </div>
 
     <!-- main js -->
@@ -339,68 +294,71 @@
             document.body.removeChild(link);
         }
     </script>
-</body>
 
-<!-- Reschedule Modal -->
-<div id="rescheduleModal" class="fixed inset-0 z-50 hidden">
-    <div class="fixed inset-0 bg-black/50" onclick="closeRescheduleModal()"></div>
-    <div
-        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl max-w-md w-[90%] p-5 max-h-[90vh] overflow-y-auto">
-        <div class="flex items-center justify-between mb-4">
-            <h3 class="text-xl font-bold font-outfit">Reschedule Inspection</h3>
-            <button onclick="closeRescheduleModal()"
-                class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                <i class="fas fa-times text-gray-400"></i>
-            </button>
-        </div>
-        <form onsubmit="handleRescheduleSubmit(event)">
-            <div class="space-y-3 mb-4">
-                <div>
-                    <label class="block text-sm font-bold text-gray-500 mb-1">New Date</label>
-                    <input type="date"
-                        class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none"
-                        required>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-gray-500 mb-1">New Time</label>
-                    <input type="time"
-                        class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none"
-                        required>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-gray-500 mb-1">Reason</label>
-                    <textarea rows="2"
-                        class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none"
-                        placeholder="Reason for rescheduling..."></textarea>
-                </div>
-            </div>
-            <div class="flex justify-end gap-3">
-                <button type="button" onclick="closeRescheduleModal()"
-                    class="px-4 py-2 rounded-xl border border-gray-200 dark:border-gray-600 font-bold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Cancel</button>
-                <button type="submit"
-                    class="px-4 py-2 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/20">Confirm
-                    Reschedule</button>
-            </div>
-        </form>
-    </div>
-</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mark All Read
+            const markReadPageBtn = document.getElementById('markReadPageBtn');
+            if (markReadPageBtn) {
+                markReadPageBtn.addEventListener('click', () => {
+                    // Find all unread items (those with colored backgrounds)
+                    const unreadItems = document.querySelectorAll('.bg-blue-50\\/50');
+                    unreadItems.forEach(item => {
+                        item.classList.remove('bg-blue-50/50', 'dark:bg-blue-900/10');
+                    });
+                    
+                    // Remove badge from header if present
+                    const badge = document.querySelector('#notification-btn .bg-primary');
+                    if (badge) badge.classList.add('hidden');
 
-<script>
-    function rescheduleInspection() {
-        document.getElementById('rescheduleModal').classList.remove('hidden');
-    }
+                    // Show success message
+                    const toast = document.createElement('div');
+                    toast.className = 'fixed bottom-4 right-4 bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-bounce';
+                    toast.textContent = 'All notifications marked as read';
+                    document.body.appendChild(toast);
+                    setTimeout(() => toast.remove(), 3000);
+                });
+            }
 
-    function closeRescheduleModal() {
-        document.getElementById('rescheduleModal').classList.add('hidden');
-    }
+            // Load More
+            const loadMorePageBtn = document.getElementById('loadMorePageBtn');
+            if (loadMorePageBtn) {
+                loadMorePageBtn.addEventListener('click', () => {
+                   // Simulate loading
+                   const originalText = loadMorePageBtn.textContent;
+                   loadMorePageBtn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> Loading...';
+                   loadMorePageBtn.disabled = true;
+                   
+                   setTimeout(() => {
+                        // Create a new notification item
+                        const template = `
+                        <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors flex gap-4 items-start animate-fade-in border-t border-gray-100 dark:border-gray-700">
+                            <div class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-500 flex items-center justify-center shrink-0">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900 dark:text-white">System Update</h3>
+                                    <span class="text-xs text-gray-500">2 days ago</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Platform maintenance scheduled for next weekend.</p>
+                            </div>
+                        </div>`;
+                        
+                        // Fix for container selection - look for the specific divide-y container
+                        const container = document.querySelector('.overflow-hidden .divide-y');
+                        if (container) {
+                            container.insertAdjacentHTML('beforeend', template);
+                        }
+                        
+                        loadMorePageBtn.innerHTML = originalText;
+                        loadMorePageBtn.disabled = false;
+                   }, 1000);
+                });
+            }
+        });
+    </script>
 
-    function handleRescheduleSubmit(event) {
-        event.preventDefault();
-        // In a real app, this would send data to the server
-        alert('Inspection request rescheduled successfully!');
-        closeRescheduleModal();
-    }
-</script>
 </body>
 
 </html>

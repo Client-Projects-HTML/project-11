@@ -7,7 +7,7 @@
     <title>Our Services | PyroGuard</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -61,24 +61,18 @@
                     </li>
                 </ul>
                 <div class="flex items-center gap-4">
+                    <button id="rtl-toggle"
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
+                        title="RTL Toggle">
+                        RTL
+                    </button>
                     <button id="theme-toggle"
                         class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all"
                         title="Toggle Theme">
                         <i class="fas fa-moon dark:hidden"></i>
                         <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                     </button>
-                    <button id="rtl-toggle"
-                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all font-bold text-xs uppercase"
-                        title="RTL Toggle">
-                        RTL
-                    </button>
-                    <div class="relative group hidden sm:block">
-                        <button
-                            class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-primary transition-all relative">
-                            <i class="fas fa-bell"></i>
-                            <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
-                        </button>
-                    </div>
+
                     <a href="login.html"
                         class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/30">
                         Login
@@ -132,7 +126,7 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> Location Assessments</li>
                         </ul>
-                        <a href="service-details.html"
+                        <a href="service-details.html?service=extinguishers"
                             class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
                             Detailed Info <i class="fas fa-arrow-right"></i>
                         </a>
@@ -262,7 +256,7 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> API Integration</li>
                         </ul>
-                        <a href="service-details.html"
+                        <a href="service-details.html?service=cloud"
                             class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
                             Detailed Info <i class="fas fa-arrow-right"></i>
                         </a>
@@ -325,9 +319,9 @@
     <footer
         class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 md:px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-12 mb-16">
                 <!-- Brand -->
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6">
                         <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
                             <i class="fas fa-shield-alt text-white text-xl"></i>
@@ -370,23 +364,23 @@
                 <div>
                     <h4 class="text-xl font-bold mb-6">Our Services</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service-details.html?service=extinguishers"
+                                class="hover:text-primary transition-colors">Portable Extinguishers</a></li>
                         <li><a href="service-details.html?service=alarms"
-                                class="hover:text-primary transition-colors">Fire Alarms</a>
-                        </li>
+                                class="hover:text-primary transition-colors">Fire Alarm Systems</a></li>
                         <li><a href="service-details.html?service=sprinkler"
-                                class="hover:text-primary transition-colors">Sprinkler
-                                Systems</a></li>
+                                class="hover:text-primary transition-colors">Sprinkler Systems</a></li>
                         <li><a href="service-details.html?service=lighting"
-                                class="hover:text-primary transition-colors">Emergency
-                                Lights</a></li>
+                                class="hover:text-primary transition-colors">Emergency Lighting</a></li>
+                        <li><a href="service-details.html?service=cloud"
+                                class="hover:text-primary transition-colors">Cloud Dashboard</a></li>
                         <li><a href="service-details.html?service=audits"
-                                class="hover:text-primary transition-colors">Safety
-                                Audits</a></li>
+                                class="hover:text-primary transition-colors">Safety Audits</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <h4 class="text-xl font-bold mb-6">Contact Us</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
                         <li class="flex items-start gap-4">
@@ -409,16 +403,17 @@
                 class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
                     Reserved.</p>
-                <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-500">
-                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
-                    <span class="text-gray-500">Developed By| <a href="https://www.abhivorn.com/"
-                            class="hover:text-primary transition-colors">Abhivorn Technologies Pvt.Ltd</a></span>
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    </div>
+                    <span class="text-gray-500">Powered By <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn Technologies Pvt.Ltd</a></span>
                 </div>
             </div>
         </div>
     </footer>
-
     <!-- Mobile Menu Modal -->
     <div id="mobile-menu"
         class="fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm hidden transition-all duration-300 translate-x-full">
@@ -438,16 +433,21 @@
 
             <ul class="space-y-6 text-lg font-medium mb-10">
                 <li><a href="index.html"
-                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a></li>
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                </li>
                 <li><a href="about.html"
-                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About</a></li>
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About</a>
+                </li>
                 <li><a href="services.html" class="text-primary">Services</a></li>
                 <li><a href="pricing.html"
-                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Pricing</a></li>
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Pricing</a>
+                </li>
                 <li><a href="blog.html"
-                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Blog</a></li>
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Blog</a>
+                </li>
                 <li><a href="contact.html"
-                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a></li>
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                </li>
             </ul>
 
             <a href="login.html"
