@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compliance Monitoring | PyroGuard Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -56,7 +57,7 @@
 
                 <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <a href="index.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-th-large w-5"></i>
                         <span>Dashboard</span>
                     </a>
@@ -66,27 +67,27 @@
                         <span>Compliance</span>
                     </a>
                     <a href="scheduling.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-calendar-alt w-5"></i>
                         <span>Scheduling</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Violations</span>
                     </a>
                     <a href="users.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-users w-5"></i>
                         <span>Clients</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Messages</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -105,7 +106,7 @@
 
         <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
@@ -149,7 +150,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
                                                     scheduled for Oct
                                                     28.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">2 mins ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -163,7 +164,7 @@
                                                     Alert</p>
                                                 <p class="text-xs text-gray-500 mt-1">Critical violation detected at
                                                     Tech Plaza B.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">1 hour ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -204,7 +205,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-20">
                 <div class="flex items-center justify-between gap-2">
                     <div class="min-w-0">
                         <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Compliance Monitoring</h1>
@@ -266,7 +267,7 @@
                         <h3 class="text-lg font-bold font-outfit">Asset Compliance Status</h3>
                         <div class="flex items-center gap-3">
                             <div class="relative">
-                                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
                                 <input type="text" placeholder="Search buildings..."
                                     class="pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-1 focus:ring-primary outline-none">
                             </div>
@@ -279,7 +280,7 @@
                     <div class="overflow-x-auto">
                         <table class="w-full text-left">
                             <thead
-                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-400 text-[10px] uppercase font-bold">
+                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-300 text-[10px] uppercase font-bold">
                                 <tr>
                                     <th class="px-3 md:px-6 py-4">Building ID</th>
                                     <th class="px-3 md:px-6 py-4">Structure Name</th>
@@ -433,7 +434,7 @@
                 <h3 id="dialogTitle" class="text-xl font-bold font-outfit">Dialog Title</h3>
                 <button onclick="closeDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                    <i class="fas fa-times text-gray-400"></i>
+                    <i class="fas fa-times text-gray-500"></i>
                 </button>
             </div>
             <form id="dialogForm" onsubmit="handleDialogSubmit(event)">

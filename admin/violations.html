@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Violation Tracking | PyroGuard Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -43,17 +44,17 @@
                 </div>
                 <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <a href="index.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-th-large w-5"></i>
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>Compliance</span>
                     </a>
                     <a href="scheduling.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-calendar-alt w-5"></i>
                         <span>Scheduling</span>
                     </a>
@@ -63,17 +64,17 @@
                         <span>Violations</span>
                     </a>
                     <a href="users.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-users w-5"></i>
                         <span>Clients</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Messages</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -90,7 +91,7 @@
 
         <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
@@ -134,7 +135,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
                                                     scheduled for Oct
                                                     28.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">2 mins ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -148,7 +149,7 @@
                                                     Alert</p>
                                                 <p class="text-xs text-gray-500 mt-1">Critical violation detected at
                                                     Tech Plaza B.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">1 hour ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -190,7 +191,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <div class="flex items-center justify-between gap-2">
                     <div class="min-w-0">
                         <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Safety Violations</h1>
@@ -245,7 +246,7 @@
                             <div class="flex justify-between items-start mb-4">
                                 <div>
                                     <h5 class="font-bold">Main Fire Pump Failure</h5>
-                                    <p class="text-xs text-gray-400">Empire Tech Towers - Mechanical Room
+                                    <p class="text-xs text-gray-500">Empire Tech Towers - Mechanical Room
                                     </p>
                                 </div>
                                 <span
@@ -273,7 +274,7 @@
                             <div class="flex justify-between items-start mb-4">
                                 <div>
                                     <h5 class="font-bold">Smoke Damper Inop</h5>
-                                    <p class="text-xs text-gray-400">Hospital Central - Wing C</p>
+                                    <p class="text-xs text-gray-500">Hospital Central - Wing C</p>
                                 </div>
                                 <span
                                     class="bg-red-50 text-red-600 px-2 py-0.5 rounded text-[10px] font-black italic">URGENT</span>
@@ -282,7 +283,7 @@
                                 bypass
                                 required.</p>
                             <div class="flex items-center justify-between">
-                                <div class="text-xs font-bold text-gray-400"><i class="fas fa-clock mr-1"></i>
+                                <div class="text-xs font-bold text-gray-500"><i class="fas fa-clock mr-1"></i>
                                     2h
                                     Remaining</div>
                                 <button onclick="dispatchNow('Smoke Damper Inop', 'Hospital Central - Wing C')"
@@ -307,7 +308,7 @@
                                     </div>
                                     <h6 class="text-sm font-bold">Alarm Battery Replaced</h6>
                                     <p class="text-xs text-gray-500">Tech Plaza B - Resolved by Mike R.</p>
-                                    <p class="text-[10px] text-gray-400 mt-1 uppercase font-black">Just Now
+                                    <p class="text-[10px] text-gray-500 mt-1 uppercase font-black">Just Now
                                     </p>
                                 </li>
                                 <li class="relative pl-10">
@@ -317,7 +318,7 @@
                                     <h6 class="text-sm font-bold">Exit Light Re-Wiring</h6>
                                     <p class="text-xs text-gray-500">Grand Valley Mall - Technician on Site
                                     </p>
-                                    <p class="text-[10px] text-gray-400 mt-1 uppercase font-black">45 Min
+                                    <p class="text-[10px] text-gray-500 mt-1 uppercase font-black">45 Min
                                         Ago</p>
                                 </li>
                                 <li class="relative pl-10 opacity-50">
@@ -327,7 +328,7 @@
                                     <h6 class="text-sm font-bold">Fire Extinguisher Re-tagging</h6>
                                     <p class="text-xs text-gray-500">City Logistics - Completed & Verified
                                     </p>
-                                    <p class="text-[10px] text-gray-400 mt-1 uppercase font-black">2h Ago
+                                    <p class="text-[10px] text-gray-500 mt-1 uppercase font-black">2h Ago
                                     </p>
                                 </li>
                             </ul>
@@ -370,7 +371,7 @@
                         <label class="block text-sm font-bold text-gray-500 mb-1">Evidence</label>
                         <div class="border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl p-6 text-center hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors cursor-pointer">
                             <i class="fas fa-camera text-2xl text-gray-300 mb-2"></i>
-                            <p class="text-xs text-gray-400 font-bold">Upload Photo/Video</p>
+                            <p class="text-xs text-gray-500 font-bold">Upload Photo/Video</p>
                         </div>
                     </div>
                 </div>
@@ -387,7 +388,7 @@
                 <div class="space-y-3">
                     <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
                         <p class="font-bold text-lg">${issue}</p>
-                        <p class="text-sm text-gray-400">${location}</p>
+                        <p class="text-sm text-gray-500">${location}</p>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Assigned Technician</label>
@@ -428,7 +429,7 @@
                 <div class="space-y-3">
                     <div class="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-200 dark:border-red-800">
                         <p class="font-bold text-lg text-red-600">${issue}</p>
-                        <p class="text-sm text-gray-400">${location}</p>
+                        <p class="text-sm text-gray-500">${location}</p>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Emergency Team</label>
@@ -473,7 +474,7 @@
                 <h3 id="dialogTitle" class="text-xl font-bold font-outfit">Dialog Title</h3>
                 <button onclick="closeDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                    <i class="fas fa-times text-gray-400"></i>
+                    <i class="fas fa-times text-gray-500"></i>
                 </button>
             </div>
             <form id="dialogForm" onsubmit="handleDialogSubmit(event)">

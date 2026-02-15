@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messages | PyroGuard Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -43,27 +44,27 @@
                 </div>
                 <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <a href="index.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-th-large w-5"></i>
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>Compliance</span>
                     </a>
                     <a href="scheduling.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-calendar-alt w-5"></i>
                         <span>Scheduling</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Violations</span>
                     </a>
                     <a href="users.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-users w-5"></i>
                         <span>Clients</span>
                     </a>
@@ -73,7 +74,7 @@
                         <span>Messages</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -90,7 +91,7 @@
 
         <main class="flex-1 lg:ml-64 min-h-screen flex flex-col bg-white dark:bg-gray-900 min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
@@ -135,7 +136,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
                                                     scheduled for Oct
                                                     28.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">2 mins ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -149,7 +150,7 @@
                                                     Alert</p>
                                                 <p class="text-xs text-gray-500 mt-1">Critical violation detected at
                                                     Tech Plaza B.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">1 hour ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -192,7 +193,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Support Messages</h1>
                 <p class="text-gray-500 mt-1 text-sm md:text-base break-words">View and manage client support inquiries.
                 </p>
@@ -207,7 +208,7 @@
                             class="p-4 md:p-6 bg-gray-50/50 dark:bg-gray-700/50 cursor-pointer hover:bg-gray-100 transition-all border-l-4 border-primary">
                             <div class="flex justify-between items-center mb-1">
                                 <h4 class="font-bold text-sm">Robert Miller</h4>
-                                <span class="text-[10px] text-gray-400 font-bold uppercase">10:45 AM</span>
+                                <span class="text-[10px] text-gray-500 font-bold uppercase">10:45 AM</span>
                             </div>
                             <p class="text-xs font-bold text-primary mb-2">Emergency Pump Secondary Check</p>
                             <p class="text-[11px] text-gray-500 line-clamp-1">Hi team, the secondary pump in the
@@ -217,11 +218,11 @@
                         <div class="p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-all">
                             <div class="flex justify-between items-center mb-1">
                                 <h4 class="font-bold text-sm">Sarah Jenkins</h4>
-                                <span class="text-[10px] text-gray-400 font-bold uppercase">Yesterday</span>
+                                <span class="text-[10px] text-gray-500 font-bold uppercase">Yesterday</span>
                             </div>
                             <p class="text-xs font-bold text-gray-700 dark:text-gray-200 mb-2">NFPA 10 Documentation
                                 Query</p>
-                            <p class="text-[11px] text-gray-400 line-clamp-1">I noticed the certificate generation for
+                            <p class="text-[11px] text-gray-500 line-clamp-1">I noticed the certificate generation for
                                 site #1024...</p>
                         </div>
                     </div>
@@ -269,7 +270,7 @@
                             class="flex items-center gap-4 bg-white dark:bg-gray-800 p-2 rounded-2xl border border-gray-100 dark:border-gray-700">
                             <input type="file" id="fileInput" class="hidden" multiple>
                             <button onclick="document.getElementById('fileInput').click()"
-                                class="p-2 text-gray-400 hover:text-primary transition-colors" title="Attach files">
+                                class="p-2 text-gray-500 hover:text-primary transition-colors" title="Attach files">
                                 <i class="fas fa-paperclip text-lg"></i>
                             </button>
                             <input type="text" id="messageInput" placeholder="Type your reply here..."

@@ -1,0 +1,8 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="128" fill="#DC2626"/>
+  <!-- Left half of the shield -->
+  <path d="M256 100L110 160V280C110 380 256 460 256 460V100Z" fill="white"/>
+  <!-- Right side outline to match fa-shield-halved -->
+  <path d="M256 100L402 160V280C402 380 256 460 256 460V100Z" stroke="white" stroke-width="40" stroke-linejoin="round" opacity="0.1"/>
+  <path d="M256 100L402 160V280C402 380 256 460" stroke="white" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

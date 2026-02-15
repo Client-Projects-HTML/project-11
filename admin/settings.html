@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings | PyroGuard Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -48,32 +49,32 @@
                 </div>
                 <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <a href="index.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-th-large w-5"></i>
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>Compliance</span>
                     </a>
                     <a href="scheduling.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-calendar-alt w-5"></i>
                         <span>Scheduling</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Violations</span>
                     </a>
                     <a href="users.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-users w-5"></i>
                         <span>Clients</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Messages</span>
                     </a>
@@ -95,7 +96,7 @@
 
         <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
@@ -141,7 +142,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
                                                     scheduled for Oct
                                                     28.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">2 mins ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -155,7 +156,7 @@
                                                     Alert</p>
                                                 <p class="text-xs text-gray-500 mt-1">Critical violation detected at
                                                     Tech Plaza B.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">1 hour ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -201,7 +202,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Settings</h1>
                 <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Manage your account and platform
                     preferences.</p>
@@ -229,21 +230,21 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Company
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Company
                                     Name</label>
                                 <input type="text" value="PyroGuard Safety Systems"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                             </div>
                             <div>
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Support
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Support
                                     Email</label>
                                 <input type="email" value="support@pyroguard.com"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                             </div>
                             <div class="md:col-span-2">
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Primary
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Primary
                                     Address</label>
                                 <textarea rows="2"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">123 Safety Ave, Tech City, ST 54321</textarea>
@@ -258,7 +259,7 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Default
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Default
                                     Currency</label>
                                 <select
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
@@ -269,7 +270,7 @@
                             </div>
                             <div>
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Timezone</label>
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Timezone</label>
                                 <select
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer">
                                     <option>(GMT-05:00) Eastern Time</option>
@@ -297,20 +298,20 @@
                         <div class="grid lg:grid-cols-2 gap-4 md:gap-8">
                             <div>
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">First
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">First
                                     Name</label>
                                 <input type="text" value="Johnathan"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Last
+                                <label class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Last
                                     Name</label>
                                 <input type="text" value="Doe"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                             </div>
                             <div class="lg:col-span-2">
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Email
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Email
                                     Address</label>
                                 <input type="email" value="john.doe@pyroguard.com"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
@@ -396,20 +397,20 @@
                         <div class="grid gap-6">
                             <div>
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Current
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Current
                                     Password</label>
                                 <input type="password" placeholder="••••••••"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">New
+                                <label class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">New
                                     Password</label>
                                 <input type="password"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
                             </div>
                             <div>
                                 <label
-                                    class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Confirm
+                                    class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Confirm
                                     New Password</label>
                                 <input type="password"
                                     class="w-full px-5 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none">
@@ -510,9 +511,9 @@
                     <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
                         <p class="font-bold mb-2">Notification Preferences:</p>
                         <p class="text-sm text-gray-500">
-                            Email Alerts: ${notifyEmail ? '<span class="text-green-500"><i class="fas fa-check"></i> Enabled</span>' : '<span class="text-gray-400"><i class="fas fa-times"></i> Disabled</span>'}<br>
-                            SMS Alerts: ${notifySMS ? '<span class="text-green-500"><i class="fas fa-check"></i> Enabled</span>' : '<span class="text-gray-400"><i class="fas fa-times"></i> Disabled</span>'}<br>
-                            Push Notifications: ${notifyPush ? '<span class="text-green-500"><i class="fas fa-check"></i> Enabled</span>' : '<span class="text-gray-400"><i class="fas fa-times"></i> Disabled</span>'}
+                            Email Alerts: ${notifyEmail ? '<span class="text-green-500"><i class="fas fa-check"></i> Enabled</span>' : '<span class="text-gray-500"><i class="fas fa-times"></i> Disabled</span>'}<br>
+                            SMS Alerts: ${notifySMS ? '<span class="text-green-500"><i class="fas fa-check"></i> Enabled</span>' : '<span class="text-gray-500"><i class="fas fa-times"></i> Disabled</span>'}<br>
+                            Push Notifications: ${notifyPush ? '<span class="text-green-500"><i class="fas fa-check"></i> Enabled</span>' : '<span class="text-gray-500"><i class="fas fa-times"></i> Disabled</span>'}
                         </p>
                     </div>
                     <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
@@ -633,7 +634,7 @@
                     Avatar</h3>
                 <button onclick="closeAvatarDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                    <i class="fas fa-times text-gray-400"></i>
+                    <i class="fas fa-times text-gray-500"></i>
                 </button>
             </div>
             <div class="space-y-6">
@@ -688,7 +689,7 @@
                 <h3 id="dialogTitle" class="text-xl font-bold font-outfit">Dialog Title</h3>
                 <button onclick="closeDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                    <i class="fas fa-times text-gray-400"></i>
+                    <i class="fas fa-times text-gray-500"></i>
                 </button>
             </div>
             <div id="dialogContent" class="mb-4">

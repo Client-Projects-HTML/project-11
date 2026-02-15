@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | PyroGuard Client Portal</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -65,27 +66,27 @@
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>My Compliance</span>
                     </a>
                     <a href="scheduling.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-calendar-alt w-5"></i>
                         <span>Book Inspection</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Safety Alerts</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Support</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -106,7 +107,7 @@
         <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <!-- Top Header -->
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <!-- Left: Logo -->
@@ -152,7 +153,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Monthly maintenance report for
                                                     September is ready.
                                                 </p>
-                                                <p class="text-[10px] text-gray-400 mt-1">5 hours ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">5 hours ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -194,7 +195,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Client Dashboard</h1>
                 <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Monitor your fire safety compliance and
                     inspections.</p>
@@ -213,7 +214,7 @@
                                 <i class="fas fa-building text-blue-600 text-xl"></i>
                             </div>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">My Buildings</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-sm font-medium mb-1">My Buildings</h3>
                         <p class="text-2xl font-bold">12</p>
                     </div>
 
@@ -226,7 +227,7 @@
                                 <i class="fas fa-calendar-check text-orange-600 text-xl"></i>
                             </div>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Scheduled Tasks</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-sm font-medium mb-1">Scheduled Tasks</h3>
                         <p class="text-2xl font-bold">3</p>
                     </div>
 
@@ -239,7 +240,7 @@
                                 <i class="fas fa-check-double text-green-600 text-xl"></i>
                             </div>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Safety Score</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-sm font-medium mb-1">Safety Score</h3>
                         <p class="text-2xl font-bold">98%</p>
                     </div>
 
@@ -252,7 +253,7 @@
                                 <i class="fas fa-radiation text-red-600 text-xl"></i>
                             </div>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Pending Alerts</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-sm font-medium mb-1">Pending Alerts</h3>
                         <p class="text-2xl font-bold">1</p>
                     </div>
                 </div>
@@ -270,7 +271,7 @@
                     <div class="overflow-x-auto">
                         <table class="w-full text-left">
                             <thead
-                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-400 text-xs uppercase font-bold">
+                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-300 text-xs uppercase font-bold">
                                 <tr>
                                     <th class="px-3 md:px-6 py-4">Location</th>
                                     <th class="px-3 md:px-6 py-4">Service</th>
@@ -350,7 +351,7 @@
             <h3 class="text-xl font-bold font-outfit">Reschedule Inspection</h3>
             <button onclick="closeRescheduleModal()"
                 class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                <i class="fas fa-times text-gray-400"></i>
+                <i class="fas fa-times text-gray-500"></i>
             </button>
         </div>
         <form onsubmit="handleRescheduleSubmit(event)">

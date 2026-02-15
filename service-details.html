@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Details | PyroGuard Safety</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -87,7 +88,7 @@
                         class="w-full rounded-[2rem] mb-12 shadow-2xl" alt="Service Detail">
                     <h1 id="service-title" class="text-4xl md:text-5xl font-black font-outfit mb-8">Fire Alarm <span
                             class="text-primary italic">Systems</span> Inspection.</h1>
-                    <p id="service-description" class="text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">
+                    <p id="service-description" class="text-lg text-gray-500 dark:text-gray-300 mb-8 leading-relaxed">
                         Early detection is the most
                         critical factor in reducing property damage and saving lives. Our fire alarm system inspections
                         are thorough, going beyond the basics to ensure every component of your detection network is
@@ -130,20 +131,6 @@
                         </div>
                     </div>
 
-                    <h3 class="text-3xl font-bold font-outfit mb-6">Service FAQ</h3>
-                    <div class="space-y-4 mb-12">
-                        <div class="p-6 rounded-2xl bg-white dark:bg-gray-800 border-2 border-primary/10">
-                            <p class="font-bold mb-2">Manual Pull Station Checks</p>
-                            <p class="text-gray-500">We verify that every manual pull station is accessible and
-                                functioning correctly within the system loop.</p>
-                        </div>
-                        <div
-                            class="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-                            <p class="font-bold mb-2">Battery Backups</p>
-                            <p class="text-gray-500">System backup batteries are load-tested to ensure they provide at
-                                least 24 hours of standby power.</p>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Sidebar -->
@@ -152,7 +139,7 @@
                     <div class="p-6 md:p-8 rounded-3xl bg-gray-900 text-white">
                         <h4 class="text-xl font-bold mb-6 border-b border-white/10 pb-4">Our Services</h4>
                         <ul class="space-y-4 font-medium">
-                            <li><a href="#"
+                            <li><a href="service-details.html?service=extinguishers"
                                     class="flex justify-between items-center hover:text-primary transition-colors"><span>Fire
                                         Extinguishers</span> <i class="fas fa-chevron-right text-xs"></i></a></li>
                             <li><a href="service-details.html?service=alarms"
@@ -176,9 +163,13 @@
                         <i class="fas fa-headset text-5xl mb-6"></i>
                         <h4 class="text-2xl font-bold mb-4">Need Help?</h4>
                         <p class="mb-8 opacity-90">Talk to our experts about your specific building needs.</p>
-                        <a href="contact.html"
-                            class="block w-full py-4 bg-white text-primary rounded-2xl font-black hover:bg-gray-100 transition-all">Contact
-                            Us Now</a>
+                        <form action="#" class="space-y-4">
+                            <input type="email" placeholder="Your Email Address" required
+                                class="w-full px-6 py-4 bg-white/10 border-2 border-white/20 rounded-2xl text-white placeholder:text-white/60 focus:bg-white focus:text-primary outline-none transition-all">
+                            <button type="submit"
+                                class="w-full py-4 bg-white text-primary rounded-2xl font-black hover:bg-gray-100 transition-all shadow-xl">Contact
+                                Us Now</button>
+                        </form>
                     </div>
 
                     <!-- Download Brochure -->
@@ -202,6 +193,40 @@
         </div>
     </section>
 
+    <!-- Service FAQ Section -->
+    <section class="py-24 border-t border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-5xl font-extrabold font-outfit text-center mb-16">Service <span
+                    class="text-primary italic">FAQ</span>.</h2>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ 1 -->
+                <div
+                    class="faq-item p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
+                        <span>Manual Pull Station Checks</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-500 leading-relaxed hidden">We verify that every manual pull
+                        station
+                        is accessible and functioning correctly within the system loop.</div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div
+                    class="faq-item p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
+                        <span>Battery Backups</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-500 leading-relaxed hidden">System backup batteries are
+                        load-tested to
+                        ensure they provide at least 24 hours of standby power.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer
         class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
@@ -216,7 +241,7 @@
                         <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
                                 class="text-primary">Guard</span></span>
                     </a>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Cutting-edge fire protection and
                         life safety
                         management solutions since 2010. Protecting what matters most.</p>
                     <div class="flex items-center gap-4">
@@ -238,7 +263,7 @@
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                         <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
                         <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
@@ -250,7 +275,7 @@
                 <!-- Services -->
                 <div>
                     <h4 class="text-xl font-bold mb-6">Our Services</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li><a href="service-details.html?service=extinguishers"
                                 class="hover:text-primary transition-colors">Portable Extinguishers</a></li>
                         <li><a href="service-details.html?service=alarms"
@@ -269,7 +294,7 @@
                 <!-- Contact -->
                 <div class="col-span-2 md:col-span-1">
                     <h4 class="text-xl font-bold mb-6">Contact Us</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li class="flex items-start gap-4">
                             <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
                             <span>123 Safety Ave, Tech City, ST 54321</span>
@@ -288,15 +313,17 @@
 
             <div
                 class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                <p class="text-gray-500 dark:text-gray-300 text-sm">© 2025 PyroGuard Safety Systems. All Rights
                     Reserved.</p>
-                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
+                <div
+                    class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-300 text-center md:text-right">
                     <div class="flex items-center gap-6">
                         <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
                         <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
                     </div>
                     <span class="text-gray-500">Powered By <a href="https://www.abhivorn.com/"
-                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn Technologies Pvt.Ltd</a></span>
+                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn
+                            Technologies Pvt.Ltd</a></span>
                 </div>
             </div>
         </div>
@@ -484,7 +511,7 @@
                 <i class="fas fa-check text-green-600 text-2xl"></i>
             </div>
             <h3 class="text-2xl font-bold font-outfit mb-2 text-gray-900 dark:text-white">Download Started!</h3>
-            <p class="text-gray-500 dark:text-gray-400 mb-8">Your service guide is being downloaded. Please check your
+            <p class="text-gray-500 dark:text-gray-300 mb-8">Your service guide is being downloaded. Please check your
                 downloads folder.</p>
             <button onclick="closeBrochureModal()"
                 class="w-full py-3 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30">
@@ -532,3 +559,4 @@
 </body>
 
 </html>
+

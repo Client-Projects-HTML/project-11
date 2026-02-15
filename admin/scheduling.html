@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspection Scheduling | PyroGuard Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -44,12 +45,12 @@
                 </div>
                 <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <a href="index.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-th-large w-5"></i>
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>Compliance</span>
                     </a>
@@ -59,22 +60,22 @@
                         <span>Scheduling</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Violations</span>
                     </a>
                     <a href="users.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-users w-5"></i>
                         <span>Clients</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Messages</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -91,7 +92,7 @@
 
         <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
@@ -135,7 +136,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
                                                     scheduled for Oct
                                                     28.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">2 mins ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -149,7 +150,7 @@
                                                     Alert</p>
                                                 <p class="text-xs text-gray-500 mt-1">Critical violation detected at
                                                     Tech Plaza B.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">1 hour ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -190,7 +191,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <div class="flex items-center justify-between">
                     <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Inspection Scheduling</h1>
                     <button onclick="scheduleNew()"
@@ -221,7 +222,7 @@
                             </div>
                             <!-- Mock Grid -->
                             <div
-                                class="grid grid-cols-7 gap-2 text-center text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                class="grid grid-cols-7 gap-2 text-center text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">
                                 <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
                             </div>
                             <div id="calendar-grid" class="grid grid-cols-7 gap-2">
@@ -292,7 +293,7 @@
                 const html = `
                     <div class="flex items-start gap-4">
                         <div class="flex flex-col items-center shrink-0 w-12 py-3 bg-gray-50 dark:bg-gray-700 rounded-2xl">
-                            <span class="text-xs font-bold text-gray-400 uppercase">${monthShort}</span>
+                            <span class="text-xs font-bold text-gray-500 uppercase">${monthShort}</span>
                             <span class="text-xl font-black text-gray-700 dark:text-white">${day}</span>
                         </div>
                         <div>
@@ -440,7 +441,7 @@
                 <h3 id="dialogTitle" class="text-xl font-bold font-outfit">Dialog Title</h3>
                 <button onclick="closeDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                    <i class="fas fa-times text-gray-400"></i>
+                    <i class="fas fa-times text-gray-500"></i>
                 </button>
             </div>
             <form id="dialogForm" onsubmit="handleDialogSubmit(event)">

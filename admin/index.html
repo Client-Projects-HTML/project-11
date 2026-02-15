@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | PyroGuard Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -65,32 +66,32 @@
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>Compliance</span>
                     </a>
                     <a href="scheduling.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-calendar-alt w-5"></i>
                         <span>Scheduling</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Violations</span>
                     </a>
                     <a href="users.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-users w-5"></i>
                         <span>Clients</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Messages</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -112,7 +113,7 @@
             <!-- Top Header -->
             <!-- Header -->
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <!-- Left: Logo -->
@@ -158,7 +159,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
                                                     scheduled for Oct
                                                     28.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">2 mins ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -172,7 +173,7 @@
                                                     Alert</p>
                                                 <p class="text-xs text-gray-500 mt-1">Minor compliance issue reported in
                                                     Server Room B.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">1 hour ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -187,7 +188,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Monthly maintenance report for
                                                     September is ready.
                                                 </p>
-                                                <p class="text-[10px] text-gray-400 mt-1">5 hours ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">5 hours ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -234,7 +235,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="container mx-auto px-3 md:px-6 py-4 md:py-8">
+            <div class="container mx-auto px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Welcome Back, Admin</h1>
                 <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Here's what's happening with your safety
                     dashboard today.</p>
@@ -255,7 +256,7 @@
                             <span class="text-green-500 text-[10px] font-bold">+12% <i
                                     class="fas fa-arrow-up"></i></span>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Total Buildings</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-xs font-medium mb-1">Total Buildings</h3>
                         <p class="text-xl md:text-2xl font-bold">1,284</p>
                     </div>
 
@@ -270,7 +271,7 @@
                             <span class="text-red-500 text-[10px] font-bold">-4% <i
                                     class="fas fa-arrow-down"></i></span>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Inspections</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-xs font-medium mb-1">Inspections</h3>
                         <p class="text-xl md:text-2xl font-bold">452</p>
                     </div>
 
@@ -285,7 +286,7 @@
                             <span class="text-green-500 text-[10px] font-bold">+28% <i
                                     class="fas fa-arrow-up"></i></span>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Compliance Rate</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-xs font-medium mb-1">Compliance Rate</h3>
                         <p class="text-xl md:text-2xl font-bold">94.2%</p>
                     </div>
 
@@ -299,7 +300,7 @@
                             </div>
                             <span class="text-orange-500 text-[10px] font-bold">+2 New</span>
                         </div>
-                        <h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Active Violations</h3>
+                        <h3 class="text-gray-500 dark:text-gray-300 text-xs font-medium mb-1">Active Violations</h3>
                         <p class="text-xl md:text-2xl font-bold">14</p>
                     </div>
                 </div>
@@ -344,7 +345,7 @@
                     <div class="overflow-x-auto">
                         <table class="w-full text-left">
                             <thead
-                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-400 text-xs uppercase font-bold">
+                                class="bg-gray-50 dark:bg-gray-700/50 text-gray-500 dark:text-gray-300 text-xs uppercase font-bold">
                                 <tr>
                                     <th class="px-3 md:px-6 py-4">Building Name</th>
                                     <th class="px-3 md:px-6 py-4">Violation Type</th>
@@ -547,7 +548,7 @@
                 <h3 id="dialogTitle" class="text-xl font-bold font-outfit">Dialog Title</h3>
                 <button onclick="closeDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                    <i class="fas fa-times text-gray-400"></i>
+                    <i class="fas fa-times text-gray-500"></i>
                 </button>
             </div>
             <form id="dialogForm" onsubmit="handleDialogSubmit(event)">
@@ -607,7 +608,7 @@
                 <div class="space-y-3">
                     <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
                         <p class="font-bold text-lg">${name}</p>
-                        <p class="text-sm text-gray-400">${type}</p>
+                        <p class="text-sm text-gray-500">${type}</p>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-500 mb-1">Violation Type</label>

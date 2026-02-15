@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clients & Users | PyroGuard Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -43,22 +44,22 @@
                 </div>
                 <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <a href="index.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-th-large w-5"></i>
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>Compliance</span>
                     </a>
                     <a href="scheduling.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-calendar-alt w-5"></i>
                         <span>Scheduling</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Violations</span>
                     </a>
@@ -68,12 +69,12 @@
                         <span>Clients</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Messages</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -90,7 +91,7 @@
 
         <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
@@ -134,7 +135,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Skyline Heights lobby inspection
                                                     scheduled for Oct
                                                     28.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">2 mins ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">2 mins ago</p>
                                             </div>
                                         </a>
                                         <a href="#"
@@ -148,7 +149,7 @@
                                                     Alert</p>
                                                 <p class="text-xs text-gray-500 mt-1">Critical violation detected at
                                                     Tech Plaza B.</p>
-                                                <p class="text-[10px] text-gray-400 mt-1">1 hour ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">1 hour ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -189,7 +190,7 @@
                 </div>
             </header>
 
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <div class="flex items-center justify-between gap-2">
                     <div class="min-w-0">
                         <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Clients Management</h1>
@@ -211,9 +212,9 @@
                                 class="filter-btn bg-gray-100 px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer">All
                                 (3)</button>
                             <button onclick="filterUsers('active')" data-filter="active"
-                                class="filter-btn text-gray-400 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer">Active</button>
+                                class="filter-btn text-gray-500 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer">Active</button>
                             <button onclick="filterUsers('inactive')" data-filter="inactive"
-                                class="filter-btn text-gray-400 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer">Inactive</button>
+                                class="filter-btn text-gray-500 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer">Inactive</button>
                         </div>
                         <input type="text" placeholder="Filter by name, email..."
                             class="px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded-xl text-sm border-none focus:ring-1 focus:ring-primary outline-none">
@@ -238,13 +239,13 @@
                                         <img src="https://i.pravatar.cc/40?u=c1" class="w-10 h-10 rounded-xl">
                                         <div>
                                             <p class="font-bold">Global Logistics Inc.</p>
-                                            <p class="text-xs text-gray-400">admin@globallogistics.com</p>
+                                            <p class="text-xs text-gray-500">admin@globallogistics.com</p>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-sm">Pro Compliance</td>
                                 <td class="px-6 py-4 text-sm font-bold">24 Buildings</td>
-                                <td class="px-6 py-4 text-sm text-gray-400">2 Hours ago</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">2 Hours ago</td>
                                 <td class="px-6 py-4 text-center">
                                     <span
                                         class="bg-green-100 text-green-600 px-2 py-0.5 rounded-full text-[10px] font-bold">ACTIVE</span>
@@ -276,13 +277,13 @@
                                         <img src="https://i.pravatar.cc/40?u=c2" class="w-10 h-10 rounded-xl">
                                         <div>
                                             <p class="font-bold">Tech Plaza B</p>
-                                            <p class="text-xs text-gray-400">facilities@techplazab.com</p>
+                                            <p class="text-xs text-gray-500">facilities@techplazab.com</p>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-sm">Basic Safety</td>
                                 <td class="px-6 py-4 text-sm font-bold">1 Building</td>
-                                <td class="px-6 py-4 text-sm text-gray-400">12 Oct 2025</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">12 Oct 2025</td>
                                 <td class="px-6 py-4 text-center">
                                     <span
                                         class="bg-amber-100 text-amber-600 px-2 py-0.5 rounded-full text-[10px] font-bold">PENDING</span>
@@ -314,13 +315,13 @@
                                         <img src="https://i.pravatar.cc/40?u=c3" class="w-10 h-10 rounded-xl">
                                         <div>
                                             <p class="font-bold">Old Town Warehouse</p>
-                                            <p class="text-xs text-gray-400">contact@oldtown.com</p>
+                                            <p class="text-xs text-gray-500">contact@oldtown.com</p>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-sm">Basic Safety</td>
                                 <td class="px-6 py-4 text-sm font-bold">3 Buildings</td>
-                                <td class="px-6 py-4 text-sm text-gray-400">01 Jan 2024</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">01 Jan 2024</td>
                                 <td class="px-6 py-4 text-center">
                                     <span
                                         class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-[10px] font-bold">INACTIVE</span>
@@ -363,7 +364,7 @@
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 // Reset to default style
-                btn.className = 'filter-btn text-gray-400 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer';
+                btn.className = 'filter-btn text-gray-500 px-3 py-1 rounded-lg text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer';
                 if (btn.dataset.filter === status) {
                     // Set active style
                     btn.className = 'filter-btn bg-gray-100 px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer';
@@ -549,7 +550,7 @@
                 <h3 id="dialogTitle" class="text-xl font-bold font-outfit">Dialog Title</h3>
                 <button onclick="closeDialog()"
                     class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                    <i class="fas fa-times text-gray-400"></i>
+                    <i class="fas fa-times text-gray-500"></i>
                 </button>
             </div>
             <form id="dialogForm" onsubmit="handleDialogSubmit(event)">

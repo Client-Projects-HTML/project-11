@@ -11,7 +11,7 @@
     --bg-body: #0F172A;
     --bg-card: #1E293B;
     --text-main: #F8FAFC;
-    --text-muted: #94A3B8;
+    --text-muted: #CBD5E1;
     --border-color: #334155;
 }
 
@@ -21,6 +21,34 @@
     --text-main: #0F172A;
     --text-muted: #64748B;
     --border-color: #E2E8F0;
+}
+
+/* Accessibility Overrides for Dark Mode */
+.dark .text-gray-400,
+.dark .dark\:text-gray-400,
+.dark .text-gray-500,
+.dark .dark\:text-gray-500,
+.dark .text-gray-600,
+.dark .dark\:text-gray-600 {
+    color: #CBD5E1 !important;
+}
+
+.dark .text-xs.text-gray-400,
+.dark .text-xs.text-gray-500,
+.dark .text-\[10px\].text-gray-400,
+.dark .text-\[10px\].text-gray-500 {
+    color: #E2E8F0 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder,
+.dark .placeholder\:text-gray-300::placeholder,
+.dark .placeholder\:text-gray-400::placeholder {
+    color: #94A3B8 !important;
+}
+
+.dark thead th {
+    color: #E2E8F0 !important;
 }
 
 body {
@@ -41,15 +69,32 @@ h6 {
 
 /* Glassmorphism */
 .glass {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .dark .glass {
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(15, 23, 42, 0.85);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Navbar Fix on Scroll */
+header.fixed,
+header.sticky {
+    z-index: 100 !important;
+}
+
+header.scrolled {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.dark header.scrolled {
+    background-color: rgba(30, 41, 59, 0.9) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Custom Scrollbar */

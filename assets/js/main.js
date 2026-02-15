@@ -102,15 +102,17 @@ const initApp = () => {
         const header = document.querySelector('header');
         if (!header) return;
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('glass', 'py-2', 'bg-white/90', 'dark:bg-gray-800/90', 'shadow-lg');
-                header.classList.remove('py-4');
+        const updateHeader = () => {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
             } else {
-                header.classList.remove('glass', 'py-2', 'bg-white/90', 'dark:bg-gray-800/90', 'shadow-lg');
-                header.classList.add('py-4');
+                header.classList.remove('scrolled');
             }
-        });
+        };
+
+        window.addEventListener('scroll', updateHeader);
+        // Run once on load
+        updateHeader();
     };
 
     // Sidebar Toggle Logic (for mobile)
@@ -143,6 +145,52 @@ const initApp = () => {
                     sidebar.classList.remove('translate-x-0');
                 }
             }
+        });
+    };
+
+    // Toast Utility
+    const showToast = (message, type = 'success') => {
+        const toast = document.createElement('div');
+        toast.className = `fixed bottom-4 right-4 px-6 py-4 rounded-2xl shadow-2xl z-[100] animate-fade-in flex items-center gap-3 font-bold text-white ${type === 'success' ? 'bg-green-500' : 'bg-primary'
+            }`;
+
+        const icon = document.createElement('i');
+        icon.className = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+
+        toast.appendChild(icon);
+        toast.appendChild(document.createTextNode(message));
+
+        document.body.appendChild(toast);
+        setTimeout(() => {
+            toast.classList.add('opacity-0', 'translate-y-4');
+            setTimeout(() => toast.remove(), 500);
+        }, 3000);
+    };
+
+    // Sidebar Contact Logic
+    const initSidebarContact = () => {
+        const contactForms = document.querySelectorAll('form');
+        contactForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                const submitBtn = form.querySelector('button[type="submit"]');
+                if (!submitBtn || !(submitBtn.textContent.toLowerCase().includes('contact') || submitBtn.textContent.toLowerCase().includes('send'))) return;
+
+                e.preventDefault();
+                const emailInput = form.querySelector('input[type="email"]');
+
+                if (emailInput && emailInput.value) {
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                    setTimeout(() => {
+                        showToast('Message sent! Our experts will contact you shortly.');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                        form.reset();
+                    }, 1500);
+                }
+            });
         });
     };
 
@@ -188,6 +236,31 @@ const initApp = () => {
         }
     };
 
+    // FAQ Accordion Logic
+    const initFAQ = () => {
+        const faqs = document.querySelectorAll('.faq-item');
+        faqs.forEach(faq => {
+            const button = faq.querySelector('button');
+            const content = faq.querySelector('.faq-content');
+            const icon = faq.querySelector('.fa-plus');
+
+            if (!button || !content) return;
+
+            button.addEventListener('click', () => {
+                const isOpen = !content.classList.contains('hidden');
+
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-item .fa-plus').forEach(i => i.classList.remove('rotate-45'));
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon?.classList.add('rotate-45');
+                }
+            });
+        });
+    };
+
     // Run Initializers
     initTheme();
     initRTL();
@@ -195,6 +268,8 @@ const initApp = () => {
     initMobileMenu();
     initHeaderScroll();
     initNotification();
+    initFAQ();
+    initSidebarContact();
 };
 
 document.addEventListener('DOMContentLoaded', initApp);

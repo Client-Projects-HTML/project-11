@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Inspection | PyroGuard Client Portal</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -57,12 +58,12 @@
                 <!-- Navigation Links -->
                 <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <a href="index.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-th-large w-5"></i>
                         <span>Dashboard</span>
                     </a>
                     <a href="compliance.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-clipboard-check w-5"></i>
                         <span>My Compliance</span>
                     </a>
@@ -72,17 +73,17 @@
                         <span>Book Inspection</span>
                     </a>
                     <a href="violations.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-exclamation-triangle w-5"></i>
                         <span>Safety Alerts</span>
                     </a>
                     <a href="messages.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-envelope w-5"></i>
                         <span>Support</span>
                     </a>
                     <a href="settings.html"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
                         <i class="fas fa-cog w-5"></i>
                         <span>Settings</span>
                     </a>
@@ -101,7 +102,7 @@
 
         <main class="flex-1 lg:ml-64 min-h-screen min-w-0 overflow-x-hidden">
             <header
-                class="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
+                class="fixed top-0 lg:left-64 left-0 right-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300 py-3 md:py-4">
                 <div class="container mx-auto px-2 md:px-6">
                     <div class="flex items-center gap-1 md:gap-4 justify-between">
                         <div class="flex items-center gap-4">
@@ -146,7 +147,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">Monthly maintenance report for
                                                     September is ready.
                                                 </p>
-                                                <p class="text-[10px] text-gray-400 mt-1">5 hours ago</p>
+                                                <p class="text-[10px] text-gray-500 mt-1">5 hours ago</p>
                                             </div>
                                         </a>
                                     </div>
@@ -189,7 +190,7 @@
             </header>
 
             <!-- Page Heading -->
-            <div class="px-3 md:px-6 py-4 md:py-8">
+            <div class="px-3 md:px-6 py-4 md:py-8 mt-16 md:mt-24">
                 <h1 class="text-xl md:text-2xl font-bold font-outfit break-words">Book an Inspection</h1>
                 <p class="text-gray-500 mt-1 text-sm md:text-base break-words">Schedule fire safety inspections for your
                     facility.</p>
@@ -206,7 +207,7 @@
                                 <div class="grid sm:grid-cols-2 gap-6">
                                     <div>
                                         <label
-                                            class="block text-sm font-bold text-gray-600 dark:text-gray-400 mb-2">Select
+                                            class="block text-sm font-bold text-gray-600 dark:text-gray-300 mb-2">Select
                                             Building</label>
                                         <select
                                             class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all">
@@ -216,7 +217,7 @@
                                     </div>
                                     <div>
                                         <label
-                                            class="block text-sm font-bold text-gray-600 dark:text-gray-400 mb-2">Service
+                                            class="block text-sm font-bold text-gray-600 dark:text-gray-300 mb-2">Service
                                             Type</label>
                                         <select
                                             class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all">
@@ -228,14 +229,14 @@
                                 </div>
                                 <div>
                                     <label
-                                        class="block text-sm font-bold text-gray-600 dark:text-gray-400 mb-2">Preferred
+                                        class="block text-sm font-bold text-gray-600 dark:text-gray-300 mb-2">Preferred
                                         Date</label>
                                     <input type="date"
                                         class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all">
                                 </div>
                                 <div>
                                     <label
-                                        class="block text-sm font-bold text-gray-600 dark:text-gray-400 mb-2">Additional
+                                        class="block text-sm font-bold text-gray-600 dark:text-gray-300 mb-2">Additional
                                         Notes</label>
                                     <textarea rows="4" placeholder="Any specific access instructions..."
                                         class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-none rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all"></textarea>
@@ -253,7 +254,7 @@
                         <div class="bg-gray-900 text-white p-8 rounded-[2.5rem] relative overflow-hidden">
                             <i class="fas fa-shield-alt absolute -bottom-10 -right-10 text-9xl opacity-10"></i>
                             <h3 class="text-xl font-bold mb-4 relative z-10">Standard SLA</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed relative z-10 mb-6">Our technicians
+                            <p class="text-gray-500 text-sm leading-relaxed relative z-10 mb-6">Our technicians
                                 typically respond within 24-48 hours of a booking request.</p>
                             <div class="flex items-center gap-3 relative z-10">
                                 <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">

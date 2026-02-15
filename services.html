@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | PyroGuard</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -46,8 +47,23 @@
                             class="text-primary">Guard</span></span>
                 </a>
                 <ul class="hidden lg:flex items-center gap-8 font-medium">
-                    <li><a href="index.html"
-                            class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Home</a></li>
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-gray-700 dark:text-gray-200 hover:text-primary py-4">
+                            Home
+                            <i
+                                class="fas fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+                        <ul
+                            class="absolute top-full left-0 w-48 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <li><a href="index.html"
+                                    class="block px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 hover:text-primary transition-all">Home
+                                    1</a></li>
+                            <li><a href="index2.html"
+                                    class="block px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 hover:text-primary transition-all">Home
+                                    2</a></li>
+                        </ul>
+                    </li>
                     <li><a href="about.html"
                             class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">About</a></li>
                     <li><a href="services.html" class="text-primary">Services</a></li>
@@ -90,7 +106,7 @@
         <div class="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold font-outfit mb-6">Expert Safety <span
                     class="text-primary italic">Services</span></h1>
-            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">From professional inspection to smart
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">From professional inspection to smart
                 monitoring, we
                 cover every aspect of fire and life safety.</p>
         </div>
@@ -115,7 +131,7 @@
                             <i class="fas fa-fire-extinguisher text-primary text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Portable Extinguishers</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm">Annual, semi-annual,
+                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed text-sm">Annual, semi-annual,
                             and monthly inspections for all types of fire extinguishers to ensure NFPA 10 compliance.
                         </p>
                         <ul class="space-y-3 mb-8">
@@ -148,7 +164,7 @@
                             <i class="fas fa-bell text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Fire Alarm Systems</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm">Comprehensive testing
+                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed text-sm">Comprehensive testing
                             and maintenance of fire alarm control panels, sensory devices, and notification appliances.
                         </p>
                         <ul class="space-y-3 mb-8">
@@ -181,7 +197,7 @@
                             <i class="fas fa-tint text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Sprinkler Systems</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm">Quarterly and annual
+                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed text-sm">Quarterly and annual
                             inspections of wet-pipe, dry-pipe, pre-action, and deluge fire sprinkler systems.</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
@@ -213,7 +229,7 @@
                             <i class="fas fa-lightbulb text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Emergency Lighting</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm">Ensuring all exit signs
+                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed text-sm">Ensuring all exit signs
                             and emergency lights function correctly during power outages for safe building evacuation.
                         </p>
                         <ul class="space-y-3 mb-8">
@@ -246,7 +262,7 @@
                             <i class="fas fa-cloud text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold font-outfit mb-4">Cloud Dashboard</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm">Centralized management
+                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed text-sm">Centralized management
                             portal for all your safety assets, documentation, and upcoming inspection dates.</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
@@ -278,7 +294,7 @@
                             <i class="fas fa-graduation-cap text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Safety Audits</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm">OSHA-compliant training
+                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed text-sm">OSHA-compliant training
                             sessions for your employees on fire extinguisher use and emergency procedures.</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
@@ -293,6 +309,53 @@
                             Detailed Info <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 border-t border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-5xl font-extrabold font-outfit text-center mb-16">Service <span
+                    class="text-primary italic">FAQ</span>.</h2>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ 1 -->
+                <div
+                    class="faq-item p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
+                        <span>How often do I need a fire safety inspection?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-500 leading-relaxed hidden">Most commercial buildings require
+                        an annual
+                        inspection for extinguishers and alarm systems, though some systems like sprinklers may require
+                        quarterly checks according to local fire codes.</div>
+                </div>
+                <!-- FAQ 2 -->
+                <div
+                    class="faq-item p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
+                        <span>Can I manage multiple buildings under one account?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-500 leading-relaxed hidden">Yes! Our Professional and
+                        Ultimate plans allow for
+                        multi-site management, where you can see all your locations' compliance status from a single
+                        unified dashboard.</div>
+                </div>
+                <!-- FAQ 3 -->
+                <div
+                    class="faq-item p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
+                        <span>Are your technicians certified?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-500 leading-relaxed hidden">Absolutely. All our safety
+                        experts and technicians
+                        hold state-specific certifications and regular training on the latest NFPA standards to ensure
+                        your building meets all legal requirements.</div>
                 </div>
             </div>
         </div>
@@ -329,7 +392,7 @@
                         <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
                                 class="text-primary">Guard</span></span>
                     </a>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Cutting-edge fire protection and
                         life safety
                         management solutions since 2010. Protecting what matters most.</p>
                     <div class="flex items-center gap-4">
@@ -351,7 +414,7 @@
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                         <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
                         <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
@@ -363,7 +426,7 @@
                 <!-- Services -->
                 <div>
                     <h4 class="text-xl font-bold mb-6">Our Services</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li><a href="service-details.html?service=extinguishers"
                                 class="hover:text-primary transition-colors">Portable Extinguishers</a></li>
                         <li><a href="service-details.html?service=alarms"
@@ -382,7 +445,7 @@
                 <!-- Contact -->
                 <div class="col-span-2 md:col-span-1">
                     <h4 class="text-xl font-bold mb-6">Contact Us</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li class="flex items-start gap-4">
                             <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
                             <span>123 Safety Ave, Tech City, ST 54321</span>
@@ -401,15 +464,17 @@
 
             <div
                 class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                <p class="text-gray-500 dark:text-gray-300 text-sm">© 2025 PyroGuard Safety Systems. All Rights
                     Reserved.</p>
-                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
+                <div
+                    class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-300 text-center md:text-right">
                     <div class="flex items-center gap-6">
                         <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
                         <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
                     </div>
                     <span class="text-gray-500">Powered By <a href="https://www.abhivorn.com/"
-                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn Technologies Pvt.Ltd</a></span>
+                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn
+                            Technologies Pvt.Ltd</a></span>
                 </div>
             </div>
         </div>
@@ -432,8 +497,12 @@
             </div>
 
             <ul class="space-y-6 text-lg font-medium mb-10">
-                <li><a href="index.html"
-                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                <li>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-gray-500 text-sm uppercase tracking-widest font-bold">Home Options</p>
+                        <a href="index.html" class="text-gray-900 dark:text-white hover:text-primary pl-4">Home 1</a>
+                        <a href="index2.html" class="text-gray-900 dark:text-white hover:text-primary pl-4">Home 2</a>
+                    </div>
                 </li>
                 <li><a href="about.html"
                         class="text-gray-900 dark:text-white hover:text-primary transition-colors">About</a>
@@ -461,3 +530,4 @@
 </body>
 
 </html>
+

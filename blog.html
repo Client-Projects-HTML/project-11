@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safety Insights Blog | PyroGuard</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com" data-mode="prod"></script>
@@ -30,7 +31,8 @@
 <body class="transition-colors duration-300">
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 glass">
+    <header
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-700">
         <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
                 <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
@@ -40,8 +42,22 @@
                         class="text-primary">Guard</span></span>
             </a>
             <ul class="hidden lg:flex items-center gap-8 font-medium">
-                <li><a href="index.html"
-                        class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">Home</a></li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 text-gray-700 dark:text-gray-200 hover:text-primary py-4">
+                        Home
+                        <i
+                            class="fas fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    <ul
+                        class="absolute top-full left-0 w-48 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <li><a href="index.html"
+                                class="block px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 hover:text-primary transition-all">Home
+                                1</a></li>
+                        <li><a href="index2.html"
+                                class="block px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 hover:text-primary transition-all">Home
+                                2</a></li>
+                    </ul>
+                </li>
                 <li><a href="about.html"
                         class="text-gray-700 dark:text-gray-200 hover:text-primary transition-colors">About</a></li>
                 <li><a href="services.html"
@@ -87,7 +103,7 @@
 
                 <div
                     class="flex items-center gap-4 bg-white dark:bg-gray-800 p-2 rounded-2xl border border-gray-100 dark:border-gray-700">
-                    <i class="fas fa-search text-gray-400 ml-4"></i>
+                    <i class="fas fa-search text-gray-500 ml-4"></i>
                     <input type="text" id="search-input" placeholder="Search articles..."
                         class="bg-transparent border-none focus:ring-0 outline-none text-sm w-48 md:w-64">
                 </div>
@@ -108,7 +124,7 @@
                                     Safety Tips</div>
                             </div>
                             <div
-                                class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                class="flex items-center gap-4 text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">
                                 <span>Oct 20, 2025</span>
                                 <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
                                 <span>5 min read</span>
@@ -117,7 +133,7 @@
                                 class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
                                 <a href="blog-details.html">5 Common Fire Hazards in Modern Office Buildings.</a>
                             </h3>
-                            <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">Discover the hidden risks in
+                            <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">Discover the hidden risks in
                                 your workplace, from overloaded power strips to blocked emergency exits, and how to fix
                                 them.</p>
                             <a href="blog-details.html"
@@ -136,7 +152,7 @@
                                     Compliance</div>
                             </div>
                             <div
-                                class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                class="flex items-center gap-4 text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">
                                 <span>Oct 18, 2025</span>
                                 <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
                                 <span>8 min read</span>
@@ -145,7 +161,7 @@
                                 class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
                                 <a href="blog-details.html">Understanding the New 2025 NFPA 10 Standards.</a>
                             </h3>
-                            <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">The fire safety landscape is
+                            <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">The fire safety landscape is
                                 changing. Here's what facility managers need to know about the latest regulatory
                                 updates.</p>
                             <a href="blog-details.html"
@@ -164,7 +180,7 @@
                                     Technology</div>
                             </div>
                             <div
-                                class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                class="flex items-center gap-4 text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">
                                 <span>Oct 15, 2025</span>
                                 <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
                                 <span>6 min read</span>
@@ -173,7 +189,7 @@
                                 class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
                                 <a href="blog-details.html">How AI is Decorating Fire Detection Systems.</a>
                             </h3>
-                            <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">Learn how machine learning
+                            <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">Learn how machine learning
                                 algorithms are identifying fire patterns faster than traditional heat sensors.</p>
                             <a href="blog-details.html"
                                 class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
@@ -193,7 +209,7 @@
                                 <a href="service-details.html?service=alarms"
                                     class="flex items-center justify-between group">
                                     <span
-                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Fire
+                                        class="text-lg text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors font-medium">Fire
                                         Alarms</span>
                                     <i
                                         class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-primary transition-all group-hover:translate-x-1"></i>
@@ -203,7 +219,7 @@
                                 <a href="service-details.html?service=sprinkler"
                                     class="flex items-center justify-between group">
                                     <span
-                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Sprinkler
+                                        class="text-lg text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors font-medium">Sprinkler
                                         Systems</span>
                                     <i
                                         class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-primary transition-all group-hover:translate-x-1"></i>
@@ -213,7 +229,7 @@
                                 <a href="service-details.html?service=lighting"
                                     class="flex items-center justify-between group">
                                     <span
-                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Emergency
+                                        class="text-lg text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors font-medium">Emergency
                                         Lights</span>
                                     <i
                                         class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-primary transition-all group-hover:translate-x-1"></i>
@@ -223,7 +239,7 @@
                                 <a href="service-details.html?service=audits"
                                     class="flex items-center justify-between group">
                                     <span
-                                        class="text-lg text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors font-medium">Safety
+                                        class="text-lg text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors font-medium">Safety
                                         Audits</span>
                                     <i
                                         class="fas fa-arrow-right text-xs text-primary transition-all group-hover:translate-x-1"></i>
@@ -386,7 +402,7 @@
                                         ${post.category}</div>
                                 </div>
                                 <div
-                                    class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                                    class="flex items-center gap-4 text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">
                                     <span>${post.date}</span>
                                     <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
                                     <span>${post.read}</span>
@@ -395,7 +411,7 @@
                                     class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
                                     <a href="blog-details.html">${post.title}</a>
                                 </h3>
-                                <p class="text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">${post.desc}</p>
+                                <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">${post.desc}</p>
                                 <a href="blog-details.html"
                                     class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
                                     More <i class="fas fa-long-arrow-right"></i></a>
@@ -491,7 +507,7 @@
                         <span class="text-2xl font-bold font-outfit tracking-tight">Pyro<span
                                 class="text-primary">Guard</span></span>
                     </a>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Cutting-edge fire protection and
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Cutting-edge fire protection and
                         life safety
                         management solutions since 2010. Protecting what matters most.</p>
                     <div class="flex items-center gap-4">
@@ -513,7 +529,7 @@
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                         <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
                         <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
@@ -525,7 +541,7 @@
                 <!-- Services -->
                 <div>
                     <h4 class="text-xl font-bold mb-6">Our Services</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li><a href="service-details.html?service=extinguishers"
                                 class="hover:text-primary transition-colors">Portable Extinguishers</a></li>
                         <li><a href="service-details.html?service=alarms"
@@ -544,7 +560,7 @@
                 <!-- Contact -->
                 <div class="col-span-2 md:col-span-1">
                     <h4 class="text-xl font-bold mb-6">Contact Us</h4>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li class="flex items-start gap-4">
                             <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
                             <span>123 Safety Ave, Tech City, ST 54321</span>
@@ -563,15 +579,17 @@
 
             <div
                 class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 dark:text-gray-500 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                <p class="text-gray-500 dark:text-gray-300 text-sm">© 2025 PyroGuard Safety Systems. All Rights
                     Reserved.</p>
-                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
+                <div
+                    class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-300 text-center md:text-right">
                     <div class="flex items-center gap-6">
                         <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
                         <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
                     </div>
                     <span class="text-gray-500">Powered By <a href="https://www.abhivorn.com/"
-                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn Technologies Pvt.Ltd</a></span>
+                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn
+                            Technologies Pvt.Ltd</a></span>
                 </div>
             </div>
         </div>
@@ -594,8 +612,12 @@
             </div>
 
             <ul class="space-y-6 text-lg font-medium mb-10">
-                <li><a href="index.html"
-                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                <li>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-gray-500 text-sm uppercase tracking-widest font-bold">Home Options</p>
+                        <a href="index.html" class="text-gray-900 dark:text-white hover:text-primary pl-4">Home 1</a>
+                        <a href="index2.html" class="text-gray-900 dark:text-white hover:text-primary pl-4">Home 2</a>
+                    </div>
                 </li>
                 <li><a href="about.html"
                         class="text-gray-900 dark:text-white hover:text-primary transition-colors">About</a>
@@ -623,3 +645,4 @@
 </body>
 
 </html>
+
