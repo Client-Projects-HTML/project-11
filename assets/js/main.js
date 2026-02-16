@@ -61,6 +61,127 @@ const initApp = () => {
         });
     };
 
+    // Login role dropdown (Client Dashboard, Admin Dashboard)
+    const initLoginRoleDropdown = () => {
+        const isNestedPage = window.location.pathname.includes('/admin/') || window.location.pathname.includes('/client/');
+        const resolvePath = (path) => (isNestedPage ? `../${path}` : path);
+        const roleLinks = [
+            { label: 'Client Dashboard', href: resolvePath('client/index.html') },
+            { label: 'Admin Dashboard', href: resolvePath('admin/index.html') },
+        ];
+
+        const createMenuItem = (item, extraClass = '') => {
+            const link = document.createElement('a');
+            link.href = item.href;
+            link.className = `block px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-primary transition-colors ${extraClass}`.trim();
+            link.textContent = item.label;
+            return link;
+        };
+
+        const closeAllDropdowns = () => {
+            document.querySelectorAll('[data-login-role-menu]').forEach(menu => menu.classList.add('hidden'));
+            document.querySelectorAll('[data-login-role-trigger]').forEach(trigger => trigger.setAttribute('aria-expanded', 'false'));
+            document.querySelectorAll('[data-login-role-chevron]').forEach(icon => icon.classList.remove('rotate-180'));
+        };
+
+        // Desktop/header login buttons
+        const desktopLoginLinks = Array.from(document.querySelectorAll('header a[href$="login.html"]'))
+            .filter(link => !link.closest('#mobile-menu'))
+            .filter(link => {
+                const text = link.textContent.trim().toLowerCase();
+                return text === 'login' || text === 'sign in';
+            });
+
+        desktopLoginLinks.forEach(link => {
+            if (link.dataset.loginRoleDropdownApplied === 'true') return;
+
+            const responsiveClass = (link.classList.contains('hidden') && link.classList.contains('sm:inline-flex'))
+                ? 'hidden sm:inline-flex'
+                : 'inline-flex';
+
+            const wrapper = document.createElement('div');
+            wrapper.className = `relative ${responsiveClass} items-stretch rounded-full bg-primary text-white shadow-lg hover:shadow-primary/30`;
+            link.parentNode?.insertBefore(wrapper, link);
+            wrapper.appendChild(link);
+
+            link.className = 'inline-flex items-center justify-center px-6 py-2.5 rounded-l-full font-semibold text-white';
+
+            const trigger = document.createElement('button');
+            trigger.type = 'button';
+            trigger.className = 'inline-flex items-center justify-center px-3 rounded-r-full border-l border-white/20 text-white';
+            trigger.dataset.loginRoleTrigger = 'true';
+            trigger.setAttribute('aria-expanded', 'false');
+            trigger.innerHTML = `<i data-login-role-chevron="true" class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>`;
+
+            const menu = document.createElement('div');
+            menu.className = 'absolute right-0 top-full mt-3 w-56 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-2 hidden z-[70]';
+            menu.dataset.loginRoleMenu = 'true';
+            roleLinks.forEach(item => menu.appendChild(createMenuItem(item)));
+
+            wrapper.appendChild(trigger);
+            wrapper.appendChild(menu);
+
+            link.dataset.loginRoleDropdownApplied = 'true';
+
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const shouldOpen = menu.classList.contains('hidden');
+                closeAllDropdowns();
+                if (shouldOpen) {
+                    menu.classList.remove('hidden');
+                    trigger.setAttribute('aria-expanded', 'true');
+                    const icon = trigger.querySelector('[data-login-role-chevron]');
+                    icon?.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // Mobile menu login button
+        const mobileLoginLink = document.querySelector('#mobile-menu a[href$="login.html"]');
+        if (mobileLoginLink && mobileLoginLink.dataset.loginRoleDropdownApplied !== 'true') {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'w-full relative';
+            const row = document.createElement('div');
+            row.className = 'flex items-stretch rounded-xl bg-primary text-white overflow-hidden';
+
+            mobileLoginLink.parentNode?.insertBefore(wrapper, mobileLoginLink);
+            wrapper.appendChild(row);
+            row.appendChild(mobileLoginLink);
+            mobileLoginLink.className = 'flex-1 inline-flex items-center justify-center px-6 py-4 font-bold text-center text-white';
+
+            const trigger = document.createElement('button');
+            trigger.type = 'button';
+            trigger.className = 'inline-flex items-center justify-center px-4 border-l border-white/20 text-white';
+            trigger.dataset.loginRoleTrigger = 'true';
+            trigger.setAttribute('aria-expanded', 'false');
+            trigger.innerHTML = `<i data-login-role-chevron="true" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>`;
+
+            const menu = document.createElement('div');
+            menu.className = 'hidden mt-2 space-y-2';
+            menu.dataset.loginRoleMenu = 'true';
+            roleLinks.forEach(item => menu.appendChild(createMenuItem(item, 'bg-gray-50 dark:bg-gray-700/50')));
+
+            row.appendChild(trigger);
+            wrapper.appendChild(menu);
+
+            mobileLoginLink.dataset.loginRoleDropdownApplied = 'true';
+
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const shouldOpen = menu.classList.contains('hidden');
+                closeAllDropdowns();
+                if (shouldOpen) {
+                    menu.classList.remove('hidden');
+                    trigger.setAttribute('aria-expanded', 'true');
+                    const icon = trigger.querySelector('[data-login-role-chevron]');
+                    icon?.classList.add('rotate-180');
+                }
+            });
+        }
+
+        document.addEventListener('click', closeAllDropdowns);
+    };
+
     // Mobile Menu Logic
     const initMobileMenu = () => {
         const menuToggles = document.querySelectorAll('#menu-toggle');
@@ -113,6 +234,19 @@ const initApp = () => {
         window.addEventListener('scroll', updateHeader);
         // Run once on load
         updateHeader();
+    };
+
+    // Ensure all top navigation headers stay fixed across pages
+    const initFixedNavbar = () => {
+        const navbarHeader = document.getElementById('menu-toggle')?.closest('header');
+        if (navbarHeader) {
+            navbarHeader.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'z-50');
+        }
+
+        const dashboardHeader = document.getElementById('sidebar-toggle')?.closest('header');
+        if (dashboardHeader) {
+            dashboardHeader.classList.add('fixed', 'top-0', 'right-0');
+        }
     };
 
     // Sidebar Toggle Logic (for mobile)
@@ -264,6 +398,8 @@ const initApp = () => {
     // Run Initializers
     initTheme();
     initRTL();
+    initLoginRoleDropdown();
+    initFixedNavbar();
     initSidebarToggle();
     initMobileMenu();
     initHeaderScroll();
