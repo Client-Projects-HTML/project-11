@@ -69,14 +69,14 @@ h6 {
 
 /* Glassmorphism */
 .glass {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .dark .glass {
-    background: rgba(15, 23, 42, 0.85);
+    background: #1e293b;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -84,6 +84,14 @@ h6 {
 header.fixed,
 header.sticky {
     z-index: 100 !important;
+    background-color: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.dark header.fixed,
+.dark header.sticky {
+    background-color: #1f2937 !important;
 }
 
 header.scrolled {
@@ -91,7 +99,7 @@ header.scrolled {
 }
 
 .dark header.scrolled {
-    background-color: rgba(30, 41, 59, 0.9) !important;
+    background-color: #1e293b !important;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
 }
 
