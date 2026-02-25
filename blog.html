@@ -129,16 +129,16 @@
                                 <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
                                 <span>5 min read</span>
                             </div>
-                            <h3
-                                class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
-                                <a href="blog-details.html">5 Common Fire Hazards in Modern Office Buildings.</a>
+                            <h3 class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors cursor-pointer"
+                                onclick="openBlogModal('fire_hazards')">
+                                5 Common Fire Hazards in Modern Office Buildings.
                             </h3>
                             <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">Discover the hidden risks in
                                 your workplace, from overloaded power strips to blocked emergency exits, and how to fix
                                 them.</p>
-                            <a href="blog-details.html"
+                            <button onclick="openBlogModal('fire_hazards')"
                                 class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
-                                More <i class="fas fa-long-arrow-right"></i></a>
+                                More <i class="fas fa-long-arrow-right"></i></button>
                         </div>
 
                         <!-- Blog 2 -->
@@ -157,16 +157,16 @@
                                 <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
                                 <span>8 min read</span>
                             </div>
-                            <h3
-                                class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
-                                <a href="blog-details.html">Understanding the New 2025 NFPA 10 Standards.</a>
+                            <h3 class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors cursor-pointer"
+                                onclick="openBlogModal('nfpa_standards')">
+                                Understanding the New 2025 NFPA 10 Standards.
                             </h3>
                             <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">The fire safety landscape is
                                 changing. Here's what facility managers need to know about the latest regulatory
                                 updates.</p>
-                            <a href="blog-details.html"
+                            <button onclick="openBlogModal('nfpa_standards')"
                                 class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
-                                More <i class="fas fa-long-arrow-right"></i></a>
+                                More <i class="fas fa-long-arrow-right"></i></button>
                         </div>
 
                         <!-- Blog 3 -->
@@ -185,15 +185,15 @@
                                 <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
                                 <span>6 min read</span>
                             </div>
-                            <h3
-                                class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
-                                <a href="blog-details.html">How AI is Decorating Fire Detection Systems.</a>
+                            <h3 class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors cursor-pointer"
+                                onclick="openBlogModal('ai_fire')">
+                                How AI is Revolutionising Fire Detection Systems.
                             </h3>
                             <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">Learn how machine learning
                                 algorithms are identifying fire patterns faster than traditional heat sensors.</p>
-                            <a href="blog-details.html"
+                            <button onclick="openBlogModal('ai_fire')"
                                 class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
-                                More <i class="fas fa-long-arrow-right"></i></a>
+                                More <i class="fas fa-long-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -312,6 +312,7 @@
                     const blogPosts = {
                         1: [
                             {
+                                key: 'fire_hazards',
                                 category: 'Safety Tips',
                                 date: 'Oct 20, 2025',
                                 read: '5 min read',
@@ -320,6 +321,7 @@
                                 img: 'assets/images/blog_fire_hazards.png'
                             },
                             {
+                                key: 'nfpa_standards',
                                 category: 'Compliance',
                                 date: 'Oct 18, 2025',
                                 read: '8 min read',
@@ -328,16 +330,18 @@
                                 img: 'assets/images/blog_compliance.png'
                             },
                             {
+                                key: 'ai_fire',
                                 category: 'Technology',
                                 date: 'Oct 15, 2025',
                                 read: '6 min read',
-                                title: 'How AI is Decorating Fire Detection Systems.',
+                                title: 'How AI is Revolutionising Fire Detection Systems.',
                                 desc: 'Learn how machine learning algorithms are identifying fire patterns faster than traditional heat sensors.',
                                 img: 'assets/images/blog_ai_fire.png'
                             }
                         ],
                         2: [
                             {
+                                key: 'fire_drills',
                                 category: 'Training',
                                 date: 'Oct 10, 2025',
                                 read: '4 min read',
@@ -346,6 +350,7 @@
                                 img: 'https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
                             },
                             {
+                                key: 'extinguisher_guide',
                                 category: 'Maintenance',
                                 date: 'Oct 05, 2025',
                                 read: '7 min read',
@@ -354,6 +359,7 @@
                                 img: 'https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
                             },
                             {
+                                key: 'smoke_detectors',
                                 category: 'Equipment',
                                 date: 'Oct 01, 2025',
                                 read: '5 min read',
@@ -364,6 +370,7 @@
                         ],
                         3: [
                             {
+                                key: 'warehouse_checklist',
                                 category: 'Industrial',
                                 date: 'Sep 28, 2025',
                                 read: '9 min read',
@@ -372,6 +379,7 @@
                                 img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
                             },
                             {
+                                key: 'electrical_safety',
                                 category: 'Safety Tips',
                                 date: 'Sep 25, 2025',
                                 read: '5 min read',
@@ -380,6 +388,7 @@
                                 img: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
                             },
                             {
+                                key: 'evacuation_plan',
                                 category: 'Planning',
                                 date: 'Sep 20, 2025',
                                 read: '10 min read',
@@ -390,13 +399,13 @@
                         ]
                     };
 
-                    function renderPostHTML(post) {
+                    function renderPostHTML(post, key) {
                         return `
                              <div class="group">
-                                <div class="relative overflow-hidden rounded-3xl mb-6">
+                                <div class="relative overflow-hidden rounded-3xl mb-6 cursor-pointer" onclick="openBlogModal('${key}')">
                                     <img src="${post.img}"
                                         class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110"
-                                        alt="Blog">
+                                        alt="${post.title}">
                                     <div
                                         class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
                                         ${post.category}</div>
@@ -408,13 +417,13 @@
                                     <span>${post.read}</span>
                                 </div>
                                 <h3
-                                    class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors">
-                                    <a href="blog-details.html">${post.title}</a>
+                                    class="text-2xl font-bold font-outfit mb-4 text-primary group-hover:text-primary-dark transition-colors cursor-pointer" onclick="openBlogModal('${key}')">
+                                    ${post.title}
                                 </h3>
                                 <p class="text-gray-500 dark:text-gray-300 mb-6 line-clamp-2">${post.desc}</p>
-                                <a href="blog-details.html"
+                                <button onclick="openBlogModal('${key}')"
                                     class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">Read
-                                    More <i class="fas fa-long-arrow-right"></i></a>
+                                    More <i class="fas fa-long-arrow-right"></i></button>
                             </div>
                         `;
                     }
@@ -425,8 +434,8 @@
                             blogContainer.innerHTML = '<p class="text-center text-gray-500 col-span-2 text-xl py-10">No articles found matching your search.</p>';
                             return;
                         }
-                        posts.forEach(post => {
-                            blogContainer.insertAdjacentHTML('beforeend', renderPostHTML(post));
+                        posts.forEach((post, idx) => {
+                            blogContainer.insertAdjacentHTML('beforeend', renderPostHTML(post, post.key));
                         });
                     }
 
@@ -492,6 +501,67 @@
             </script>
         </div>
     </section>
+
+    <!-- Blog Article Modal -->
+    <div id="blog-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/75 backdrop-blur-sm" onclick="closeBlogModal()"></div>
+
+        <!-- Flex-column panel: image + meta fixed, body scrolls -->
+        <div id="blog-modal-panel"
+            class="relative z-10 bg-white dark:bg-gray-900 rounded-3xl shadow-2xl w-full max-w-2xl flex flex-col transform scale-95 opacity-0 transition-all duration-300"
+            style="height:90vh;">
+
+            <!-- ① PINNED HERO IMAGE -->
+            <div class="relative shrink-0 overflow-hidden rounded-t-3xl" style="height:240px;">
+                <img id="bm-image" src="" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <button onclick="closeBlogModal()"
+                    class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all z-10">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <span id="bm-category"
+                        class="inline-block bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-2"></span>
+                    <h2 id="bm-title" class="text-xl md:text-2xl font-black font-outfit text-white leading-tight"></h2>
+                </div>
+            </div>
+
+            <!-- ② PINNED META BAR -->
+            <div
+                class="shrink-0 px-6 py-3 flex flex-wrap items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest border-b border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <span class="flex items-center gap-1.5"><i class="fas fa-calendar text-primary"></i><span
+                        id="bm-date"></span></span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-clock text-primary"></i><span
+                        id="bm-read"></span></span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-user text-primary"></i>PyroGuard
+                    Editorial</span>
+                <!-- Scroll hint bounces to signal more content -->
+                <span class="ml-auto flex items-center gap-1 text-primary normal-case font-semibold text-[11px]"
+                    style="animation:bounce 1.5s infinite;">
+                    <i class="fas fa-chevron-down text-[9px]"></i> Scroll to read full article
+                </span>
+            </div>
+
+            <!-- ③ SCROLLABLE BODY -->
+            <div class="flex-1 overflow-y-auto" id="bm-scroll-area">
+                <!-- Top fade gradient so content appears to slide under the meta bar -->
+                <div
+                    class="sticky top-0 h-5 bg-gradient-to-b from-white dark:from-gray-900 to-transparent pointer-events-none z-10 -mb-5">
+                </div>
+
+                <div id="bm-body"
+                    class="px-7 pt-6 pb-4 text-gray-600 dark:text-gray-300 leading-relaxed space-y-4 text-[15px]"></div>
+
+                <!-- CTA always reachable at bottom of scroll area -->
+                <div class="px-7 pb-8 pt-2">
+                    <a href="contact.html"
+                        class="block w-full py-4 text-center bg-primary text-white rounded-2xl font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20">
+                        Get a Free Safety Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer
@@ -642,7 +712,198 @@
     </div>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        const blogArticles = {
+            fire_hazards: {
+                img: 'assets/images/blog_fire_hazards.png',
+                category: 'Safety Tips',
+                date: 'Oct 20, 2025',
+                read: '5 min read',
+                title: '5 Common Fire Hazards in Modern Office Buildings',
+                body: `
+                    <p>Modern office buildings contain a surprising number of hidden fire risks that facility managers often overlook. Identifying and addressing these hazards is the first step toward a genuinely safe workplace.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">1. Overloaded Power Strips & Extension Cords</h4>
+                    <p>Daisy-chaining power strips or using undersized extension cords for high-draw appliances is one of the leading causes of office fires. Always use surge-protected, rated power strips and have an electrician evaluate your panel capacity annually.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">2. Blocked Emergency Exits</h4>
+                    <p>Boxes, furniture, and equipment stored near fire doors or emergency exits can be deadly during an evacuation. Conduct monthly walkthroughs to ensure all exit routes are clear and exit signs are illuminated.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">3. Improperly Stored Flammables</h4>
+                    <p>Cleaning supplies, paper stock, and aerosol cans should be stored in designated, ventilated cabinets away from heat sources. Many offices unknowingly keep combustibles near boiler rooms or electrical panels.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">4. Neglected Fire Equipment</h4>
+                    <p>Fire extinguishers that haven't been inspected, sprinkler heads obscured by ceiling tiles, or smoke detectors with dead batteries turn life-saving equipment into liabilities. Schedule annual NFPA-10 inspections without fail.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">5. Improper Use of Kitchen Appliances</h4>
+                    <p>Unattended cooking, toasters left plugged in overnight, and microwaves with metal containers are common office kitchen hazards. Establish clear break-room policies and install automatic shut-off plugs on heat-generating appliances.</p>
+                `
+            },
+            nfpa_standards: {
+                img: 'assets/images/blog_compliance.png',
+                category: 'Compliance',
+                date: 'Oct 18, 2025',
+                read: '8 min read',
+                title: 'Understanding the New 2025 NFPA 10 Standards',
+                body: `
+                    <p>The National Fire Protection Association released significant updates to NFPA 10 — the Standard for Portable Fire Extinguishers — for the 2025 edition. Facility managers who aren't aware of these changes risk non-compliance penalties and, more critically, unsafe buildings.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Key Change #1: Electronic Monitoring Requirements</h4>
+                    <p>Large commercial facilities with 10 or more extinguishers are now required to implement electronic monitoring tags or cloud-connected inspection records, replacing paper tags as the primary documentation method by 2026.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Key Change #2: Updated Inspection Intervals</h4>
+                    <p>Wet chemical extinguishers used in commercial kitchens now require semi-annual inspections instead of annual. This change reflects new data on how quickly kitchen grease degrades suppressant agent effectiveness.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Key Change #3: Placement Standards Revised</h4>
+                    <p>The 2025 edition tightens travel-distance requirements in high-hazard occupancies from 50 ft to 40 ft for Class B extinguishers, meaning many warehouses and industrial kitchens will need additional units repositioned.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">What You Should Do Now</h4>
+                    <p>Partner with a certified fire safety inspector to audit your current extinguisher layout, documentation method, and inspection schedule against the new 2025 requirements before your next AHJ (Authority Having Jurisdiction) visit.</p>
+                `
+            },
+            ai_fire: {
+                img: 'assets/images/blog_ai_fire.png',
+                category: 'Technology',
+                date: 'Oct 15, 2025',
+                read: '6 min read',
+                title: 'How AI is Revolutionising Fire Detection Systems',
+                body: `
+                    <p>Artificial intelligence is no longer a future concept in fire safety — it is actively being deployed in intelligent fire detection systems that outperform traditional heat and smoke sensors in speed, accuracy, and false-alarm reduction.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Computer Vision for Early Detection</h4>
+                    <p>AI-powered cameras can identify the visual signature of a nascent flame — before any smoke or heat reaches a detector — by analysing light flicker patterns at 30 frames per second. In warehouse environments, this can provide a 60-second head start on suppression.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Machine Learning & False Alarm Reduction</h4>
+                    <p>Traditional ionisation detectors frequently trigger false alarms from cooking steam, dust, or vehicle exhaust. ML models trained on millions of sensor readings can distinguish a real fire signature from nuisance events with over 98% accuracy, dramatically reducing costly false dispatches.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Predictive Maintenance via IoT</h4>
+                    <p>Smart detectors continuously self-diagnose sensor drift, battery degradation, and dust accumulation, pushing real-time alerts to facility dashboards before a device fails inspection. This predictive model has been shown to reduce detector failure rates by up to 35%.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">The Road Ahead</h4>
+                    <p>As AI integration deepens, expect fire safety platforms to offer building-wide risk scores, automatically adjusting suppression thresholds based on occupancy data, weather conditions, and historical incident patterns — making passive safety infrastructure genuinely intelligent.</p>
+                `
+            },
+            fire_drills: {
+                img: 'https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                category: 'Training',
+                date: 'Oct 10, 2025',
+                read: '4 min read',
+                title: 'Why Regular Fire Drills Are Essential for Team Safety',
+                body: `
+                    <p>A fire drill is not a bureaucratic checkbox — it is the single most effective method for ensuring your team responds correctly when seconds count. Research consistently shows that people who have practiced emergency procedures make faster, calmer decisions during real incidents.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">How Often Should You Drill?</h4>
+                    <p>OSHA and NFPA 101 recommend a minimum of two drills per year for most commercial occupancies, with high-density venues (schools, hospitals, large retail) conducting quarterly exercises. New employees should participate in a drill within their first 30 days.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Making Drills Effective</h4>
+                    <p>Vary the scenario — simulate a blocked exit, trigger the alarm at an unusual time, or designate a mock casualty that requires assistance. Post-drill debriefs that review confusion points dramatically improve muscle memory for future events.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Documenting & Improving</h4>
+                    <p>Record evacuation times, identify bottlenecks at stairwells, and track floor-warden performance. Use this data to update your written Emergency Action Plan and inform your next drill scenario. PyroGuard's cloud dashboard can store and timestamp all drill records automatically.</p>
+                `
+            },
+            extinguisher_guide: {
+                img: 'https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                category: 'Maintenance',
+                date: 'Oct 05, 2025',
+                read: '7 min read',
+                title: 'Fire Extinguisher Maintenance: A Comprehensive Guide',
+                body: `
+                    <p>A fire extinguisher that fails to discharge is worse than no extinguisher at all — it creates a false sense of security. Proper maintenance is not just a compliance requirement; it is a life-safety imperative.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Monthly Visual Inspection</h4>
+                    <p>Every month, verify the extinguisher is in its designated location, the access path is clear, the pin and tamper seal are intact, and the pressure gauge reads in the green zone. Log the check with a dated tag or digital record.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Annual Professional Inspection</h4>
+                    <p>An NFPA 10-certified technician must inspect every extinguisher annually. This includes internal examination of certain types, weight verification, and a full operational check. Any unit that fails is immediately pulled for service.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">6-Year Internal Maintenance & Hydrostatic Testing</h4>
+                    <p>Stored-pressure dry-chemical extinguishers require internal examination every 6 years and hydrostatic pressure testing every 12 years per NFPA 10. Failure to conduct these tests voids manufacturer warranties and creates legal liability.</p>
+                `
+            },
+            smoke_detectors: {
+                img: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                category: 'Equipment',
+                date: 'Oct 01, 2025',
+                read: '5 min read',
+                title: 'Choosing the Right Smoke Detectors for Your Facility',
+                body: `
+                    <p>Not all smoke detectors are created equal. Choosing the wrong technology for your environment leads to either slow detection or chronic false alarms — both dangerous outcomes for a commercial facility.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Ionisation Detectors</h4>
+                    <p>Ionisation detectors use a small radioactive source to ionise air between two charged plates. They are highly responsive to fast-flaming fires that produce small combustion particles. Best suited for: storage rooms, server rooms, and areas away from cooking.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Photoelectric Detectors</h4>
+                    <p>Photoelectric detectors use a light beam and sensor chamber to detect larger smoke particles produced by slow, smoldering fires. They generate far fewer kitchen false alarms. Best suited for: offices, corridors, and sleeping areas in hotels.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Dual-Sensor & Multi-Criteria Detectors</h4>
+                    <p>Modern commercial buildings increasingly use multi-criteria detectors that combine ionisation, photoelectric, CO sensing, and heat detection with AI algorithms to distinguish fire signatures from false triggers — the gold standard for mission-critical environments.</p>
+                `
+            },
+            warehouse_checklist: {
+                img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                category: 'Industrial',
+                date: 'Sep 28, 2025',
+                read: '9 min read',
+                title: 'Warehouse Fire Safety Checklist for 2025',
+                body: `
+                    <p>Warehouses present a unique combination of fire hazards: high-rack storage that obstructs sprinkler coverage, forklifts with combustion engines, large volumes of cardboard and plastic packaging, and often limited occupancy during overnight hours when a fire could grow unchecked.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Storage & Aisle Management</h4>
+                    <p>✔ Maintain 18-inch clearance below sprinkler heads at all times. ✔ Keep aisles clear of pallets and debris. ✔ Separate Class I–IV commodities from high-hazard plastics. ✔ Store flammable liquids in FM-approved cabinets only.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Forklift & Equipment Safety</h4>
+                    <p>✔ Charge electric forklifts in designated, ventilated charging bays only. ✔ Inspect propane connections on gas-powered units monthly. ✔ Prohibit smoking within 25 feet of any charging station or flammable storage area.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Sprinkler & Detection Checks</h4>
+                    <p>✔ Verify in-rack sprinklers are installed where required by NFPA 13. ✔ Conduct quarterly main drain tests. ✔ Inspect heat detectors in roof spaces semi-annually. ✔ Test all dock-door smoke seals annually.</p>
+                `
+            },
+            electrical_safety: {
+                img: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                category: 'Safety Tips',
+                date: 'Sep 25, 2025',
+                read: '5 min read',
+                title: 'Electrical Safety at Work: Best Practices',
+                body: `
+                    <p>Electrical failures are one of the top three causes of commercial fires in the United States. Unlike open-flame risks, electrical hazards are often invisible — developing silently inside walls, panels, and equipment until a catastrophic failure occurs.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Know Your Panel Capacity</h4>
+                    <p>Many older commercial buildings have panels that were designed for far lower electrical loads than modern equipment demands. Have a licensed electrician conduct an annual load analysis and infrared scan of your breaker panel to detect hot spots before they cause fires.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Extension Cord Policy</h4>
+                    <p>Extension cords are for temporary use only. Any cord that runs through a wall, under a carpet, or is used as a permanent outlet must be replaced with properly installed wiring. Use colour-coded tags to track cord inspection dates and retirement cycles.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Ground Fault & Arc Fault Protection</h4>
+                    <p>GFCI outlets should be installed in all wet areas. AFCI breakers — which detect the arc signature of a deteriorating wire connection — should be fitted in all sleeping areas and anywhere insulation damage is suspected. These two technologies prevent the majority of electrical fire ignitions.</p>
+                `
+            },
+            evacuation_plan: {
+                img: 'https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                category: 'Planning',
+                date: 'Sep 20, 2025',
+                read: '10 min read',
+                title: 'Creating an Emergency Evacuation Plan That Works',
+                body: `
+                    <p>An emergency evacuation plan is only valuable if it can be executed reliably under stress, in smoke-filled or dark conditions, by people who may have never practiced it. Most plans fail not because they are poorly written, but because they are never tested.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Step 1: Map Every Exit Route</h4>
+                    <p>Walk every floor with a clipboard and identify all fire exits, stairwells, and refuge areas. Measure travel times from the furthest point to the nearest exit. Post colour-coded floor plans at every elevator bank and break room — OSHA 1910.38 requires this in most commercial occupancies.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Step 2: Designate & Train Floor Wardens</h4>
+                    <p>Assign one primary and one backup warden per floor. Train them on head-count procedures, how to assist mobility-impaired occupants to Areas of Refuge, and how to communicate with the incident commander at the assembly point.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Step 3: Account for Special Needs</h4>
+                    <p>Maintain a confidential Personal Emergency Evacuation Plan (PEEP) for any employee or regular visitor who cannot use stairs independently. Coordinate with your local fire department so they are aware of these individuals' locations in advance.</p>
+                    <h4 class="font-bold text-gray-800 dark:text-white text-lg mt-4">Step 4: Review After Every Incident or Drill</h4>
+                    <p>After each drill or real evacuation, sit with your wardens within 48 hours to capture lessons learned while the experience is fresh. Update the written plan, revise posted maps if needed, and re-train any wardens who underperformed. Treat the EAP as a living document, not a one-time filing.</p>
+                `
+            }
+        };
+
+        function openBlogModal(key) {
+            const post = blogArticles[key];
+            if (!post) return;
+            document.getElementById('bm-image').src = post.img;
+            document.getElementById('bm-image').alt = post.title;
+            document.getElementById('bm-category').textContent = post.category;
+            document.getElementById('bm-date').textContent = post.date;
+            document.getElementById('bm-read').textContent = post.read;
+            document.getElementById('bm-title').textContent = post.title;
+            document.getElementById('bm-body').innerHTML = post.body;
+
+            const modal = document.getElementById('blog-modal');
+            const panel = document.getElementById('blog-modal-panel');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => {
+                panel.classList.remove('scale-95', 'opacity-0');
+                panel.classList.add('scale-100', 'opacity-100');
+            });
+        }
+
+        function closeBlogModal() {
+            const modal = document.getElementById('blog-modal');
+            const panel = document.getElementById('blog-modal-panel');
+            panel.classList.remove('scale-100', 'opacity-100');
+            panel.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBlogModal(); });
+    </script>
 </body>
 
 </html>
-

@@ -97,171 +97,512 @@
         </div>
     </header>
 
-    <section class="pt-40 pb-24 bg-gray-50 dark:bg-gray-900">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold tracking-widest uppercase text-sm">Flexible Plans</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold font-outfit mt-2 mb-6">Choose Your <span
-                        class="text-primary italic">Safety</span> Plan.</h1>
-                <p class="text-lg text-gray-500 dark:text-gray-300">Scale your fire safety management as your business
-                    grows. No hidden fees, just pure protection.</p>
+    <!-- Hero Banner -->
+    <section class="relative pt-36 pb-20 bg-gray-900 overflow-hidden">
+        <!-- Animated blobs -->
+        <div
+            class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse">
+        </div>
+        <div class="absolute -bottom-20 -right-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px]"></div>
+        <div class="relative z-10 container mx-auto px-4 md:px-6 text-center">
+            <span
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 text-primary text-xs font-black uppercase tracking-widest mb-6">
+                <i class="fas fa-shield-alt"></i> Transparent Pricing
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-black font-outfit text-white leading-tight mb-6">
+                Choose the Plan<br>That <span class="text-primary italic">Protects</span> Best.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                No hidden fees. No long-term lock-ins. Just world-class fire safety management that scales with your
+                business.
+            </p>
 
-                <div class="mt-10 flex items-center justify-center gap-4">
-                    <span class="font-bold text-gray-900 dark:text-gray-100">Monthly</span>
-                    <button onclick="togglePricing()" id="pricingToggle"
-                        class="w-14 h-8 bg-gray-200 dark:bg-gray-700 rounded-full p-1 relative transition-colors cursor-pointer">
-                        <div id="pricingKnob"
-                            class="w-6 h-6 bg-primary rounded-full shadow-md transition-transform duration-300 transform translate-x-0">
-                        </div>
-                    </button>
-                    <span class="text-gray-500">Yearly <span class="text-primary text-xs font-bold">(Save
-                            20%)</span></span>
-                </div>
+            <!-- Toggle -->
+            <div
+                class="inline-flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-3">
+                <span id="labelMonthly" class="font-bold text-white text-sm">Monthly</span>
+                <button onclick="togglePricing()" id="pricingToggle"
+                    class="w-14 h-7 bg-gray-700 rounded-full p-1 relative transition-colors cursor-pointer focus:outline-none">
+                    <div id="pricingKnob"
+                        class="w-5 h-5 bg-primary rounded-full shadow-md transition-transform duration-300 transform translate-x-0">
+                    </div>
+                </button>
+                <span id="labelYearly" class="text-gray-400 text-sm font-bold">
+                    Annual <span class="text-primary text-xs font-black">−20%</span>
+                </span>
             </div>
+        </div>
+    </section>
 
-            <div class="grid md:grid-cols-3 gap-8 items-stretch pt-12">
+    <!-- Pricing Cards -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900 -mt-1">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+
                 <!-- Basic -->
                 <div
-                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm flex flex-col hover:shadow-2xl transition-all duration-300">
-                    <img src="assets/images/basic_safety.png" alt="Basic Safety"
-                        class="w-full h-48 object-cover rounded-2xl mb-8">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold mb-2">Basic Safety</h3>
-                        <p class="text-gray-500 text-sm mb-6 uppercase font-bold tracking-widest">Small Business</p>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-4xl font-extrabold">$</span>
-                            <span id="priceBasic" class="text-6xl font-extrabold">49</span>
-                            <span id="periodBasic" class="text-gray-500 font-medium">/mo</span>
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-md flex flex-col hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
+                            <i class="fas fa-fire-extinguisher text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-gray-400">Starter</p>
+                            <h3 class="text-xl font-black font-outfit">Basic Safety</h3>
                         </div>
                     </div>
-                    <ul class="space-y-4 mb-10 flex-1">
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> 1 Building Location
+                    <div class="mb-8">
+                        <div class="flex items-end gap-1 mb-1">
+                            <span class="text-2xl font-bold text-gray-500">$</span>
+                            <span id="priceBasic" class="text-6xl font-black font-outfit leading-none">49</span>
+                            <span id="periodBasic" class="text-gray-400 font-medium mb-2">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-500">Perfect for small businesses with a single location.</p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-blue-500 text-[10px]"></i></span> 1 Building Location</li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-blue-500 text-[10px]"></i></span> Annual Extinguisher Check
                         </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Annual Extinguisher Check
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-blue-500 text-[10px]"></i></span> Basic Compliance Portal
                         </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Basic Compliance Portal
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Email Support
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-300 dark:text-gray-600 line-through">
-                            Advanced Reporting
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-blue-500 text-[10px]"></i></span> Email Support</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300 dark:text-gray-600"><span
+                                class="w-5 h-5 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-times text-gray-300 text-[10px]"></i></span> Advanced Reporting</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300 dark:text-gray-600"><span
+                                class="w-5 h-5 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-times text-gray-300 text-[10px]"></i></span> 24/7 Remote Monitoring
                         </li>
                     </ul>
                     <a href="register.html"
-                        class="w-full py-4 text-center rounded-2xl border-2 border-gray-100 dark:border-gray-700 font-bold hover:border-primary hover:text-primary transition-all">Get
-                        Started</a>
+                        class="w-full py-3.5 text-center rounded-2xl border-2 border-gray-200 dark:border-gray-600 font-bold text-sm hover:border-primary hover:text-primary transition-all">
+                        Get Started Free
+                    </a>
                 </div>
 
-                <!-- Professional -->
+                <!-- Pro — Featured -->
                 <div
-                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border-4 border-primary shadow-2xl flex flex-col relative scale-105 z-10 hover:shadow-primary/20 transition-all duration-300">
+                    class="relative bg-gray-900 rounded-3xl p-8 flex flex-col shadow-2xl shadow-primary/20 border border-primary/30">
+                    <!-- Badge -->
                     <div
-                        class="absolute -top-5 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-xs font-bold rounded-full uppercase tracking-widest">
-                        Most Popular</div>
-                    <img src="assets/images/pro_compliance.png" alt="Pro Compliance"
-                        class="w-full h-48 object-cover rounded-2xl mb-8">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold mb-2">Pro Compliance</h3>
-                        <p class="text-gray-500 text-sm mb-6 uppercase font-bold tracking-widest">Enterprise Ready</p>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-4xl font-extrabold">$</span>
-                            <span id="pricePro" class="text-6xl font-extrabold">129</span>
-                            <span id="periodPro" class="text-gray-500 font-medium">/mo</span>
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-4 py-1.5 bg-primary text-white text-[11px] font-black rounded-full uppercase tracking-widest shadow-lg shadow-primary/40">
+                        <i class="fas fa-bolt"></i> Most Popular
+                    </div>
+                    <!-- Glow -->
+                    <div class="absolute inset-0 rounded-3xl bg-primary/5 pointer-events-none"></div>
+
+                    <div class="flex items-center gap-3 mb-6 relative">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary">Enterprise Ready</p>
+                            <h3 class="text-xl font-black font-outfit text-white">Pro Compliance</h3>
                         </div>
                     </div>
-                    <ul class="space-y-4 mb-10 flex-1">
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Up to 5 Locations
+                    <div class="mb-8 relative">
+                        <div class="flex items-end gap-1 mb-1">
+                            <span class="text-2xl font-bold text-gray-400">$</span>
+                            <span id="pricePro"
+                                class="text-6xl font-black font-outfit leading-none text-white">129</span>
+                            <span id="periodPro" class="text-gray-400 font-medium mb-2">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Full compliance suite for growing multi-site operations.</p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-1 relative">
+                        <li class="flex items-center gap-3 text-sm text-gray-200"><span
+                                class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-primary text-[10px]"></i></span> Up to 5 Locations</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-200"><span
+                                class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-primary text-[10px]"></i></span> Quarterly System Testing
                         </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Quarterly System Testing
+                        <li class="flex items-center gap-3 text-sm text-gray-200"><span
+                                class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-primary text-[10px]"></i></span> Advanced Analytics
+                            Dashboard</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-200"><span
+                                class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-primary text-[10px]"></i></span> Priority Email & Phone
                         </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Advanced Analytics Dashboard
+                        <li class="flex items-center gap-3 text-sm text-gray-200"><span
+                                class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-primary text-[10px]"></i></span> Digital NFPA Certificates
                         </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Priority Email & Phone
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Digital NFPA Certificates
+                        <li class="flex items-center gap-3 text-sm text-gray-200"><span
+                                class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-primary text-[10px]"></i></span> Client & Admin Portals
                         </li>
                     </ul>
                     <a href="register.html"
-                        class="w-full py-4 text-center rounded-2xl bg-primary text-white font-bold hover:bg-primary-dark transition-all shadow-xl shadow-primary/30">Select
-                        Pro</a>
+                        class="relative w-full py-3.5 text-center rounded-2xl bg-primary text-white font-bold text-sm hover:bg-red-700 transition-all shadow-xl shadow-primary/30">
+                        Start Pro Trial
+                    </a>
                 </div>
 
-                <!-- Ultimate -->
+                <!-- Enterprise -->
                 <div
-                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm flex flex-col hover:shadow-2xl transition-all duration-300">
-                    <img src="assets/images/custom_safety.png" alt="Custom Safety"
-                        class="w-full h-48 object-cover rounded-2xl mb-8">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold mb-2">Custom Safety</h3>
-                        <p class="text-gray-500 text-sm mb-6 uppercase font-bold tracking-widest">Industrial Giants</p>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-4xl font-extrabold italic font-outfit">Custom</span>
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-md flex flex-col hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center">
+                            <i class="fas fa-building text-purple-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-gray-400">Industrial Giants</p>
+                            <h3 class="text-xl font-black font-outfit">Custom Safety</h3>
                         </div>
                     </div>
-                    <ul class="space-y-4 mb-10 flex-1">
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Unlimited Locations
+                    <div class="mb-8">
+                        <div class="flex items-end gap-1 mb-1">
+                            <span
+                                class="text-4xl font-black font-outfit text-gray-800 dark:text-white italic leading-none">Custom</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Tailored pricing for your scale and requirements.</p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-purple-500 text-[10px]"></i></span> Unlimited Locations
                         </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> 24/7 Remote Monitoring
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-purple-500 text-[10px]"></i></span> 24/7 Remote Monitoring
                         </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> Dedicated Account Manager
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> On-site Training Sessions
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
-                            <i class="fas fa-check text-primary"></i> API & Webhook Support
-                        </li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-purple-500 text-[10px]"></i></span> Dedicated Account
+                            Manager</li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-purple-500 text-[10px]"></i></span> On-site Training
+                            Sessions</li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-purple-500 text-[10px]"></i></span> API & Webhook
+                            Integration</li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0"><i
+                                    class="fas fa-check text-purple-500 text-[10px]"></i></span> SLA Guarantee & Audit
+                            Trail</li>
                     </ul>
                     <a href="contact.html"
-                        class="w-full py-4 text-center rounded-2xl border-2 border-gray-100 dark:border-gray-700 font-bold hover:border-primary hover:text-primary transition-all">Contact
-                        Us</a>
+                        class="w-full py-3.5 text-center rounded-2xl border-2 border-gray-200 dark:border-gray-600 font-bold text-sm hover:border-purple-500 hover:text-purple-500 transition-all">
+                        Contact Sales
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Stats Bar -->
+    <section class="py-14 bg-white dark:bg-gray-800 border-y border-gray-100 dark:border-gray-700">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-4xl font-black font-outfit text-primary mb-1">1,200+</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-widest">Sites
+                        Protected</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-black font-outfit text-primary mb-1">98.7%</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-widest">Compliance
+                        Rate</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-black font-outfit text-primary mb-1">15yr</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-widest">Industry
+                        Experience</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-black font-outfit text-primary mb-1">24/7</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-widest">Expert
+                        Support</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-24 border-t border-gray-100 dark:border-gray-800">
+    <!-- Feature Comparison Table -->
+    <section class="py-24 bg-gray-50 dark:bg-gray-900">
         <div class="container mx-auto px-4 md:px-6">
-            <h2 class="text-3xl md:text-5xl font-extrabold font-outfit text-center mb-16">Frequently Asked <span
-                    class="text-primary italic">Questions</span>.</h2>
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Full Breakdown</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 text-gray-900 dark:text-white">Compare
+                    <span class="text-primary italic">Every Feature.</span>
+                </h2>
+            </div>
+            <div class="overflow-x-auto rounded-3xl border border-gray-200 dark:border-gray-700 shadow-xl">
+                <table class="w-full text-left min-w-[600px]">
+                    <thead>
+                        <tr class="bg-gray-900 text-white">
+                            <th class="px-6 py-5 text-sm font-bold rounded-tl-3xl">Feature</th>
+                            <th class="px-6 py-5 text-center text-sm font-bold">
+                                <div class="flex flex-col items-center gap-1">
+                                    <i class="fas fa-fire-extinguisher text-blue-400"></i>
+                                    <span>Basic</span>
+                                </div>
+                            </th>
+                            <th class="px-6 py-5 text-center text-sm font-bold bg-primary/20">
+                                <div class="flex flex-col items-center gap-1">
+                                    <i class="fas fa-shield-alt text-primary"></i>
+                                    <span class="text-primary">Pro</span>
+                                </div>
+                            </th>
+                            <th class="px-6 py-5 text-center text-sm font-bold rounded-tr-3xl">
+                                <div class="flex flex-col items-center gap-1">
+                                    <i class="fas fa-building text-purple-400"></i>
+                                    <span>Custom</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 dark:divide-gray-700 bg-white dark:bg-gray-800">
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">Building
+                                Locations</td>
+                            <td class="px-6 py-4 text-center text-gray-500 text-sm">1</td>
+                            <td class="px-6 py-4 text-center font-bold text-primary bg-primary/5 text-sm">Up to 5</td>
+                            <td class="px-6 py-4 text-center text-gray-500 text-sm">Unlimited</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">Inspection
+                                Frequency</td>
+                            <td class="px-6 py-4 text-center text-gray-500 text-sm">Annual</td>
+                            <td class="px-6 py-4 text-center font-bold text-primary bg-primary/5 text-sm">Quarterly</td>
+                            <td class="px-6 py-4 text-center text-gray-500 text-sm">On-demand</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">Compliance
+                                Dashboard</td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="px-6 py-4 text-center bg-primary/5"><i
+                                    class="fas fa-check text-primary text-lg"></i></td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">Advanced
+                                Analytics</td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="px-6 py-4 text-center bg-primary/5"><i
+                                    class="fas fa-check text-primary text-lg"></i></td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">24/7 Remote
+                                Monitoring</td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="px-6 py-4 text-center bg-primary/5"><i class="fas fa-times text-gray-300"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">Dedicated Account
+                                Manager</td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="px-6 py-4 text-center bg-primary/5"><i class="fas fa-times text-gray-300"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">Support Level
+                            </td>
+                            <td class="px-6 py-4 text-center text-gray-500 text-sm">Email only</td>
+                            <td class="px-6 py-4 text-center font-bold text-primary bg-primary/5 text-sm">Email & Phone
+                            </td>
+                            <td class="px-6 py-4 text-center text-gray-500 text-sm">Dedicated Rep</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-700 dark:text-gray-300 text-sm">API & Webhooks
+                            </td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="px-6 py-4 text-center bg-primary/5"><i class="fas fa-times text-gray-300"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-            <div class="max-w-3xl mx-auto space-y-6">
-                <!-- FAQ 1 -->
+    <!-- Testimonials -->
+    <section class="py-24 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Real Results</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 text-gray-900 dark:text-white">Trusted
+                    by <span class="text-primary italic">Safety Leaders.</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
                 <div
-                    class="faq-item p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
-                        <span>How often do I need a fire safety inspection?</span>
-                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content mt-4 text-gray-500 leading-relaxed hidden">Most commercial buildings require
-                        an annual
-                        inspection for extinguishers and alarm systems, though some systems like sprinklers may require
-                        quarterly checks according to local fire codes.</div>
+                    class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 relative">
+                    <div
+                        class="absolute top-6 right-8 text-gray-100 dark:text-gray-800 text-6xl font-serif leading-none">
+                        "</div>
+                    <div class="flex text-amber-400 mb-4 gap-0.5">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">"The Pro plan
+                        gave us everything we needed to stay compliant across all five of our retail locations.
+                        Absolutely worth every cent."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?u=x1" class="w-11 h-11 rounded-full ring-2 ring-primary/20"
+                            alt="">
+                        <div>
+                            <p class="font-bold text-sm">James Harrington</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wide">VP Ops, RetailMax</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- FAQ 2 -->
                 <div
-                    class="faq-item p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-                    <button class="flex items-center justify-between w-full text-left font-bold text-lg group">
-                        <span>Can I manage multiple buildings under one account?</span>
-                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 relative">
+                    <div
+                        class="absolute top-6 right-8 text-gray-100 dark:text-gray-800 text-6xl font-serif leading-none">
+                        "</div>
+                    <div class="flex text-amber-400 mb-4 gap-0.5">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">"We started
+                        with Basic and scaled to Custom within a year. PyroGuard's team made the entire transition
+                        completely seamless."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?u=x2" class="w-11 h-11 rounded-full ring-2 ring-primary/20"
+                            alt="">
+                        <div>
+                            <p class="font-bold text-sm">Priya Nair</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wide">Facilities Director, TechHub</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-8 rounded-3xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 relative">
+                    <div
+                        class="absolute top-6 right-8 text-gray-100 dark:text-gray-800 text-6xl font-serif leading-none">
+                        "</div>
+                    <div class="flex text-amber-400 mb-4 gap-0.5">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">"Transparent
+                        pricing, zero surprises. Our compliance scores jumped 40% in the first quarter after switching
+                        to PyroGuard."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?u=x3" class="w-11 h-11 rounded-full ring-2 ring-primary/20"
+                            alt="">
+                        <div>
+                            <p class="font-bold text-sm">Carlos Mendez</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wide">Safety Manager, BuildCo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 md:px-6 max-w-3xl">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Got Questions?</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 text-gray-900 dark:text-white">
+                    Frequently <span class="text-primary italic">Asked.</span></h2>
+            </div>
+            <div class="space-y-4" id="faqContainer">
+                <div
+                    class="faq-item bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <button onclick="toggleFaq(this)"
+                        class="flex items-center justify-between w-full text-left px-6 py-5 font-bold text-gray-900 dark:text-white hover:text-primary transition-colors">
+                        <span>How often do I need a fire safety inspection?</span>
+                        <i class="fas fa-chevron-down text-primary text-sm transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content mt-4 text-gray-500 leading-relaxed hidden">Yes! Our Professional and
-                        Ultimate plans allow for
-                        multi-site management, where you can see all your locations' compliance status from a single
-                        unified dashboard.</div>
+                    <div class="faq-body px-6 pb-5 text-gray-500 dark:text-gray-400 leading-relaxed text-sm hidden">
+                        Most commercial buildings require an annual inspection for extinguishers and alarm systems,
+                        though some systems like sprinklers may require quarterly checks according to local fire codes.
+                    </div>
+                </div>
+                <div
+                    class="faq-item bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <button onclick="toggleFaq(this)"
+                        class="flex items-center justify-between w-full text-left px-6 py-5 font-bold text-gray-900 dark:text-white hover:text-primary transition-colors">
+                        <span>Can I manage multiple buildings under one account?</span>
+                        <i class="fas fa-chevron-down text-primary text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body px-6 pb-5 text-gray-500 dark:text-gray-400 leading-relaxed text-sm hidden">
+                        Yes! Our Pro and Custom plans allow for multi-site management, where you can see all your
+                        locations' compliance status from a single unified dashboard.
+                    </div>
+                </div>
+                <div
+                    class="faq-item bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <button onclick="toggleFaq(this)"
+                        class="flex items-center justify-between w-full text-left px-6 py-5 font-bold text-gray-900 dark:text-white hover:text-primary transition-colors">
+                        <span>Can I switch plans at any time?</span>
+                        <i class="fas fa-chevron-down text-primary text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body px-6 pb-5 text-gray-500 dark:text-gray-400 leading-relaxed text-sm hidden">
+                        Absolutely. You can upgrade or downgrade your plan at any time from your dashboard. Upgrades
+                        take effect immediately; downgrades take effect at your next billing cycle.
+                    </div>
+                </div>
+                <div
+                    class="faq-item bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <button onclick="toggleFaq(this)"
+                        class="flex items-center justify-between w-full text-left px-6 py-5 font-bold text-gray-900 dark:text-white hover:text-primary transition-colors">
+                        <span>Is there a free trial available?</span>
+                        <i class="fas fa-chevron-down text-primary text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body px-6 pb-5 text-gray-500 dark:text-gray-400 leading-relaxed text-sm hidden">
+                        Yes! We offer a 14-day free trial on our Pro plan with no credit card required. You get full
+                        access to every Pro feature so you can experience the platform before committing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-24 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div
+                class="bg-gray-900 rounded-[3rem] p-10 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+                <!-- Floating icon -->
+                <div
+                    class="relative z-10 w-20 h-20 rounded-3xl bg-primary/20 border border-primary/30 flex items-center justify-center mx-auto mb-8">
+                    <i class="fas fa-shield-alt text-primary text-3xl"></i>
+                </div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-black font-outfit mb-6">Not Sure Which Plan<br>Is Right for
+                        You?</h2>
+                    <p class="text-gray-400 text-lg mb-10">Our safety consultants are available to walk you through the
+                        best option for your building portfolio. No commitment required.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="contact.html"
+                            class="inline-flex items-center gap-3 px-10 py-4 bg-primary text-white rounded-2xl font-bold text-lg hover:bg-red-700 transition-all shadow-2xl shadow-primary/40">
+                            Talk to an Expert <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="register.html"
+                            class="inline-flex items-center gap-3 px-10 py-4 border border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all">
+                            Start Free Trial
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -426,37 +767,37 @@
             const periodBasic = document.getElementById('periodBasic');
             const pricePro = document.getElementById('pricePro');
             const periodPro = document.getElementById('periodPro');
+            const labelMonthly = document.getElementById('labelMonthly');
+            const labelYearly = document.getElementById('labelYearly');
 
             if (isYearly) {
-                // Switch to Yearly
                 knob.classList.remove('translate-x-0');
                 knob.classList.add('translate-x-6');
-
-                // Update Basic
-                // 49 * 12 * 0.8 = 470.4
                 priceBasic.innerText = '470';
                 periodBasic.innerText = '/yr';
-
-                // Update Pro
-                // 129 * 12 * 0.8 = 1238.4
                 pricePro.innerText = '1239';
                 periodPro.innerText = '/yr';
+                if (labelMonthly) labelMonthly.classList.replace('text-white', 'text-gray-400');
+                if (labelYearly) labelYearly.classList.replace('text-gray-400', 'text-white');
             } else {
-                // Switch to Monthly
                 knob.classList.remove('translate-x-6');
                 knob.classList.add('translate-x-0');
-
-                // Update Basic
                 priceBasic.innerText = '49';
                 periodBasic.innerText = '/mo';
-
-                // Update Pro
                 pricePro.innerText = '129';
                 periodPro.innerText = '/mo';
+                if (labelMonthly) labelMonthly.classList.replace('text-gray-400', 'text-white');
+                if (labelYearly) labelYearly.classList.replace('text-white', 'text-gray-400');
             }
+        }
+
+        function toggleFaq(btn) {
+            const body = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            body.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
         }
     </script>
 </body>
 
 </html>
-

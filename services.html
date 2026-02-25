@@ -142,10 +142,10 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> Location Assessments</li>
                         </ul>
-                        <a href="service-details.html?service=extinguishers"
-                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
+                        <button onclick="openModal('extinguishers')"
+                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all cursor-pointer">
                             Detailed Info <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -175,10 +175,10 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> Panel Programming</li>
                         </ul>
-                        <a href="service-details.html?service=alarms"
-                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
+                        <button onclick="openModal('alarms')"
+                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all cursor-pointer">
                             Detailed Info <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -207,10 +207,10 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> Pipe Corrosion Checks</li>
                         </ul>
-                        <a href="service-details.html?service=sprinkler"
-                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
+                        <button onclick="openModal('sprinkler')"
+                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all cursor-pointer">
                             Detailed Info <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -240,10 +240,10 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> Compliance Tagging</li>
                         </ul>
-                        <a href="service-details.html?service=lighting"
-                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
+                        <button onclick="openModal('lighting')"
+                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all cursor-pointer">
                             Detailed Info <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -272,10 +272,10 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> API Integration</li>
                         </ul>
-                        <a href="service-details.html?service=cloud"
-                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
+                        <button onclick="openModal('cloud')"
+                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all cursor-pointer">
                             Detailed Info <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -304,10 +304,10 @@
                             <li class="flex items-center gap-2 text-sm text-gray-500"><i
                                     class="fas fa-check text-primary"></i> First Aid Training</li>
                         </ul>
-                        <a href="service-details.html?service=audits"
-                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all">
+                        <button onclick="openModal('audits')"
+                            class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all cursor-pointer">
                             Detailed Info <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -377,6 +377,53 @@
             </div>
         </div>
     </section>
+
+    <!-- Service Detail Modal -->
+    <div id="service-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 hidden" aria-modal="true"
+        role="dialog">
+        <!-- Backdrop -->
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal()"></div>
+        <!-- Panel -->
+        <div class="relative z-10 bg-white dark:bg-gray-900 rounded-3xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto flex flex-col transform scale-95 opacity-0 transition-all duration-300"
+            id="modal-panel">
+            <!-- Image -->
+            <div class="relative h-64 md:h-80 shrink-0 overflow-hidden rounded-t-3xl">
+                <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <!-- Close -->
+                <button onclick="closeModal()"
+                    class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all">
+                    <i class="fas fa-times"></i>
+                </button>
+                <!-- Title overlay -->
+                <div class="absolute bottom-0 left-0 p-8">
+                    <div id="modal-icon-wrap"
+                        class="w-14 h-14 rounded-2xl flex items-center justify-center mb-3 border-4 border-white shadow-lg">
+                        <i id="modal-icon" class="text-2xl"></i>
+                    </div>
+                    <h2 id="modal-title" class="text-3xl font-black font-outfit text-white"></h2>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="p-8 md:p-10 flex flex-col gap-6">
+                <p id="modal-description" class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed"></p>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">What's Included</h4>
+                    <ul id="modal-features" class="space-y-3"></ul>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                    <a id="modal-cta" href="#"
+                        class="flex-1 py-4 text-center bg-primary text-white rounded-2xl font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/30">
+                        Request This Service
+                    </a>
+                    <a id="modal-details" href="#"
+                        class="flex-1 py-4 text-center border-2 border-gray-200 dark:border-gray-600 rounded-2xl font-bold text-lg hover:border-primary hover:text-primary transition-all">
+                        Full Service Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer
@@ -527,7 +574,155 @@
     </div>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        const serviceData = {
+            extinguishers: {
+                title: 'Portable Extinguishers',
+                image: 'assets/images/service_inspection.png',
+                icon: 'fas fa-fire-extinguisher',
+                iconBg: 'bg-red-50 dark:bg-red-900/20',
+                iconColor: 'text-primary',
+                description: 'Our portable extinguisher service covers annual, semi-annual, and monthly inspections for all extinguisher types, ensuring full NFPA 10 compliance. We handle everything from visual checks to 6-year maintenance and hydrostatic testing.',
+                features: [
+                    'Annual & Semi-Annual Inspections',
+                    'Recharge & Refill Services',
+                    'Hydrostatic Pressure Testing',
+                    'Strategic Placement Assessments',
+                    'NFPA 10 Compliance Tagging',
+                    'On-site Staff Walkthroughs'
+                ]
+            },
+            alarms: {
+                title: 'Fire Alarm Systems',
+                image: 'assets/images/service_monitoring.png',
+                icon: 'fas fa-bell',
+                iconBg: 'bg-orange-50 dark:bg-orange-900/20',
+                iconColor: 'text-orange-500',
+                description: 'Comprehensive testing and maintenance of fire alarm control panels, smoke and heat detectors, pull stations, and notification appliances. Our certified technicians ensure every component meets NFPA 72 standards.',
+                features: [
+                    'Smoke & Heat Detector Testing',
+                    'Battery & Power Supply Checks',
+                    'Panel Inspection & Programming',
+                    'Sensitivity Testing & Calibration',
+                    'Duct Detector Testing',
+                    'Central Station Monitoring Setup'
+                ]
+            },
+            sprinkler: {
+                title: 'Sprinkler Systems',
+                image: 'assets/images/service_sprinkler_alarm.png',
+                icon: 'fas fa-tint',
+                iconBg: 'bg-blue-50 dark:bg-blue-900/20',
+                iconColor: 'text-blue-500',
+                description: 'Quarterly and annual inspections of wet-pipe, dry-pipe, pre-action, and deluge fire sprinkler systems. We inspect, test, and certify your entire sprinkler infrastructure to NFPA 25 requirements.',
+                features: [
+                    'Forward Flow & Main Drain Tests',
+                    'Backflow Preventer Certification',
+                    'Pipe & Head Corrosion Checks',
+                    'Gauges & Alarm Valve Inspection',
+                    'Anti-freeze Loop Testing',
+                    'Trip Test for Dry Pipe Valves'
+                ]
+            },
+            lighting: {
+                title: 'Emergency Lighting',
+                image: 'assets/images/service_lighting_training.png',
+                icon: 'fas fa-lightbulb',
+                iconBg: 'bg-green-50 dark:bg-green-900/20',
+                iconColor: 'text-green-600',
+                description: 'We test and certify all exit signs and emergency luminaires to ensure they function correctly during a power failure. Annual 90-minute discharge tests and monthly 30-second tests performed as per NFPA 101 Life Safety Code.',
+                features: [
+                    '90-Minute Full Discharge Tests',
+                    'Monthly 30-Second Function Tests',
+                    'Battery Replacement & Calibration',
+                    'LED Bulb Upgrades',
+                    'Exit Sign Visibility Audits',
+                    'Compliance Labeling & Certification'
+                ]
+            },
+            cloud: {
+                title: 'Cloud Dashboard',
+                image: 'assets/images/service_compliance.png',
+                icon: 'fas fa-cloud',
+                iconBg: 'bg-purple-50 dark:bg-purple-900/20',
+                iconColor: 'text-purple-600',
+                description: 'Our centralized SaaS compliance portal gives you a real-time view of every safety asset across all your locations. Schedule inspections, download digital certificates, track violation resolutions, and generate instant reports — all from one dashboard.',
+                features: [
+                    'Real-Time Asset Status Dashboard',
+                    'Digital Compliance Certificates',
+                    'Multi-Site Portfolio Management',
+                    'Automated Inspection Scheduling',
+                    'Violation Tracking & Alerts',
+                    'REST API & Webhook Integration'
+                ]
+            },
+            audits: {
+                title: 'Safety Audits',
+                image: 'assets/images/service_lighting_training.png',
+                icon: 'fas fa-graduation-cap',
+                iconBg: 'bg-amber-50 dark:bg-amber-900/20',
+                iconColor: 'text-amber-600',
+                description: 'OSHA-compliant onsite safety audits and employee training sessions covering proper fire extinguisher use, evacuation procedures, and first aid. Our instructors tailor each session to your building layout and occupant demographics.',
+                features: [
+                    'Live Fire Extinguisher Drills',
+                    'Evacuation Route Planning',
+                    'First Aid & CPR Certification',
+                    'OSHA Compliance Assessments',
+                    'Fire Warden Designation Training',
+                    'Post-Audit Digital Reporting'
+                ]
+            }
+        };
+
+        function openModal(serviceKey) {
+            const data = serviceData[serviceKey];
+            if (!data) return;
+
+            document.getElementById('modal-image').src = data.image;
+            document.getElementById('modal-image').alt = data.title;
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-description').textContent = data.description;
+            document.getElementById('modal-icon').className = data.icon + ' text-2xl';
+            const iconWrap = document.getElementById('modal-icon-wrap');
+            iconWrap.className = 'w-14 h-14 rounded-2xl flex items-center justify-center mb-3 border-4 border-white shadow-lg ' + data.iconBg;
+            document.getElementById('modal-icon').className = data.icon + ' ' + data.iconColor + ' text-2xl';
+
+            const featureList = document.getElementById('modal-features');
+            featureList.innerHTML = data.features.map(f =>
+                `<li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <i class="fas fa-check text-primary text-xs"></i>
+                    </div>
+                    <span>${f}</span>
+                </li>`
+            ).join('');
+
+            document.getElementById('modal-cta').href = 'contact.html';
+            document.getElementById('modal-details').href = 'service-details.html?service=' + serviceKey;
+
+            const modal = document.getElementById('service-modal');
+            const panel = document.getElementById('modal-panel');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => {
+                panel.classList.remove('scale-95', 'opacity-0');
+                panel.classList.add('scale-100', 'opacity-100');
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('service-modal');
+            const panel = document.getElementById('modal-panel');
+            panel.classList.remove('scale-100', 'opacity-100');
+            panel.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    </script>
 </body>
 
 </html>
-

@@ -171,113 +171,602 @@
         </div>
     </section>
 
-    <!-- Services Grid -->
+    <!-- How It Works Section (Unique to Home 2) -->
     <section class="py-24 bg-white dark:bg-gray-800">
         <div class="container mx-auto px-4 md:px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                <div class="max-w-2xl">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm">What We Offer</span>
-                    <h2
-                        class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 break-words text-gray-900 dark:text-white">
-                        Comprehensive Fire Protection Solutions.</h2>
-                </div>
-                <a href="services.html"
-                    class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore All Services <i class="fas fa-long-arrow-right"></i>
-                </a>
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Our Process</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 text-gray-900 dark:text-white">
+                    Safety in <span class="text-primary italic">4 Simple Steps.</span>
+                </h2>
+                <p class="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto">From initial assessment to
+                    continuous automated monitoring — we handle every layer of your fire safety lifecycle.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
+            <!-- Steps: alternating layout with connector line on desktop -->
+            <div class="grid md:grid-cols-4 gap-0 relative">
+                <!-- Connector line desktop -->
                 <div
-                    class="group overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-all shadow-sm hover:shadow-xl">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/service_inspection.png"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            alt="Inspection">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
+                    class="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20 z-0">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center px-6 mb-12 md:mb-0">
+                    <div
+                        class="w-24 h-24 rounded-full bg-primary flex items-center justify-center shadow-xl shadow-primary/30 mb-6 ring-4 ring-white dark:ring-gray-800">
+                        <i class="fas fa-search text-white text-3xl"></i>
                     </div>
-                    <div class="p-6 md:p-8">
+                    <span class="text-xs font-black uppercase tracking-widest text-primary mb-2">Step 01</span>
+                    <h3 class="text-xl font-extrabold font-outfit mb-3 text-gray-900 dark:text-white">Site Assessment
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Our certified engineers conduct
+                        a
+                        thorough on-site hazard evaluation, mapping every risk zone and asset.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center px-6 mb-12 md:mb-0">
+                    <div
+                        class="w-24 h-24 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center shadow-xl mb-6 ring-4 ring-white dark:ring-gray-800">
+                        <i class="fas fa-drafting-compass text-primary text-3xl"></i>
+                    </div>
+                    <span class="text-xs font-black uppercase tracking-widest text-primary mb-2">Step 02</span>
+                    <h3 class="text-xl font-extrabold font-outfit mb-3 text-gray-900 dark:text-white">Custom Safety Plan
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">We design a tailored protection
+                        blueprint — equipment placement, system type, and compliance roadmap.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center px-6 mb-12 md:mb-0">
+                    <div
+                        class="w-24 h-24 rounded-full bg-primary flex items-center justify-center shadow-xl shadow-primary/30 mb-6 ring-4 ring-white dark:ring-gray-800">
+                        <i class="fas fa-tools text-white text-3xl"></i>
+                    </div>
+                    <span class="text-xs font-black uppercase tracking-widest text-primary mb-2">Step 03</span>
+                    <h3 class="text-xl font-extrabold font-outfit mb-3 text-gray-900 dark:text-white">Installation &
+                        Setup</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Certified technicians install,
+                        configure, and test all systems to NFPA and local code standards.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center px-6">
+                    <div
+                        class="w-24 h-24 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center shadow-xl mb-6 ring-4 ring-white dark:ring-gray-800">
+                        <i class="fas fa-satellite-dish text-primary text-3xl"></i>
+                    </div>
+                    <span class="text-xs font-black uppercase tracking-widest text-primary mb-2">Step 04</span>
+                    <h3 class="text-xl font-extrabold font-outfit mb-3 text-gray-900 dark:text-white">Live Monitoring
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Your facility enters our 24/7
+                        AI-monitored cloud dashboard with automated alerts and instant dispatch.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="contact.html"
+                    class="inline-flex items-center gap-3 px-10 py-4 bg-primary text-white rounded-2xl font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_20px_40px_rgba(220,38,36,0.25)]">
+                    Start Your Assessment <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve (Unique to Home 2) -->
+    <section class="py-24 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Who We Protect</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 text-gray-900 dark:text-white">
+                    Industries We <span class="text-primary italic">Serve.</span>
+                </h2>
+                <p class="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto">From hospitality to heavy industry,
+                    every sector has unique fire risks. We specialise in all of them.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Industry 1: Healthcare -->
+                <div class="group relative overflow-hidden rounded-3xl h-64 cursor-pointer">
+                    <img src="assets/images/blog_industrial_safety.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Healthcare">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent">
+                    </div>
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-7">
                         <div
-                            class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center mb-6 -mt-14 relative z-10 border-4 border-white dark:border-gray-800">
-                            <i class="fas fa-fire-extinguisher text-primary text-xl"></i>
+                            class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-3">
+                            <i class="fas fa-hospital text-white text-lg"></i>
                         </div>
-                        <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Inspection & Maintenance</h3>
-                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed">Regular checks and
-                            certification for fire extinguishers, hoses, and sprinkler systems to ensure peak
-                            performance.</p>
-                        <a href="service-details.html"
-                            class="inline-flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
-                            Learn More <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
+                        <h3 class="text-xl font-extrabold font-outfit text-white mb-1">Healthcare</h3>
+                        <p
+                            class="text-gray-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Hospital-grade suppression systems with zero-disruption compliance monitoring.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Service 2 -->
-                <div
-                    class="group overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-all shadow-sm hover:shadow-xl">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/service_monitoring.png"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            alt="Monitoring">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
+                <!-- Industry 2: Hospitality -->
+                <div class="group relative overflow-hidden rounded-3xl h-64 cursor-pointer">
+                    <img src="assets/images/blog_office_fire_drill.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Hospitality">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent">
                     </div>
-                    <div class="p-6 md:p-8">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-7">
                         <div
-                            class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-6 -mt-14 relative z-10 border-4 border-white dark:border-gray-800">
-                            <i class="fas fa-broadcast-tower text-blue-600 text-xl"></i>
+                            class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-3">
+                            <i class="fas fa-hotel text-white text-lg"></i>
                         </div>
-                        <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Centralized Monitoring</h3>
-                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed">24/7 cloud-based monitoring for
-                            smoke detectors and alarm systems with instant emergency dispatching.</p>
-                        <a href="service-details.html"
-                            class="inline-flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
-                            Learn More <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
+                        <h3 class="text-xl font-extrabold font-outfit text-white mb-1">Hospitality</h3>
+                        <p
+                            class="text-gray-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Protecting hotels, resorts, and venues with discreet, guest-safe fire systems.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
-                <div
-                    class="group overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-all shadow-sm hover:shadow-xl">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/service_compliance.png"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            alt="Auditing">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
+                <!-- Industry 3: Warehousing -->
+                <div class="group relative overflow-hidden rounded-3xl h-64 cursor-pointer">
+                    <img src="assets/images/blog_smart_sensors.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Warehousing">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent">
                     </div>
-                    <div class="p-6 md:p-8">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-7">
                         <div
-                            class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 -mt-14 relative z-10 border-4 border-white dark:border-gray-800">
-                            <i class="fas fa-file-contract text-amber-600 text-xl"></i>
+                            class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-3">
+                            <i class="fas fa-warehouse text-white text-lg"></i>
                         </div>
-                        <h3 class="text-2xl font-bold font-outfit mb-4 text-primary">Compliance Auditing</h3>
-                        <p class="text-gray-500 dark:text-gray-300 mb-6 leading-relaxed">Helping businesses stay aligned
-                            with NFPA standards and local fire codes through detailed automated reports.</p>
-                        <a href="service-details.html"
-                            class="inline-flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
-                            Learn More <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
+                        <h3 class="text-xl font-extrabold font-outfit text-white mb-1">Warehousing</h3>
+                        <p
+                            class="text-gray-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            High-rack in-rack sprinklers and heat detection for large distribution centres.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Industry 4: Education -->
+                <div class="group relative overflow-hidden rounded-3xl h-64 cursor-pointer">
+                    <img src="assets/images/blog_ai_fire.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Education">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent">
+                    </div>
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-7">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-3">
+                            <i class="fas fa-school text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold font-outfit text-white mb-1">Education</h3>
+                        <p
+                            class="text-gray-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Campus-wide alarm networks and evacuation planning for schools and universities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Industry 5: Manufacturing -->
+                <div class="group relative overflow-hidden rounded-3xl h-64 cursor-pointer">
+                    <img src="assets/images/blog_compliance.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Manufacturing">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent">
+                    </div>
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-7">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-3">
+                            <i class="fas fa-industry text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold font-outfit text-white mb-1">Manufacturing</h3>
+                        <p
+                            class="text-gray-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Heavy-duty suppression and chemical fire systems for factories and plants.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Industry 6: Commercial Real Estate -->
+                <div class="group relative overflow-hidden rounded-3xl h-64 cursor-pointer">
+                    <img src="assets/images/blog_fire_hazards.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Commercial Real Estate">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent">
+                    </div>
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-7">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-3">
+                            <i class="fas fa-building text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold font-outfit text-white mb-1">Commercial Real Estate</h3>
+                        <p
+                            class="text-gray-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Multi-tenant office towers and retail centres with centralised reporting dashboards.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════
+         FEATURE HIGHLIGHTS — Split alternating layout
+    ═══════════════════════════════════════════════ -->
+    <section class="py-24 bg-white dark:bg-gray-800 overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6 space-y-28">
+
+            <!-- Row 1: text left, visual right -->
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Real-Time Intelligence</span>
+                    <h2
+                        class="text-3xl md:text-5xl font-extrabold font-outfit mt-3 mb-6 text-gray-900 dark:text-white leading-tight">
+                        Know Every Risk <span class="text-primary italic">Before It Happens.</span>
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
+                        Our AI engine continuously analyses sensor data across all your assets, predicting failure
+                        patterns
+                        and flagging anomalies before they escalate into incidents. Get actionable alerts — not just
+                        alarms.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-brain text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 dark:text-white">Predictive AI Models</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Pattern-trained on 500 k+ inspection
+                                    records for maximum accuracy.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-bell text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 dark:text-white">Instant Push Alerts</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">SMS, email and in-app notifications
+                                    reach the right team in under 2 seconds.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-chart-line text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 dark:text-white">Live Compliance Score</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">A rolling compliance gauge updated
+                                    every 15 minutes across all sites.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="services.html"
+                        class="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-primary-dark transition-all shadow-lg shadow-primary/30">
+                        Explore Features <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Visual card panel -->
+                <div class="relative">
+                    <div class="bg-gray-900 rounded-3xl p-8 shadow-2xl">
+                        <div class="flex items-center justify-between mb-6">
+                            <p class="text-white font-bold font-outfit">Live Risk Dashboard</p>
+                            <span class="flex items-center gap-2 text-xs text-green-400 font-bold">
+                                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>LIVE
+                            </span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Extinguisher
+                                        Health</span><span class="text-green-400 font-bold">97%</span></div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-green-400 rounded-full" style="width:97%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Alarm
+                                        System</span><span class="text-green-400 font-bold">100%</span></div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-green-400 rounded-full" style="width:100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Sprinkler
+                                        Network</span><span class="text-amber-400 font-bold">84%</span></div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-amber-400 rounded-full" style="width:84%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Emergency
+                                        Lighting</span><span class="text-primary font-bold">62%</span></div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-primary rounded-full" style="width:62%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-gray-700 grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <p class="text-2xl font-black text-white">12</p>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider">Sites Active</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-primary">2</p>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider">Alerts Today</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-green-400">94%</p>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider">Compliance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- decorative blobs -->
+                    <div class="absolute -top-8 -right-8 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+                    <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+
+            <!-- Row 2: visual left, text right -->
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Icon grid left -->
+                <div class="grid grid-cols-2 gap-5 order-2 md:order-1">
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-3xl p-7 flex flex-col gap-4 hover:shadow-xl transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center"><i
+                                class="fas fa-fire-extinguisher text-primary text-xl"></i></div>
+                        <p class="font-extrabold font-outfit text-gray-900 dark:text-white">Extinguisher Tracking</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">QR-coded units with expiry, location, and
+                            inspection trail.</p>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-3xl p-7 flex flex-col gap-4 hover:shadow-xl transition-all mt-8">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center"><i
+                                class="fas fa-file-alt text-primary text-xl"></i></div>
+                        <p class="font-extrabold font-outfit text-gray-900 dark:text-white">Digital Reports</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Auto-generated NFPA-format PDFs after every
+                            inspection.</p>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-3xl p-7 flex flex-col gap-4 hover:shadow-xl transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center"><i
+                                class="fas fa-user-shield text-primary text-xl"></i></div>
+                        <p class="font-extrabold font-outfit text-gray-900 dark:text-white">Role-Based Access</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Admin, inspector, and client portal with
+                            granular permissions.</p>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-3xl p-7 flex flex-col gap-4 hover:shadow-xl transition-all mt-8">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center"><i
+                                class="fas fa-code-branch text-primary text-xl"></i></div>
+                        <p class="font-extrabold font-outfit text-gray-900 dark:text-white">API & Webhooks</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Integrate safety data with your BMS, ERP, or
+                            CMMS platform.</p>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Full-Stack Platform</span>
+                    <h2
+                        class="text-3xl md:text-5xl font-extrabold font-outfit mt-3 mb-6 text-gray-900 dark:text-white leading-tight">
+                        Every Tool You Need, <span class="text-primary italic">One Dashboard.</span>
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
+                        From QR-tagged extinguisher tracking to automated NFPA report generation — everything lives in
+                        one unified platform. No spreadsheets. No chasing paperwork. Just clarity.
+                    </p>
+                    <a href="pricing.html"
+                        class="inline-flex items-center gap-3 px-8 py-4 border-2 border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white rounded-2xl font-bold hover:border-primary hover:text-primary transition-all">
+                        View Pricing <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         LIVE STATS BAR — Dark animated counters
+    ═══════════════════════════════════════════════ -->
+    <section class="bg-gray-900 py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-14">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">By The Numbers</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 text-white">
+                    Trusted at Scale, <span class="text-primary italic">Proven by Data.</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div
+                    class="text-center p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-building text-primary text-2xl"></i>
+                    </div>
+                    <p class="text-5xl font-black text-white mb-2">1,200<span class="text-primary">+</span></p>
+                    <p class="text-gray-400 text-sm uppercase tracking-widest font-bold">Buildings Protected</p>
+                </div>
+                <div
+                    class="text-center p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-clipboard-check text-primary text-2xl"></i>
+                    </div>
+                    <p class="text-5xl font-black text-white mb-2">48k<span class="text-primary">+</span></p>
+                    <p class="text-gray-400 text-sm uppercase tracking-widest font-bold">Inspections Done</p>
+                </div>
+                <div
+                    class="text-center p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-clock text-primary text-2xl"></i>
+                    </div>
+                    <p class="text-5xl font-black text-white mb-2">1.2<span class="text-primary">s</span></p>
+                    <p class="text-gray-400 text-sm uppercase tracking-widest font-bold">Avg Alert Dispatch</p>
+                </div>
+                <div
+                    class="text-center p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-award text-primary text-2xl"></i>
+                    </div>
+                    <p class="text-5xl font-black text-white mb-2">15<span class="text-primary">yr</span></p>
+                    <p class="text-gray-400 text-sm uppercase tracking-widest font-bold">Industry Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         TESTIMONIALS — 3-column quote cards
+    ═══════════════════════════════════════════════ -->
+    <section class="py-24 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">What Clients Say</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-outfit mt-2 text-gray-900 dark:text-white">
+                    Trusted by Safety <span class="text-primary italic">Leaders.</span>
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all relative">
+                    <div
+                        class="absolute top-6 right-8 text-gray-100 dark:text-gray-700 text-7xl font-serif leading-none select-none">
+                        "</div>
+                    <div class="flex text-amber-400 mb-5 gap-0.5">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic mb-6 leading-relaxed relative z-10">
+                        "Switching to PyroGuard was the best operational decision we made this year. Our audit readiness
+                        score went from 71% to 98% in just three months."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?u=h2t1"
+                            class="w-11 h-11 rounded-full ring-2 ring-primary/20" alt="James">
+                        <div>
+                            <p class="font-bold text-sm text-gray-900 dark:text-white">James Harrington</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wide">VP Ops, RetailMax Group</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 — highlighted -->
+                <div
+                    class="bg-primary rounded-3xl p-8 shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all relative">
+                    <div class="absolute top-6 right-8 text-white/20 text-7xl font-serif leading-none select-none">"
+                    </div>
+                    <div class="flex text-white/80 mb-5 gap-0.5">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-white italic mb-6 leading-relaxed relative z-10">
+                        "The AI alerts caught a suppression valve fault before our scheduled quarterly check. That
+                        proactive catch alone justified the entire annual cost of the platform."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?u=h2t2" class="w-11 h-11 rounded-full ring-2 ring-white/30"
+                            alt="Priya">
+                        <div>
+                            <p class="font-bold text-sm text-white">Priya Nair</p>
+                            <p class="text-xs text-white/70 uppercase tracking-wide">Facilities Director, TechHub</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all relative">
+                    <div
+                        class="absolute top-6 right-8 text-gray-100 dark:text-gray-700 text-7xl font-serif leading-none select-none">
+                        "</div>
+                    <div class="flex text-amber-400 mb-5 gap-0.5">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i
+                            class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic mb-6 leading-relaxed relative z-10">
+                        "Managing 24 locations used to be a compliance nightmare. With PyroGuard, every site's status is
+                        visible on one screen and every report is auto-generated. Incredible."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?u=h2t3"
+                            class="w-11 h-11 rounded-full ring-2 ring-primary/20" alt="Carlos">
+                        <div>
+                            <p class="font-bold text-sm text-gray-900 dark:text-white">Carlos Mendez</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wide">Safety Manager, BuildCo Intl.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CTA BANNER — Dark with gradient glow
+    ═══════════════════════════════════════════════ -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative bg-gray-900 rounded-[3rem] overflow-hidden px-8 py-20 text-center shadow-2xl">
+                <!-- Glows -->
+                <div
+                    class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <!-- Fire particles strip -->
+                <div
+                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60">
+                </div>
+
+                <div class="relative z-10 max-w-3xl mx-auto">
+                    <span
+                        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-8">
+                        <i class="fas fa-shield-alt"></i> Zero-Risk Trial
+                    </span>
+                    <h2 class="text-4xl md:text-6xl font-black font-outfit text-white mb-6 leading-tight">
+                        Ready to Guard <br><span class="text-primary">Every Floor?</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-xl mx-auto">
+                        Start your 14-day free trial — no credit card required. Full access to every Pro feature from
+                        day one.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                        <a href="register.html"
+                            class="px-12 py-5 bg-primary text-white rounded-2xl font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(220,38,36,0.4)] flex items-center gap-3">
+                            Start Free Trial <i class="fas fa-rocket"></i>
+                        </a>
+                        <a href="contact.html"
+                            class="px-12 py-5 border border-white/20 text-white rounded-2xl font-black text-lg hover:bg-white/10 transition-all flex items-center gap-3">
+                            Talk to Us <i class="fas fa-headset"></i>
+                        </a>
+                    </div>
+                    <p class="mt-8 text-gray-600 text-sm">No credit card · Cancel anytime · Full Pro access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
+
     <footer
         class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-12 mb-16">
                 <!-- Brand -->
-                <div class="col-span-2 md:col-span-1 text-center md:text-left">
-                    <a href="index.html" class="flex items-center justify-center md:justify-start gap-2 mb-6">
+                <div class="col-span-2 md:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
                         <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg">
                             <i class="fas fa-shield-alt text-white text-xl"></i>
                         </div>
@@ -285,7 +774,22 @@
                                 class="text-primary">Guard</span></span>
                     </a>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Cutting-edge fire protection and
-                        life safety management solutions since 2010.</p>
+                        life safety
+                        management solutions since 2010. Protecting what matters most.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors hover:text-white shadow-sm border border-gray-200 dark:border-gray-700">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Quick Links -->
@@ -295,33 +799,64 @@
                         <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                         <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
                         <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing Plans</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-primary transition-colors">Latest News</a></li>
+                        <li><a href="404.html" class="hover:text-primary transition-colors">Events</a></li>
                     </ul>
                 </div>
 
-                <!-- Services -->
+                <!-- Our Services -->
                 <div>
-                    <h4 class="text-xl font-bold mb-6">Support</h4>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-300">
-                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Support</a></li>
-                        <li><a href="documentation.html" class="hover:text-primary transition-colors">Help Center</a>
-                        </li>
-                        <li><a href="404.html" class="hover:text-primary transition-colors">Community</a></li>
+                        <li><a href="service-details.html?service=extinguishers"
+                                class="hover:text-primary transition-colors">Portable Extinguishers</a></li>
+                        <li><a href="service-details.html?service=alarms"
+                                class="hover:text-primary transition-colors">Fire Alarm Systems</a></li>
+                        <li><a href="service-details.html?service=sprinkler"
+                                class="hover:text-primary transition-colors">Sprinkler Systems</a></li>
+                        <li><a href="service-details.html?service=lighting"
+                                class="hover:text-primary transition-colors">Emergency Lighting</a></li>
+                        <li><a href="service-details.html?service=cloud"
+                                class="hover:text-primary transition-colors">Cloud Dashboard</a></li>
+                        <li><a href="service-details.html?service=audits"
+                                class="hover:text-primary transition-colors">Safety Audits</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Contact</h4>
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="text-xl font-bold mb-6">Contact Us</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                         <li class="flex items-start gap-4">
                             <i class="fas fa-map-marker-alt text-primary mt-1.5"></i>
                             <span>123 Safety Ave, Tech City, ST 54321</span>
                         </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>support@pyroguard.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-sm text-gray-500">
-                © 2025 PyroGuard Safety Systems. All Rights Reserved.
+
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 dark:text-gray-300 text-sm">© 2025 PyroGuard Safety Systems. All Rights
+                    Reserved.</p>
+                <div
+                    class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm text-gray-500 dark:text-gray-300 text-center md:text-right">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    </div>
+                    <span class="text-gray-500">Powered By <a href="https://www.abhivorn.com/"
+                            class="hover:text-primary active:text-primary active:font-bold active:underline transition-all">Abhivorn
+                            Technologies Pvt.Ltd</a></span>
+                </div>
             </div>
         </div>
     </footer>
@@ -371,4 +906,3 @@
 </body>
 
 </html>
-
